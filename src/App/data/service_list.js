@@ -2,8 +2,7 @@ const services_category = [
     {
         id: 'uzi_diagnistic',
         category_name: 'Ультразвуковая диагностика (УЗИ)',
-        medic: 'УЗИ-специалист',
-
+        medic: null,
         services: {
             visit_1: null,
             visit_2: null,
@@ -40,7 +39,7 @@ const services_category = [
         services: {
             visit_1: 'Первичный прием акушера-гинеколога',
             visit_2: 'Повторный прием акушера-гинеколога',
-            visit_candidate: 'Первичный прием врача-акушера-гинеколога кандидата медицинских наук',
+            visit_candidate: 'Первичный прием врача акушера-гинеколога кандидата медицинских наук',
             serv_0: 'Консультация гинеколога',
             serv_1: 'Ведение беременности',   
             serv_2: 'Диагностика ИППП',
@@ -403,7 +402,7 @@ const services_category = [
     {
         id: 'x-ray_diag',
         category_name: 'Лучевая диагностика',
-        medic: 'Специалист по лучевой диагностике',
+        medic: null,
         services: {
             serv_0: null,
             serv_1: 'Остеоденситометрия',
@@ -567,9 +566,20 @@ const services_category = [
             serv_5: 'Аутогемотерапия',
             serv_6: 'Измерение артериального давления',
         }
-},
-]
+    },
+    {
+        id: 'ortopedy',
+        category_name: 'Ортопедия',
+        medic: 'Ортопед',
+        services: {
+            visit_1: 'Первичный прием врача-ортопеда',
+            visit_2: 'Повторный прием врача-ортопеда',
+            visit_candidate: 'Прием врача-ортопеда, кандидата медицинских наук',
+            serv_0: 'Консультация ортопеда',
+            serv_1: 'Внутрисуставная блокада',
+            serv_2: 'Паравертебральная блокада',
+            serv_3: 'Перевязка',
 
-// let a  = [];
-// services_category.map( e => a.push( e.services.serv_0 ));
-// console.log(a.filter( e => e !== null).sort())
+        }
+    },
+]
