@@ -10,8 +10,8 @@ module.exports = env => {
     context: path.join(__dirname, 'src'),
     entry: './index.tsx',
     output: {
-      filename: 'main.js',
-      path: path.join(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'bundle-[hash].js',
     },
     resolve: {
       modules: ['node_modules'],
@@ -42,8 +42,17 @@ module.exports = env => {
           ],
         },
         {
-          test: /\.less$/,
-          use: [isDevEnv ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: process.env.NODE_ENV === 'development',
+              },
+            },
+            'css-loader',
+            'sass-loader',
+          ],
         },
         {
           test: /\.(png|jpe?g|gif|svg)$/i,

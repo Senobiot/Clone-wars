@@ -1,6 +1,7 @@
 import React from 'react';
-import './Footer.less';
+import './Footer.scss';
 import GitList from './GitList'
+import "../../global/reset.scss";
 
 export default function Footer() {
   return (

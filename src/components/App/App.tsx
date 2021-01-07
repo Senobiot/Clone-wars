@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.less';
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 
