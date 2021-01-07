@@ -1,4 +1,4 @@
-// numbers are prices for services
+// The numerical values of the keys 'visit_xxx' / 'serv_xxx' are prices in rubles for doctor's visit and service cost, respectively
 
 const med_centers = [
     {
@@ -8,8 +8,7 @@ const med_centers = [
         img: '../img/centers_img/alfamed.jpg',
         logo: '../img/centers_img/alfamed_logo.jpg',
         coord: '53.919774, 27.601318',
-        phone_1: '+375 29 637-00-00',
-        phone_2: '+375 17 336-45-16',
+        phones: ['+375 29 637-00-00', '+375 17 336-45-16'],
         schedule: '08:00—21:00',
         services: {
             'allergology': [ 
@@ -94,8 +93,7 @@ const med_centers = [
         img: '../img/centers_img/doctor_profi.jpg',
         logo: '../img/centers_img/doctor_profi_logo.jpg',
         coord: '53.953662, 27.678280',
-        phone_1: '+375 17 270-01-06',
-        phone_2: '+375 29 323-75-03',
+        phones: ['+375 17 270-01-06', '+375 29 323-75-03'],
         schedule: '08:00—21:00',
         services: {
             'dermatology': [ 
@@ -171,8 +169,7 @@ const med_centers = [
         img: '../img/centers_img/rkmc.jpg',
         logo: '../img/centers_img/nordin_logo.jpg',
         coord: '53.962129, 27.434541',
-        phone_1: '+375 17 543-44-44',
-        phone_2: '+375 17 543-42-10',
+        phones: ['+375 17 543-44-44', '+375 17 543-42-10'],
         schedule: '08:00—21:00',
         services: {
             'cardiology': [ 
@@ -325,8 +322,7 @@ const med_centers = [
         img: '../img/centers_img/lode.jpg',
         logo: '../img/centers_img/lode_logo.jpg',
         coord: '53.917846, 27.589140',
-        phone_1: '+375 29 638-30-03',
-        phone_2: '+375 17 293-98-00',
+        phones: ['+375 29 638-30-03', '+375 17 293-98-00'],
         schedule: '08:00—21:00',
         services: {
             'allergology': [ 
@@ -485,8 +481,7 @@ const med_centers = [
         img: '../img/centers_img/seven_heaven.jpg',
         logo: '../img/centers_img/seven_heaven_logo.jpg',
         coord: '53.924484, 27.633301',
-        phone_1: '+375 17 352-00-20',
-        phone_2: '+375 29 749-49-39',
+        phones: ['+375 17 352-00-20', '+375 29 749-49-39'],
         schedule: '08:00—21:00',
         services: {
             'cosmetology': [ 
@@ -525,8 +520,7 @@ const med_centers = [
         img: '../img/centers_img/nordin.jpg',
         logo: '../img/centers_img/nordin_logo.jpg',
         coord: '53.927247, 27.587999',
-        phone_1: '159',
-        phone_2: '+375 17 296-62-72',
+        phones: ['159', '+375 17 296-62-72'],
         schedule: '08:00—21:00',
         services: {
             'allergology': [ 
@@ -643,8 +637,7 @@ const med_centers = [
         img: '../img/centers_img/avicenna.jpg',
         logo: '../img/centers_img/avicenna_logo.jpg',
         coord: '53.855749, 27.447089',
-        phone_1: '+375 17 399-63-99',
-        phone_2: '+375 29 639-90-00',
+        phones: ['+375 17 399-63-99', '+375 29 639-90-00'],
         schedule: '08:00—21:00',
         services: {
             'endocrinology': [ 
@@ -694,8 +687,7 @@ const med_centers = [
         adress: 'Минск, пр-т Победителей, 45',
         img: '../img/centers_img/kravira.jpg',
         logo: '../img/centers_img/kravira_logo.jpg',
-        phone_1: '+375 17 370-28-61',
-        phone_2: '+375 29 611-28-61',
+        phones: ['+375 17 370-28-61', '+375 29 611-28-61'],
         coord: '53.915995, 27.534567',
         schedule: '08:00—21:00',
         services: {
@@ -834,8 +826,7 @@ const med_centers = [
         img: '../img/centers_img/embrio.jpg',
         logo: '../img/centers_img/embrio_logo.jpg',
         coord: '53.924484, 27.633301',
-        phone_1: '+375 29 333-99-13',
-        phone_2: '+375 17 397-64-04',
+        phones: ['+375 29 333-99-13', '+375 17 397-64-04'],
         schedule: '09:00—19:00',
         services: {
             'ginecology': [ 
@@ -905,8 +896,7 @@ const med_centers = [
         adress: 'Минск, ул. Энгельса, 34А/2',
         img: '../img/centers_img/noviy_lekar.jpg',
         logo: '../img/centers_img/noviy_lekar_logo.jpg',
-        phone_1: '+375 29 102-02-03',
-        phone_2: '+375 29 501-02-03',
+        phones: ['+375 29 102-02-03', '+375 29 501-02-03'],
         coord: '53.897392, 27.565110',
         schedule: '08:00—20:00',
         services: {
@@ -963,8 +953,7 @@ const med_centers = [
         adress: 'Минск, ул. Червякова, 22',
         img: '../img/centers_img/belevro.jpg',
         logo: '../img/centers_img/belevro_logo.jpg',
-        phone_1: '+375 29 130-30-05',
-        phone_2: '+375 17 358-81-98',
+        phones: ['+375 29 130-30-05', '+375 17 358-81-98'],
         coord: '53.925667, 27.550270',
         schedule: '08:00—20:00',
         services: {
@@ -985,8 +974,7 @@ const med_centers = [
         adress: 'Минск, ул. Академическая, 26',
         img: '../img/centers_img/synlab.jpg',
         logo: '../img/centers_img/synlab_logo.jpg',
-        phone_1: '+375 17 378-33-35',
-        phone_2: '+375 29 263-95-03',
+        phones: ['+375 17 378-33-35', '+375 29 263-95-03'],
         coord: '53.909413, 27.609918',
         schedule: '07:00—19:00',
         services: {
@@ -1026,8 +1014,7 @@ const med_centers = [
         adress: '',
         img: '../img/centers_img/terra.jpg',
         logo: '../img/centers_img/terra_logo.jpg',
-        phone_1: '+375 17 318-14-78',
-        phone_2: '+375 29 772-44-11',
+        phones: ['+375 17 318-14-78', '+375 29 772-44-11'],
         coord: '53.930178, 27.623716',
         schedule: '08:00—19:00',
         services: {
@@ -1103,8 +1090,7 @@ const med_centers = [
         adress: 'Минск, ул. Семашко, 10',
         img: '../img/centers_img/mkkdc.jpg',
         logo: '../img/centers_img/mkkdc_logo.jpg',
-        phone_1: '+375 17 270-21-42',
-        phone_2: '+375 44 550-00-90',
+        phones: ['+375 17 270-21-42', '+375 44 550-00-90'],
         coord: '53.858771, 27.496371',
         schedule: '08:00—19:00',
         services: {
@@ -1211,8 +1197,7 @@ const med_centers = [
         adress: 'Минск, ул. Червякова, 64',
         img: '../img/centers_img/biomedica.jpg',
         logo: '../img/centers_img/biomedica_logo.jpg',
-        phone_1: '+375 17 350-77-44',
-        phone_2: '+375 29 769-29-17',
+        phones: ['+375 17 350-77-44', '+375 29 769-29-17'],
         coord: '53.930788, 27.548608',
         schedule: '09:00—20:00',
         services: {
@@ -1285,8 +1270,7 @@ const med_centers = [
         adress: 'Минск, ул. Немига, 30',
         img: '../img/centers_img/tes.jpg',
         logo: '../img/centers_img/tes_logo.jpg',
-        phone_1: '+375 29 557-75-87',
-        phone_2: '+375 17 211-09-57',
+        phones: ['+375 29 557-75-87', '+375 17 211-09-57'],
         coord: '53.901456, 27.547332',
         schedule: '08:00—19:00',
         services: {
@@ -1304,8 +1288,7 @@ const med_centers = [
         adress: 'Минск, ул. Филимонова, 53',
         img: '../img/centers_img/optimed.jpg',
         logo: '../img/centers_img/optimed_logo.jpg',
-        phone_1: '+375 29 549-51-79',
-        phone_2: '+375 44 549-51-79',
+        phones: ['+375 29 549-51-79', '+375 44 549-51-79'],
         coord: '53.924484, 27.633301',
         schedule: '08:00—20:00',
         services: {
