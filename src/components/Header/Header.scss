@@ -1,11 +1,10 @@
 @import "../../global/variables.scss";
 @import "../../global/mixin.scss";
 
-
 .MuiToolbar-root {
- @include flex;
+  @include flex;
 }
+
 .MuiButton-label {
   color: $very-light-blue;
 }
-

@@ -1,14 +1,25 @@
 import React from 'react';
 import './Footer.scss';
-import GitList from './GitList';
-import '../../global/reset.scss';
 
-const Footer: React.FC = () => {
-    return (
-        <div className="footer">
-            <GitList></GitList>
-            <span>2021</span>
-        </div>
-    );
-};
-export default Footer;
+export function Footer() {
+  const links = [
+    'https://github.com/AlinaSuhorebraya',
+    'https://github.com/KLIM-nk01',
+    'https://github.com/Senobiot',
+    'https://github.com/cup0ra',
+  ];
+  return (
+    <div className="footer">
+        <div className="githubLinksContainer">
+      {links.map((link, index) => {
+        return (
+          <a href={link} key={index}>
+            {link}
+          </a>
+        );
+      })}
+    </div>
+      <span>2021</span>
+    </div>
+  );
+}

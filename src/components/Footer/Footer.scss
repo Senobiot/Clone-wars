@@ -1,25 +1,28 @@
 @import "../../global/variables.scss";
 @import "../../global/mixin.scss";
 
-
 .footer {
   background: $dark-blue-crayola;
   color: $very-light-blue;
   padding: 0 20px;
   position: absolute;
+
   @include flex;
+
   bottom: 0;
   right: 0;
   left: 0;
 }
+
 a {
   text-decoration: none;
   color: $very-light-blue;
 }
 
-span{
+span {
   color: $very-light-blue;
 }
-.gitContainer {
+
+.githubLinksContainer {
   @include flex-column;
 }
