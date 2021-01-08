@@ -1,17 +1,20 @@
 import React from 'react';
 import './MedicalList.scss';
 import MedicsCard from './MedicsCard'
+import { medicsArray } from './medicsArray'
+
+
+
 
 
 const MedicsList: React.FC = () => {
-    // const classes = useStyles();
-
     return (
         <div className="medicsListWrapper">
-            <MedicsCard />
-            <MedicsCard />
-            <MedicsCard />
-            <MedicsCard />
+            {medicsArray.map(e =>{
+                return (
+                   <MedicsCard name={e.name} category={e.category} speciality={e.speciality} /> 
+                )
+            })}
         </div>
     );
 };

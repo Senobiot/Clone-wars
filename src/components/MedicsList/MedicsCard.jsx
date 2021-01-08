@@ -1,27 +1,17 @@
 import React from 'react';
-
 import '../../global/variables.scss';
 import './MedicsCard.scss';
 
-interface Props {
-    name: string;
-    category: string;
-    speciality: string;
-  }
-
-const MedicsCard: React.FC<Props> = ({name, category, speciality}) => {
-
+export const MedicsCard = () => {
     return (
         <div className='medicsCard'>
            <img src={'../../assets/pic2.jpg'} />
-           <div className='medicFullname'>{name}</div>
+           <div className='medicFullname'>Козыро Инна Александровна</div>
            <div className='medicCallbacks'>Пока нет отзывов</div>
            <div className='medicExperience'>Стаж работы: 15 лет</div>
-           <div className='medicCategory'>{category}</div>
-           <div className='medicSpecs'>{speciality}</div>
+           <div className='medicCategory'>Высшая квалификационная категория</div>
+           <div className='medicSpecs'>Врач-аллерголог</div>
            <button value='Записаться' className='medicAppointmentBtn'>Записаться</button>        
         </div>
     );
 };
-
-export default MedicsCard;
