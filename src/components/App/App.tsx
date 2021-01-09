@@ -1,14 +1,14 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
+import {Footer} from '../Footer';
+import {Header} from '../Header';
+import '../../global/variables.scss';
+import '../../global/reset.scss';
 
-const App: React.FC = () => {
-    return (
-        <div>
-            <Header></Header>
-            <Footer></Footer>
-        </div>
-    );
-};
-
-export default App;
+export default function App() {
+  return (
+    <>
+      <Header></Header>
+      <Footer></Footer>
+    </>
+  );
+}

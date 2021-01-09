@@ -5,33 +5,41 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
 }
+
 :focus,
 :active {
   outline: none;
 }
+
 a:focus,
 a:active {
   outline: none;
 }
+
 nav,
 footer,
 header {
   display: block;
   width: 100%;
 }
+
 button {
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 ul li {
   list-style: none;
 }

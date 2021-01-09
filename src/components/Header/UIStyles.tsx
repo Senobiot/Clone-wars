@@ -1,6 +1,11 @@
 import { fade, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+    toolBar:{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
     search: {
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
@@ -9,10 +14,9 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
         marginLeft: 0,
-        width: '100%',
+        width: '40vw',
         [theme.breakpoints.up('sm')]: {
             marginLeft: theme.spacing(1),
-            width: 'auto',
         },
     },
     searchIcon: {
