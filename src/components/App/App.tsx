@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Footer} from '../Footer';
 import {Header} from '../Header';
 import '../../global/variables.scss';
@@ -12,3 +13,21 @@ export default function App() {
     </>
   );
 }
+=======
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import MedicsList from '../MedicsList/MedicsList';
+
+
+const App: React.FC = () => {
+    return (
+        <div>
+            <Header></Header>
+            <MedicsList />
+            <Footer></Footer>
+        </div>
+    );
+};
+
+export default App;
+>>>>>>> 9f3ac45... feat: add cards and list base markups
