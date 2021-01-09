@@ -21,7 +21,9 @@ module.exports = env => {
     devtool: isDevEnv ? 'inline-source-map' : 'source-map',
     ...(isDevEnv) && {
       devServer: {
-        contentBase: './dist',
+        contentBase: './',
+        historyApiFallback: true,
+        hot: true
       },
     },
     plugins: [
@@ -43,16 +45,18 @@ module.exports = env => {
         },
         {
           test: /\.(sa|sc|c)ss$/,
-          use: [
+           use: [
+            isDevEnv ? { loader: 'style-loader' } : MiniCssExtractPlugin.loader,
             {
-              loader: MiniCssExtractPlugin.loader,
+              loader: 'css-loader',
               options: {
-                hmr: process.env.NODE_ENV === 'development',
-              },
+                modules: {
+                  localIdentName: '[name]__[local]--[hash:base64:5]',
+                },
+              }
             },
-            'css-loader',
-            'sass-loader',
-          ],
+            { loader: 'sass-loader' }
+          ]
         },
 
         {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.scss';
+import styles from './Footer.module.scss'
 
 export function Footer() {
   const links = [
@@ -9,12 +9,12 @@ export function Footer() {
     'https://github.com/cup0ra',
   ];
   return (
-    <div className="footer">
-        <div className="githubLinksContainer">
+    <div className={styles.footer}>
+        <div className={styles.githubLinksContainer}>
       {links.map((link, index) => {
         return (
           <a href={link} key={index}>
-            {link}
+            @{link.replace('https://github.com/', '')}
           </a>
         );
       })}
