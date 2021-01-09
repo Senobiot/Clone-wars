@@ -1,0 +1,15 @@
+@import "../../global/mixin.scss";
+.MuiTab-root {
+	transition: all 0.3s !important;
+	.MuiTab-wrapper {
+		color: #3f51b5;
+	}
+	&:hover {
+		transition: all 0.3s !important;
+		text-shadow: 2px 2px 5px #0c0146;
+		background-color:rgba(63,81,181,0.5);
+		.MuiTab-wrapper {
+			color: beige;
+		}
+	}
+}

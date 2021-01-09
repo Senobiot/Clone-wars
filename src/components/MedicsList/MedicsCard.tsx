@@ -7,16 +7,17 @@ interface Props {
     name: string;
     category: string;
     speciality: string;
+    experience: string;
+    imgSource: string;
   }
 
-const MedicsCard: React.FC<Props> = ({name, category, speciality}) => {
-
+const MedicsCard: React.FC<Props> = ({name, category, speciality, experience, imgSource}) => {
     return (
         <div className='medicsCard'>
-           <img src={'../../assets/pic2.jpg'} />
+           <img src={imgSource} />
            <div className='medicFullname'>{name}</div>
            <div className='medicCallbacks'>Пока нет отзывов</div>
-           <div className='medicExperience'>Стаж работы: 15 лет</div>
+           <div className='medicExperience'>{experience}</div>
            <div className='medicCategory'>{category}</div>
            <div className='medicSpecs'>{speciality}</div>
            <button value='Записаться' className='medicAppointmentBtn'>Записаться</button>        
