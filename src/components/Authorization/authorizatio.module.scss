@@ -1,0 +1,27 @@
+.container {
+  height: 100%;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  background-image: url(../../assets/google.png);
+  background-size: cover;
+}
+
+.line {
+  position: relative;
+  width: 70px;
+  border-bottom: 1px solid #9e9e9e;
+  margin: 15px 0 5px 0;
+
+  span {
+    padding: 0 5px;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #9e9e9e;
+  }
+}
