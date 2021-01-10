@@ -3,6 +3,7 @@ import styles from './MedicslList.modlule.scss';
 import MedicsCard from './MedicsCard'
 import MedicListCtrlPanel from './MedicListCtrlPanel'
 import { medicsList } from '../../data/medicsList'
+
 let data = medicsList;
 
 const MedicsList: React.FC = () => {

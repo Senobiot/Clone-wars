@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../global/variables.scss';
 import styles from './MedicsCard.module.scss';
 
@@ -25,7 +26,9 @@ const MedicsCard: React.FC<Props> = ({name, category, speciality, experience, im
            <div className={styles.medicExperience}>{experience}</div>
            <div className={styles.medicCategory}>{category}</div>
            <div className={styles.medicSpecs}>{speciality}</div>
-            <button value='Записаться' className={styles.medicAppointmentBtn}>Записаться</button>        
+           <Link to='/medicPage'>
+              <button value='Записаться' className={styles.medicAppointmentBtn}>Записаться</button>     
+          </Link>
         </div>
     );
 };
