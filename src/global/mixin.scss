@@ -4,27 +4,22 @@
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
 @mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
-=======
-  @mixin flex-column {
     display: flex;
     flex-direction: column;
-  }
+}
 
 @mixin font-regular {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
 @mixin font-bold {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
+
 @mixin font-bolder {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
 }
->>>>>>> 9f3ac45... feat: add cards and list base markups

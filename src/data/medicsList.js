@@ -6,7 +6,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Витебский государственный медицинский университет в 2007 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m1.jpg",
+		"img": "assets/medics_img/males/m1.jpg",
 		"phone": "+375-17-259-89-45"
 	},
 	{
@@ -16,7 +16,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f1.jpg",
+		"img": "assets/medics_img/females/f1.jpg",
 		"phone": "+375-17-998-85-87"
 	},
 	{
@@ -26,7 +26,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Витебский государственный медицинский университет в 2004 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m2.jpg",
+		"img": "assets/medics_img/males/m2.jpg",
 		"phone": "+375-17-238-40-27"
 	},
 	{
@@ -36,7 +36,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Клиническая ординатура в 2001 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f2.jpg",
+		"img": "assets/medics_img/females/f2.jpg",
 		"phone": "+375-17-620-82-88"
 	},
 	{
@@ -46,7 +46,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Клиническая ординатура в 2009 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m3.jpg",
+		"img": "assets/medics_img/males/m3.jpg",
 		"phone": "+375-17-665-22-57"
 	},
 	{
@@ -56,7 +56,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Витебский государственный медицинский университет в 1988 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f3.jpg",
+		"img": "assets/medics_img/females/f3.jpg",
 		"phone": "+375-17-765-34-32"
 	},
 	{
@@ -66,7 +66,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2000 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m4.jpg",
+		"img": "assets/medics_img/males/m4.jpg",
 		"phone": "+375-17-531-61-26"
 	},
 	{
@@ -76,7 +76,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2002 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f4.jpg",
+		"img": "assets/medics_img/females/f4.jpg",
 		"phone": "+375-17-951-20-41"
 	},
 	{
@@ -86,7 +86,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Клиническая ординатура в 1985 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m5.jpg",
+		"img": "assets/medics_img/males/m5.jpg",
 		"phone": "+375-17-773-38-63"
 	},
 	{
@@ -96,7 +96,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Витебский государственный медицинский университет в 2003 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f5.jpg",
+		"img": "assets/medics_img/females/f5.jpg",
 		"phone": "+375-17-297-71-43"
 	},
 	{
@@ -106,7 +106,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2014 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m6.jpg",
+		"img": "assets/medics_img/males/m6.jpg",
 		"phone": "+375-17-334-46-83"
 	},
 	{
@@ -116,7 +116,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2003 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f6.jpg",
+		"img": "assets/medics_img/females/f6.jpg",
 		"phone": "+375-17-972-12-52"
 	},
 	{
@@ -126,7 +126,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Витебский государственный медицинский университет в 2013 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m7.jpg",
+		"img": "assets/medics_img/males/m7.jpg",
 		"phone": "+375-17-539-90-01"
 	},
 	{
@@ -136,7 +136,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2004 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f7.jpg",
+		"img": "assets/medics_img/females/f7.jpg",
 		"phone": "+375-17-620-19-82"
 	},
 	{
@@ -146,7 +146,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1986 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/males/m8.jpg",
+		"img": "assets/medics_img/males/m8.jpg",
 		"phone": "+375-17-810-38-34"
 	},
 	{
@@ -156,7 +156,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Витебский государственный медицинский университет в 1991 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/females/f8.jpg",
+		"img": "assets/medics_img/females/f8.jpg",
 		"phone": "+375-17-003-88-29"
 	},
 	{
@@ -166,7 +166,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1997 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m9.jpg",
+		"img": "assets/medics_img/males/m9.jpg",
 		"phone": "+375-17-990-53-18"
 	},
 	{
@@ -176,7 +176,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Витебский государственный медицинский университет в 1992 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f9.jpg",
+		"img": "assets/medics_img/females/f9.jpg",
 		"phone": "+375-17-270-97-76"
 	},
 	{
@@ -186,7 +186,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Витебский государственный медицинский университет в 1982 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m10.jpg",
+		"img": "assets/medics_img/males/m10.jpg",
 		"phone": "+375-17-409-12-32"
 	},
 	{
@@ -196,7 +196,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Витебский государственный медицинский университет в 2012 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f10.jpg",
+		"img": "assets/medics_img/females/f10.jpg",
 		"phone": "+375-17-190-96-63"
 	},
 	{
@@ -206,7 +206,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1992 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m11.jpg",
+		"img": "assets/medics_img/males/m11.jpg",
 		"phone": "+375-17-077-40-64"
 	},
 	{
@@ -216,7 +216,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f11.jpg",
+		"img": "assets/medics_img/females/f11.jpg",
 		"phone": "+375-17-676-73-01"
 	},
 	{
@@ -226,7 +226,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1984 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m12.jpg",
+		"img": "assets/medics_img/males/m12.jpg",
 		"phone": "+375-17-841-57-73"
 	},
 	{
@@ -236,7 +236,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Клиническая ординатура в 2000 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f12.jpg",
+		"img": "assets/medics_img/females/f12.jpg",
 		"phone": "+375-17-721-02-98"
 	},
 	{
@@ -246,7 +246,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1995 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m13.jpg",
+		"img": "assets/medics_img/males/m13.jpg",
 		"phone": "+375-17-261-40-60"
 	},
 	{
@@ -256,7 +256,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Витебский государственный медицинский университет в 2008 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f13.jpg",
+		"img": "assets/medics_img/females/f13.jpg",
 		"phone": "+375-17-484-30-71"
 	},
 	{
@@ -266,7 +266,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Клиническая ординатура в 1995 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m14.jpg",
+		"img": "assets/medics_img/males/m14.jpg",
 		"phone": "+375-17-143-94-10"
 	},
 	{
@@ -276,7 +276,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Витебский государственный медицинский университет в 1994 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f14.jpg",
+		"img": "assets/medics_img/females/f14.jpg",
 		"phone": "+375-17-610-52-18"
 	},
 	{
@@ -286,7 +286,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Витебский государственный медицинский университет в 1988 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m15.jpg",
+		"img": "assets/medics_img/males/m15.jpg",
 		"phone": "+375-17-968-29-68"
 	},
 	{
@@ -296,7 +296,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1993 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f15.jpg",
+		"img": "assets/medics_img/females/f15.jpg",
 		"phone": "+375-17-552-65-74"
 	},
 	{
@@ -306,7 +306,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1995 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m16.jpg",
+		"img": "assets/medics_img/males/m16.jpg",
 		"phone": "+375-17-923-18-92"
 	},
 	{
@@ -316,7 +316,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1994 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f16.jpg",
+		"img": "assets/medics_img/females/f16.jpg",
 		"phone": "+375-17-946-97-94"
 	},
 	{
@@ -326,7 +326,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Клиническая ординатура в 2001 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m17.jpg",
+		"img": "assets/medics_img/males/m17.jpg",
 		"phone": "+375-17-871-25-34"
 	},
 	{
@@ -336,7 +336,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f17.jpg",
+		"img": "assets/medics_img/females/f17.jpg",
 		"phone": "+375-17-356-42-28"
 	},
 	{
@@ -346,7 +346,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1987 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m18.jpg",
+		"img": "assets/medics_img/males/m18.jpg",
 		"phone": "+375-17-457-81-43"
 	},
 	{
@@ -356,7 +356,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2010 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f18.jpg",
+		"img": "assets/medics_img/females/f18.jpg",
 		"phone": "+375-17-089-24-91"
 	},
 	{
@@ -366,7 +366,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1992 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m19.jpg",
+		"img": "assets/medics_img/males/m19.jpg",
 		"phone": "+375-17-291-83-06"
 	},
 	{
@@ -376,7 +376,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1989 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f19.jpg",
+		"img": "assets/medics_img/females/f19.jpg",
 		"phone": "+375-17-645-89-99"
 	},
 	{
@@ -386,7 +386,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1994 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m20.jpg",
+		"img": "assets/medics_img/males/m20.jpg",
 		"phone": "+375-17-798-54-46"
 	},
 	{
@@ -396,7 +396,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1988 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f20.jpg",
+		"img": "assets/medics_img/females/f20.jpg",
 		"phone": "+375-17-802-38-64"
 	},
 	{
@@ -406,7 +406,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2006 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m21.jpg",
+		"img": "assets/medics_img/males/m21.jpg",
 		"phone": "+375-17-424-23-38"
 	},
 	{
@@ -416,7 +416,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2002 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f21.jpg",
+		"img": "assets/medics_img/females/f21.jpg",
 		"phone": "+375-17-038-50-00"
 	},
 	{
@@ -426,7 +426,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m22.jpg",
+		"img": "assets/medics_img/males/m22.jpg",
 		"phone": "+375-17-910-61-84"
 	},
 	{
@@ -436,7 +436,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1999 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f22.jpg",
+		"img": "assets/medics_img/females/f22.jpg",
 		"phone": "+375-17-180-27-83"
 	},
 	{
@@ -446,7 +446,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2012 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m23.jpg",
+		"img": "assets/medics_img/males/m23.jpg",
 		"phone": "+375-17-890-26-50"
 	},
 	{
@@ -456,7 +456,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2004 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f23.jpg",
+		"img": "assets/medics_img/females/f23.jpg",
 		"phone": "+375-17-208-00-20"
 	},
 	{
@@ -466,7 +466,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1993 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m24.jpg",
+		"img": "assets/medics_img/males/m24.jpg",
 		"phone": "+375-17-634-30-03"
 	},
 	{
@@ -476,7 +476,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Клиническая ординатура в 1988 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f24.jpg",
+		"img": "assets/medics_img/females/f24.jpg",
 		"phone": "+375-17-062-42-45"
 	},
 	{
@@ -486,7 +486,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Витебский государственный медицинский университет в 2014 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m25.jpg",
+		"img": "assets/medics_img/males/m25.jpg",
 		"phone": "+375-17-340-87-86"
 	},
 	{
@@ -496,7 +496,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2008 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f25.jpg",
+		"img": "assets/medics_img/females/f25.jpg",
 		"phone": "+375-17-451-30-28"
 	},
 	{
@@ -506,7 +506,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1994 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m26.jpg",
+		"img": "assets/medics_img/males/m26.jpg",
 		"phone": "+375-17-639-13-86"
 	},
 	{
@@ -516,7 +516,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2006 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f26.jpg",
+		"img": "assets/medics_img/females/f26.jpg",
 		"phone": "+375-17-491-90-35"
 	},
 	{
@@ -526,7 +526,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2003 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m27.jpg",
+		"img": "assets/medics_img/males/m27.jpg",
 		"phone": "+375-17-864-92-39"
 	},
 	{
@@ -536,7 +536,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1999 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f27.jpg",
+		"img": "assets/medics_img/females/f27.jpg",
 		"phone": "+375-17-503-86-25"
 	},
 	{
@@ -546,7 +546,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m28.jpg",
+		"img": "assets/medics_img/males/m28.jpg",
 		"phone": "+375-17-572-25-56"
 	},
 	{
@@ -556,7 +556,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f28.jpg",
+		"img": "assets/medics_img/females/f28.jpg",
 		"phone": "+375-17-973-73-86"
 	},
 	{
@@ -566,7 +566,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Витебский государственный медицинский университет в 1996 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m29.jpg",
+		"img": "assets/medics_img/males/m29.jpg",
 		"phone": "+375-17-575-66-32"
 	},
 	{
@@ -576,7 +576,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f29.jpg",
+		"img": "assets/medics_img/females/f29.jpg",
 		"phone": "+375-17-389-81-98"
 	},
 	{
@@ -586,7 +586,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Витебский государственный медицинский университет в 2005 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m30.jpg",
+		"img": "assets/medics_img/males/m30.jpg",
 		"phone": "+375-17-881-21-52"
 	},
 	{
@@ -596,7 +596,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1984 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f30.jpg",
+		"img": "assets/medics_img/females/f30.jpg",
 		"phone": "+375-17-999-09-95"
 	},
 	{
@@ -606,7 +606,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Витебский государственный медицинский университет в 1990 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m31.jpg",
+		"img": "assets/medics_img/males/m31.jpg",
 		"phone": "+375-17-275-30-72"
 	},
 	{
@@ -616,7 +616,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Клиническая ординатура в 1990 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f31.jpg",
+		"img": "assets/medics_img/females/f31.jpg",
 		"phone": "+375-17-892-38-88"
 	},
 	{
@@ -626,7 +626,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2008 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m32.jpg",
+		"img": "assets/medics_img/males/m32.jpg",
 		"phone": "+375-17-882-27-10"
 	},
 	{
@@ -636,7 +636,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2009 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f32.jpg",
+		"img": "assets/medics_img/females/f32.jpg",
 		"phone": "+375-17-879-13-51"
 	},
 	{
@@ -646,7 +646,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2008 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m33.jpg",
+		"img": "assets/medics_img/males/m33.jpg",
 		"phone": "+375-17-697-19-36"
 	},
 	{
@@ -656,7 +656,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Витебский государственный медицинский университет в 2006 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f33.jpg",
+		"img": "assets/medics_img/females/f33.jpg",
 		"phone": "+375-17-397-42-26"
 	},
 	{
@@ -666,7 +666,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1998 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m34.jpg",
+		"img": "assets/medics_img/males/m34.jpg",
 		"phone": "+375-17-830-74-71"
 	},
 	{
@@ -676,7 +676,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1986 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f34.jpg",
+		"img": "assets/medics_img/females/f34.jpg",
 		"phone": "+375-17-933-68-07"
 	},
 	{
@@ -686,7 +686,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Витебский государственный медицинский университет в 2004 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m35.jpg",
+		"img": "assets/medics_img/males/m35.jpg",
 		"phone": "+375-17-438-46-77"
 	},
 	{
@@ -696,7 +696,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1999 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f35.jpg",
+		"img": "assets/medics_img/females/f35.jpg",
 		"phone": "+375-17-488-18-02"
 	},
 	{
@@ -706,7 +706,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1993 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m36.jpg",
+		"img": "assets/medics_img/males/m36.jpg",
 		"phone": "+375-17-284-90-00"
 	},
 	{
@@ -716,7 +716,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Витебский государственный медицинский университет в 1983 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f36.jpg",
+		"img": "assets/medics_img/females/f36.jpg",
 		"phone": "+375-17-385-11-15"
 	},
 	{
@@ -726,7 +726,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Витебский государственный медицинский университет в 2014 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m37.jpg",
+		"img": "assets/medics_img/males/m37.jpg",
 		"phone": "+375-17-345-99-39"
 	},
 	{
@@ -736,7 +736,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f37.jpg",
+		"img": "assets/medics_img/females/f37.jpg",
 		"phone": "+375-17-619-34-09"
 	},
 	{
@@ -746,7 +746,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Витебский государственный медицинский университет в 2010 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m38.jpg",
+		"img": "assets/medics_img/males/m38.jpg",
 		"phone": "+375-17-764-01-40"
 	},
 	{
@@ -756,7 +756,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Клиническая ординатура в 1993 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f38.jpg",
+		"img": "assets/medics_img/females/f38.jpg",
 		"phone": "+375-17-783-77-55"
 	},
 	{
@@ -766,7 +766,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1995 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m39.jpg",
+		"img": "assets/medics_img/males/m39.jpg",
 		"phone": "+375-17-480-12-04"
 	},
 	{
@@ -776,7 +776,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Витебский государственный медицинский университет в 1985 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f39.jpg",
+		"img": "assets/medics_img/females/f39.jpg",
 		"phone": "+375-17-269-50-71"
 	},
 	{
@@ -786,7 +786,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Клиническая ординатура в 1984 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m40.jpg",
+		"img": "assets/medics_img/males/m40.jpg",
 		"phone": "+375-17-504-45-12"
 	},
 	{
@@ -796,7 +796,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2013 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f40.jpg",
+		"img": "assets/medics_img/females/f40.jpg",
 		"phone": "+375-17-970-78-79"
 	},
 	{
@@ -806,7 +806,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1994 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/males/m41.jpg",
+		"img": "assets/medics_img/males/m41.jpg",
 		"phone": "+375-17-947-24-77"
 	},
 	{
@@ -816,7 +816,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/females/f41.jpg",
+		"img": "assets/medics_img/females/f41.jpg",
 		"phone": "+375-17-916-50-15"
 	},
 	{
@@ -826,7 +826,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m42.jpg",
+		"img": "assets/medics_img/males/m42.jpg",
 		"phone": "+375-17-409-11-62"
 	},
 	{
@@ -836,7 +836,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Витебский государственный медицинский университет в 1985 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f42.jpg",
+		"img": "assets/medics_img/females/f42.jpg",
 		"phone": "+375-17-837-13-59"
 	},
 	{
@@ -846,7 +846,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2007 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m43.jpg",
+		"img": "assets/medics_img/males/m43.jpg",
 		"phone": "+375-17-560-58-26"
 	},
 	{
@@ -856,7 +856,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Витебский государственный медицинский университет в 2013 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f43.jpg",
+		"img": "assets/medics_img/females/f43.jpg",
 		"phone": "+375-17-386-25-71"
 	},
 	{
@@ -866,7 +866,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Клиническая ординатура в 2004 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m44.jpg",
+		"img": "assets/medics_img/males/m44.jpg",
 		"phone": "+375-17-682-65-19"
 	},
 	{
@@ -876,7 +876,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2013 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f44.jpg",
+		"img": "assets/medics_img/females/f44.jpg",
 		"phone": "+375-17-088-08-65"
 	},
 	{
@@ -886,7 +886,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1984 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m45.jpg",
+		"img": "assets/medics_img/males/m45.jpg",
 		"phone": "+375-17-133-44-98"
 	},
 	{
@@ -896,7 +896,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2003 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f45.jpg",
+		"img": "assets/medics_img/females/f45.jpg",
 		"phone": "+375-17-201-97-37"
 	},
 	{
@@ -906,7 +906,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2005 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/males/m46.jpg",
+		"img": "assets/medics_img/males/m46.jpg",
 		"phone": "+375-17-419-98-35"
 	},
 	{
@@ -916,7 +916,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Витебский государственный медицинский университет в 2009 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/females/f46.jpg",
+		"img": "assets/medics_img/females/f46.jpg",
 		"phone": "+375-17-165-54-40"
 	},
 	{
@@ -926,7 +926,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Витебский государственный медицинский университет в 2002 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m47.jpg",
+		"img": "assets/medics_img/males/m47.jpg",
 		"phone": "+375-17-138-57-53"
 	},
 	{
@@ -936,7 +936,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2000 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f47.jpg",
+		"img": "assets/medics_img/females/f47.jpg",
 		"phone": "+375-17-001-58-40"
 	},
 	{
@@ -946,7 +946,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Клиническая ординатура в 2005 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m48.jpg",
+		"img": "assets/medics_img/males/m48.jpg",
 		"phone": "+375-17-586-23-19"
 	},
 	{
@@ -956,7 +956,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2009 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f48.jpg",
+		"img": "assets/medics_img/females/f48.jpg",
 		"phone": "+375-17-110-90-96"
 	},
 	{
@@ -966,7 +966,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Витебский государственный медицинский университет в 1990 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m49.jpg",
+		"img": "assets/medics_img/males/m49.jpg",
 		"phone": "+375-17-215-66-82"
 	},
 	{
@@ -976,7 +976,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Витебский государственный медицинский университет в 1991 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f49.jpg",
+		"img": "assets/medics_img/females/f49.jpg",
 		"phone": "+375-17-546-72-80"
 	},
 	{
@@ -986,7 +986,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1984 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m50.jpg",
+		"img": "assets/medics_img/males/m50.jpg",
 		"phone": "+375-17-240-68-31"
 	},
 	{
@@ -996,7 +996,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1998 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f50.jpg",
+		"img": "assets/medics_img/females/f50.jpg",
 		"phone": "+375-17-574-72-05"
 	},
 	{
@@ -1006,7 +1006,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Витебский государственный медицинский университет в 1989 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m51.jpg",
+		"img": "assets/medics_img/males/m51.jpg",
 		"phone": "+375-17-583-88-41"
 	},
 	{
@@ -1016,7 +1016,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2003 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f51.jpg",
+		"img": "assets/medics_img/females/f51.jpg",
 		"phone": "+375-17-242-91-20"
 	},
 	{
@@ -1026,7 +1026,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1988 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m52.jpg",
+		"img": "assets/medics_img/males/m52.jpg",
 		"phone": "+375-17-742-50-96"
 	},
 	{
@@ -1036,7 +1036,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f52.jpg",
+		"img": "assets/medics_img/females/f52.jpg",
 		"phone": "+375-17-805-54-12"
 	},
 	{
@@ -1046,7 +1046,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Клиническая ординатура в 1982 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m53.jpg",
+		"img": "assets/medics_img/males/m53.jpg",
 		"phone": "+375-17-038-68-96"
 	},
 	{
@@ -1056,7 +1056,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2000 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f53.jpg",
+		"img": "assets/medics_img/females/f53.jpg",
 		"phone": "+375-17-344-17-36"
 	},
 	{
@@ -1066,7 +1066,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m54.jpg",
+		"img": "assets/medics_img/males/m54.jpg",
 		"phone": "+375-17-093-23-51"
 	},
 	{
@@ -1076,7 +1076,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1991 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f54.jpg",
+		"img": "assets/medics_img/females/f54.jpg",
 		"phone": "+375-17-550-75-69"
 	},
 	{
@@ -1086,7 +1086,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2003 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m55.jpg",
+		"img": "assets/medics_img/males/m55.jpg",
 		"phone": "+375-17-857-44-52"
 	},
 	{
@@ -1096,7 +1096,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1994 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f55.jpg",
+		"img": "assets/medics_img/females/f55.jpg",
 		"phone": "+375-17-226-10-78"
 	},
 	{
@@ -1106,7 +1106,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m56.jpg",
+		"img": "assets/medics_img/males/m56.jpg",
 		"phone": "+375-17-786-60-84"
 	},
 	{
@@ -1116,7 +1116,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1987 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f56.jpg",
+		"img": "assets/medics_img/females/f56.jpg",
 		"phone": "+375-17-321-91-13"
 	},
 	{
@@ -1126,7 +1126,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2009 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m57.jpg",
+		"img": "assets/medics_img/males/m57.jpg",
 		"phone": "+375-17-983-41-42"
 	},
 	{
@@ -1136,7 +1136,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Витебский государственный медицинский университет в 1984 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f57.jpg",
+		"img": "assets/medics_img/females/f57.jpg",
 		"phone": "+375-17-953-02-03"
 	},
 	{
@@ -1146,7 +1146,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1986 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m58.jpg",
+		"img": "assets/medics_img/males/m58.jpg",
 		"phone": "+375-17-113-19-18"
 	},
 	{
@@ -1156,7 +1156,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2006 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f58.jpg",
+		"img": "assets/medics_img/females/f58.jpg",
 		"phone": "+375-17-175-00-23"
 	},
 	{
@@ -1166,7 +1166,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Витебский государственный медицинский университет в 1982 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m59.jpg",
+		"img": "assets/medics_img/males/m59.jpg",
 		"phone": "+375-17-562-16-80"
 	},
 	{
@@ -1176,7 +1176,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1997 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f59.jpg",
+		"img": "assets/medics_img/females/f59.jpg",
 		"phone": "+375-17-513-91-45"
 	},
 	{
@@ -1186,7 +1186,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Витебский государственный медицинский университет в 2009 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m60.jpg",
+		"img": "assets/medics_img/males/m60.jpg",
 		"phone": "+375-17-791-27-44"
 	},
 	{
@@ -1196,7 +1196,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1993 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f60.jpg",
+		"img": "assets/medics_img/females/f60.jpg",
 		"phone": "+375-17-763-71-77"
 	},
 	{
@@ -1206,7 +1206,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1985 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/males/m61.jpg",
+		"img": "assets/medics_img/males/m61.jpg",
 		"phone": "+375-17-476-71-29"
 	},
 	{
@@ -1216,7 +1216,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Витебский государственный медицинский университет в 2007 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/females/f61.jpg",
+		"img": "assets/medics_img/females/f61.jpg",
 		"phone": "+375-17-359-95-78"
 	},
 	{
@@ -1226,7 +1226,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/males/m62.jpg",
+		"img": "assets/medics_img/males/m62.jpg",
 		"phone": "+375-17-568-49-87"
 	},
 	{
@@ -1236,7 +1236,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1983 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/females/f62.jpg",
+		"img": "assets/medics_img/females/f62.jpg",
 		"phone": "+375-17-840-88-28"
 	},
 	{
@@ -1246,7 +1246,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Клиническая ординатура в 1997 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m63.jpg",
+		"img": "assets/medics_img/males/m63.jpg",
 		"phone": "+375-17-237-45-43"
 	},
 	{
@@ -1256,7 +1256,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2009 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f63.jpg",
+		"img": "assets/medics_img/females/f63.jpg",
 		"phone": "+375-17-853-27-22"
 	},
 	{
@@ -1266,7 +1266,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Клиническая ординатура в 2013 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/males/m64.jpg",
+		"img": "assets/medics_img/males/m64.jpg",
 		"phone": "+375-17-071-41-82"
 	},
 	{
@@ -1276,7 +1276,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Витебский государственный медицинский университет в 1989 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/females/f64.jpg",
+		"img": "assets/medics_img/females/f64.jpg",
 		"phone": "+375-17-194-85-08"
 	},
 	{
@@ -1286,7 +1286,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Клиническая ординатура в 1997 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m65.jpg",
+		"img": "assets/medics_img/males/m65.jpg",
 		"phone": "+375-17-050-67-95"
 	},
 	{
@@ -1296,7 +1296,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2009 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f65.jpg",
+		"img": "assets/medics_img/females/f65.jpg",
 		"phone": "+375-17-893-78-09"
 	},
 	{
@@ -1306,7 +1306,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1983 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m66.jpg",
+		"img": "assets/medics_img/males/m66.jpg",
 		"phone": "+375-17-548-90-01"
 	},
 	{
@@ -1316,7 +1316,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2003 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f66.jpg",
+		"img": "assets/medics_img/females/f66.jpg",
 		"phone": "+375-17-094-37-79"
 	},
 	{
@@ -1326,7 +1326,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Витебский государственный медицинский университет в 1986 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m67.jpg",
+		"img": "assets/medics_img/males/m67.jpg",
 		"phone": "+375-17-359-52-46"
 	},
 	{
@@ -1336,7 +1336,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2002 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f67.jpg",
+		"img": "assets/medics_img/females/f67.jpg",
 		"phone": "+375-17-602-81-25"
 	},
 	{
@@ -1346,7 +1346,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1984 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m68.jpg",
+		"img": "assets/medics_img/males/m68.jpg",
 		"phone": "+375-17-955-69-50"
 	},
 	{
@@ -1356,7 +1356,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1987 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f68.jpg",
+		"img": "assets/medics_img/females/f68.jpg",
 		"phone": "+375-17-956-88-23"
 	},
 	{
@@ -1366,7 +1366,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Клиническая ординатура в 2008 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m69.jpg",
+		"img": "assets/medics_img/males/m69.jpg",
 		"phone": "+375-17-743-65-57"
 	},
 	{
@@ -1376,7 +1376,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1992 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f69.jpg",
+		"img": "assets/medics_img/females/f69.jpg",
 		"phone": "+375-17-896-72-24"
 	},
 	{
@@ -1386,7 +1386,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Витебский государственный медицинский университет в 2002 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m70.jpg",
+		"img": "assets/medics_img/males/m70.jpg",
 		"phone": "+375-17-820-94-29"
 	},
 	{
@@ -1396,7 +1396,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Клиническая ординатура в 2006 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f70.jpg",
+		"img": "assets/medics_img/females/f70.jpg",
 		"phone": "+375-17-856-77-00"
 	},
 	{
@@ -1406,7 +1406,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1999 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m71.jpg",
+		"img": "assets/medics_img/males/m71.jpg",
 		"phone": "+375-17-890-53-65"
 	},
 	{
@@ -1416,7 +1416,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1987 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f71.jpg",
+		"img": "assets/medics_img/females/f71.jpg",
 		"phone": "+375-17-121-88-23"
 	},
 	{
@@ -1426,7 +1426,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2014 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m72.jpg",
+		"img": "assets/medics_img/males/m72.jpg",
 		"phone": "+375-17-555-07-66"
 	},
 	{
@@ -1436,7 +1436,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2007 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f72.jpg",
+		"img": "assets/medics_img/females/f72.jpg",
 		"phone": "+375-17-641-41-67"
 	},
 	{
@@ -1446,7 +1446,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2003 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m73.jpg",
+		"img": "assets/medics_img/males/m73.jpg",
 		"phone": "+375-17-637-55-61"
 	},
 	{
@@ -1456,7 +1456,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1997 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f73.jpg",
+		"img": "assets/medics_img/females/f73.jpg",
 		"phone": "+375-17-584-00-34"
 	},
 	{
@@ -1466,7 +1466,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Витебский государственный медицинский университет в 1994 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m74.jpg",
+		"img": "assets/medics_img/males/m74.jpg",
 		"phone": "+375-17-087-72-37"
 	},
 	{
@@ -1476,7 +1476,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1998 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f74.jpg",
+		"img": "assets/medics_img/females/f74.jpg",
 		"phone": "+375-17-562-73-68"
 	},
 	{
@@ -1486,7 +1486,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2013 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m75.jpg",
+		"img": "assets/medics_img/males/m75.jpg",
 		"phone": "+375-17-169-34-87"
 	},
 	{
@@ -1496,7 +1496,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Витебский государственный медицинский университет в 2011 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f75.jpg",
+		"img": "assets/medics_img/females/f75.jpg",
 		"phone": "+375-17-203-47-89"
 	},
 	{
@@ -1506,7 +1506,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Клиническая ординатура в 1982 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m76.jpg",
+		"img": "assets/medics_img/males/m76.jpg",
 		"phone": "+375-17-248-22-59"
 	},
 	{
@@ -1516,7 +1516,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2001 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f76.jpg",
+		"img": "assets/medics_img/females/f76.jpg",
 		"phone": "+375-17-327-49-18"
 	},
 	{
@@ -1526,7 +1526,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Клиническая ординатура в 2010 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m77.jpg",
+		"img": "assets/medics_img/males/m77.jpg",
 		"phone": "+375-17-440-69-85"
 	},
 	{
@@ -1536,7 +1536,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Витебский государственный медицинский университет в 1986 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f77.jpg",
+		"img": "assets/medics_img/females/f77.jpg",
 		"phone": "+375-17-344-29-67"
 	},
 	{
@@ -1546,7 +1546,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1996 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m78.jpg",
+		"img": "assets/medics_img/males/m78.jpg",
 		"phone": "+375-17-811-24-38"
 	},
 	{
@@ -1556,7 +1556,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2006 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f78.jpg",
+		"img": "assets/medics_img/females/f78.jpg",
 		"phone": "+375-17-471-22-20"
 	},
 	{
@@ -1566,7 +1566,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Витебский государственный медицинский университет в 1983 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m79.jpg",
+		"img": "assets/medics_img/males/m79.jpg",
 		"phone": "+375-17-663-25-49"
 	},
 	{
@@ -1576,7 +1576,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2005 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f79.jpg",
+		"img": "assets/medics_img/females/f79.jpg",
 		"phone": "+375-17-947-23-49"
 	},
 	{
@@ -1586,7 +1586,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Витебский государственный медицинский университет в 2004 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m80.jpg",
+		"img": "assets/medics_img/males/m80.jpg",
 		"phone": "+375-17-532-44-98"
 	},
 	{
@@ -1596,7 +1596,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1987 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f80.jpg",
+		"img": "assets/medics_img/females/f80.jpg",
 		"phone": "+375-17-399-12-14"
 	},
 	{
@@ -1606,7 +1606,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Витебский государственный медицинский университет в 1993 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m81.jpg",
+		"img": "assets/medics_img/males/m81.jpg",
 		"phone": "+375-17-709-71-77"
 	},
 	{
@@ -1616,7 +1616,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1988 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f81.jpg",
+		"img": "assets/medics_img/females/f81.jpg",
 		"phone": "+375-17-359-22-85"
 	},
 	{
@@ -1626,7 +1626,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2003 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m82.jpg",
+		"img": "assets/medics_img/males/m82.jpg",
 		"phone": "+375-17-492-92-76"
 	},
 	{
@@ -1636,7 +1636,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Клиническая ординатура в 1996 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f82.jpg",
+		"img": "assets/medics_img/females/f82.jpg",
 		"phone": "+375-17-275-78-42"
 	},
 	{
@@ -1646,7 +1646,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2004 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m83.jpg",
+		"img": "assets/medics_img/males/m83.jpg",
 		"phone": "+375-17-976-89-47"
 	},
 	{
@@ -1656,7 +1656,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1998 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f83.jpg",
+		"img": "assets/medics_img/females/f83.jpg",
 		"phone": "+375-17-042-58-21"
 	},
 	{
@@ -1666,7 +1666,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2012 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m84.jpg",
+		"img": "assets/medics_img/males/m84.jpg",
 		"phone": "+375-17-968-51-09"
 	},
 	{
@@ -1676,7 +1676,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f84.jpg",
+		"img": "assets/medics_img/females/f84.jpg",
 		"phone": "+375-17-131-59-75"
 	},
 	{
@@ -1686,7 +1686,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1990 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m85.jpg",
+		"img": "assets/medics_img/males/m85.jpg",
 		"phone": "+375-17-347-36-91"
 	},
 	{
@@ -1696,7 +1696,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1989 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f85.jpg",
+		"img": "assets/medics_img/females/f85.jpg",
 		"phone": "+375-17-194-93-24"
 	},
 	{
@@ -1706,7 +1706,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2001 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m86.jpg",
+		"img": "assets/medics_img/males/m86.jpg",
 		"phone": "+375-17-028-34-73"
 	},
 	{
@@ -1716,7 +1716,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2005 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f86.jpg",
+		"img": "assets/medics_img/females/f86.jpg",
 		"phone": "+375-17-987-75-83"
 	},
 	{
@@ -1726,7 +1726,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2000 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m87.jpg",
+		"img": "assets/medics_img/males/m87.jpg",
 		"phone": "+375-17-804-67-93"
 	},
 	{
@@ -1736,7 +1736,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1991 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f87.jpg",
+		"img": "assets/medics_img/females/f87.jpg",
 		"phone": "+375-17-824-96-76"
 	},
 	{
@@ -1746,7 +1746,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2007 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m88.jpg",
+		"img": "assets/medics_img/males/m88.jpg",
 		"phone": "+375-17-382-08-57"
 	},
 	{
@@ -1756,7 +1756,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Клиническая ординатура в 2005 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f88.jpg",
+		"img": "assets/medics_img/females/f88.jpg",
 		"phone": "+375-17-569-28-09"
 	},
 	{
@@ -1766,7 +1766,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Клиническая ординатура в 2005 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m89.jpg",
+		"img": "assets/medics_img/males/m89.jpg",
 		"phone": "+375-17-117-61-24"
 	},
 	{
@@ -1776,7 +1776,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Витебский государственный медицинский университет в 2005 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f89.jpg",
+		"img": "assets/medics_img/females/f89.jpg",
 		"phone": "+375-17-369-43-71"
 	},
 	{
@@ -1786,7 +1786,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1985 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m90.jpg",
+		"img": "assets/medics_img/males/m90.jpg",
 		"phone": "+375-17-135-14-49"
 	},
 	{
@@ -1796,7 +1796,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Витебский государственный медицинский университет в 2001 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f90.jpg",
+		"img": "assets/medics_img/females/f90.jpg",
 		"phone": "+375-17-785-40-25"
 	},
 	{
@@ -1806,7 +1806,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2013 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m91.jpg",
+		"img": "assets/medics_img/males/m91.jpg",
 		"phone": "+375-17-486-01-11"
 	},
 	{
@@ -1816,7 +1816,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1981 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f91.jpg",
+		"img": "assets/medics_img/females/f91.jpg",
 		"phone": "+375-17-846-76-64"
 	},
 	{
@@ -1826,7 +1826,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/males/m92.jpg",
+		"img": "assets/medics_img/males/m92.jpg",
 		"phone": "+375-17-785-57-68"
 	},
 	{
@@ -1836,7 +1836,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Витебский государственный медицинский университет в 1993 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/females/f92.jpg",
+		"img": "assets/medics_img/females/f92.jpg",
 		"phone": "+375-17-923-66-71"
 	},
 	{
@@ -1846,7 +1846,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1983 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/males/m93.jpg",
+		"img": "assets/medics_img/males/m93.jpg",
 		"phone": "+375-17-927-15-89"
 	},
 	{
@@ -1856,7 +1856,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Витебский государственный медицинский университет в 2014 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/females/f93.jpg",
+		"img": "assets/medics_img/females/f93.jpg",
 		"phone": "+375-17-117-18-19"
 	},
 	{
@@ -1866,7 +1866,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2013 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/males/m94.jpg",
+		"img": "assets/medics_img/males/m94.jpg",
 		"phone": "+375-17-088-42-45"
 	},
 	{
@@ -1876,7 +1876,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1985 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/females/f94.jpg",
+		"img": "assets/medics_img/females/f94.jpg",
 		"phone": "+375-17-455-38-73"
 	},
 	{
@@ -1886,7 +1886,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m95.jpg",
+		"img": "assets/medics_img/males/m95.jpg",
 		"phone": "+375-17-140-89-56"
 	},
 	{
@@ -1896,7 +1896,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f95.jpg",
+		"img": "assets/medics_img/females/f95.jpg",
 		"phone": "+375-17-063-28-85"
 	},
 	{
@@ -1906,7 +1906,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2007 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m96.jpg",
+		"img": "assets/medics_img/males/m96.jpg",
 		"phone": "+375-17-193-29-13"
 	},
 	{
@@ -1916,7 +1916,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1984 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f96.jpg",
+		"img": "assets/medics_img/females/f96.jpg",
 		"phone": "+375-17-755-43-26"
 	},
 	{
@@ -1926,7 +1926,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2009 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m97.jpg",
+		"img": "assets/medics_img/males/m97.jpg",
 		"phone": "+375-17-964-77-34"
 	},
 	{
@@ -1936,7 +1936,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Витебский государственный медицинский университет в 2001 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f97.jpg",
+		"img": "assets/medics_img/females/f97.jpg",
 		"phone": "+375-17-138-57-49"
 	},
 	{
@@ -1946,7 +1946,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m98.jpg",
+		"img": "assets/medics_img/males/m98.jpg",
 		"phone": "+375-17-905-54-36"
 	},
 	{
@@ -1956,7 +1956,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1985 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f98.jpg",
+		"img": "assets/medics_img/females/f98.jpg",
 		"phone": "+375-17-320-58-75"
 	},
 	{
@@ -1966,7 +1966,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m99.jpg",
+		"img": "assets/medics_img/males/m99.jpg",
 		"phone": "+375-17-795-38-16"
 	},
 	{
@@ -1976,7 +1976,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2011 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f99.jpg",
+		"img": "assets/medics_img/females/f99.jpg",
 		"phone": "+375-17-343-78-26"
 	},
 	{
@@ -1986,7 +1986,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Клиническая ординатура в 1981 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m100.jpg",
+		"img": "assets/medics_img/males/m100.jpg",
 		"phone": "+375-17-154-66-56"
 	},
 	{
@@ -1996,7 +1996,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Витебский государственный медицинский университет в 2007 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f100.jpg",
+		"img": "assets/medics_img/females/f100.jpg",
 		"phone": "+375-17-536-45-22"
 	},
 	{
@@ -2006,7 +2006,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1998 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m1.jpg",
+		"img": "assets/medics_img/males/m1.jpg",
 		"phone": "+375-17-884-21-93"
 	},
 	{
@@ -2016,7 +2016,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Клиническая ординатура в 1992 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f1.jpg",
+		"img": "assets/medics_img/females/f1.jpg",
 		"phone": "+375-17-929-71-63"
 	},
 	{
@@ -2026,7 +2026,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1994 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m2.jpg",
+		"img": "assets/medics_img/males/m2.jpg",
 		"phone": "+375-17-127-19-76"
 	},
 	{
@@ -2036,7 +2036,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f2.jpg",
+		"img": "assets/medics_img/females/f2.jpg",
 		"phone": "+375-17-240-19-59"
 	},
 	{
@@ -2046,7 +2046,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Клиническая ординатура в 1989 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m3.jpg",
+		"img": "assets/medics_img/males/m3.jpg",
 		"phone": "+375-17-446-41-56"
 	},
 	{
@@ -2056,7 +2056,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1987 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f3.jpg",
+		"img": "assets/medics_img/females/f3.jpg",
 		"phone": "+375-17-096-91-34"
 	},
 	{
@@ -2066,7 +2066,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Витебский государственный медицинский университет в 2003 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m4.jpg",
+		"img": "assets/medics_img/males/m4.jpg",
 		"phone": "+375-17-561-66-49"
 	},
 	{
@@ -2076,7 +2076,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2013 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f4.jpg",
+		"img": "assets/medics_img/females/f4.jpg",
 		"phone": "+375-17-546-30-20"
 	},
 	{
@@ -2086,7 +2086,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1985 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m5.jpg",
+		"img": "assets/medics_img/males/m5.jpg",
 		"phone": "+375-17-478-67-07"
 	},
 	{
@@ -2096,7 +2096,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1986 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f5.jpg",
+		"img": "assets/medics_img/females/f5.jpg",
 		"phone": "+375-17-599-06-72"
 	},
 	{
@@ -2106,7 +2106,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m6.jpg",
+		"img": "assets/medics_img/males/m6.jpg",
 		"phone": "+375-17-876-05-87"
 	},
 	{
@@ -2116,7 +2116,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2007 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f6.jpg",
+		"img": "assets/medics_img/females/f6.jpg",
 		"phone": "+375-17-537-05-40"
 	},
 	{
@@ -2126,7 +2126,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Витебский государственный медицинский университет в 1981 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m7.jpg",
+		"img": "assets/medics_img/males/m7.jpg",
 		"phone": "+375-17-398-62-84"
 	},
 	{
@@ -2136,7 +2136,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1997 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f7.jpg",
+		"img": "assets/medics_img/females/f7.jpg",
 		"phone": "+375-17-057-53-67"
 	},
 	{
@@ -2146,7 +2146,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Витебский государственный медицинский университет в 1990 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m8.jpg",
+		"img": "assets/medics_img/males/m8.jpg",
 		"phone": "+375-17-814-64-37"
 	},
 	{
@@ -2156,7 +2156,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f8.jpg",
+		"img": "assets/medics_img/females/f8.jpg",
 		"phone": "+375-17-668-57-98"
 	},
 	{
@@ -2166,7 +2166,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2010 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m9.jpg",
+		"img": "assets/medics_img/males/m9.jpg",
 		"phone": "+375-17-700-52-50"
 	},
 	{
@@ -2176,7 +2176,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Клиническая ординатура в 2014 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f9.jpg",
+		"img": "assets/medics_img/females/f9.jpg",
 		"phone": "+375-17-502-63-17"
 	},
 	{
@@ -2186,7 +2186,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1990 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m10.jpg",
+		"img": "assets/medics_img/males/m10.jpg",
 		"phone": "+375-17-944-94-01"
 	},
 	{
@@ -2196,7 +2196,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f10.jpg",
+		"img": "assets/medics_img/females/f10.jpg",
 		"phone": "+375-17-613-04-87"
 	},
 	{
@@ -2206,7 +2206,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Клиническая ординатура в 1998 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m11.jpg",
+		"img": "assets/medics_img/males/m11.jpg",
 		"phone": "+375-17-081-74-59"
 	},
 	{
@@ -2216,7 +2216,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f11.jpg",
+		"img": "assets/medics_img/females/f11.jpg",
 		"phone": "+375-17-299-83-65"
 	},
 	{
@@ -2226,7 +2226,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1990 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m12.jpg",
+		"img": "assets/medics_img/males/m12.jpg",
 		"phone": "+375-17-613-17-72"
 	},
 	{
@@ -2236,7 +2236,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1996 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f12.jpg",
+		"img": "assets/medics_img/females/f12.jpg",
 		"phone": "+375-17-606-66-03"
 	},
 	{
@@ -2246,7 +2246,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m13.jpg",
+		"img": "assets/medics_img/males/m13.jpg",
 		"phone": "+375-17-990-01-44"
 	},
 	{
@@ -2256,7 +2256,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Клиническая ординатура в 1995 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f13.jpg",
+		"img": "assets/medics_img/females/f13.jpg",
 		"phone": "+375-17-342-27-17"
 	},
 	{
@@ -2266,7 +2266,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m14.jpg",
+		"img": "assets/medics_img/males/m14.jpg",
 		"phone": "+375-17-578-88-89"
 	},
 	{
@@ -2276,7 +2276,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Витебский государственный медицинский университет в 2004 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f14.jpg",
+		"img": "assets/medics_img/females/f14.jpg",
 		"phone": "+375-17-326-76-30"
 	},
 	{
@@ -2286,7 +2286,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m15.jpg",
+		"img": "assets/medics_img/males/m15.jpg",
 		"phone": "+375-17-498-89-81"
 	},
 	{
@@ -2296,7 +2296,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1983 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f15.jpg",
+		"img": "assets/medics_img/females/f15.jpg",
 		"phone": "+375-17-287-00-00"
 	},
 	{
@@ -2306,7 +2306,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2001 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m16.jpg",
+		"img": "assets/medics_img/males/m16.jpg",
 		"phone": "+375-17-218-04-10"
 	},
 	{
@@ -2316,7 +2316,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f16.jpg",
+		"img": "assets/medics_img/females/f16.jpg",
 		"phone": "+375-17-682-67-14"
 	},
 	{
@@ -2326,7 +2326,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Клиническая ординатура в 1982 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m17.jpg",
+		"img": "assets/medics_img/males/m17.jpg",
 		"phone": "+375-17-951-24-67"
 	},
 	{
@@ -2336,7 +2336,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Витебский государственный медицинский университет в 2013 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f17.jpg",
+		"img": "assets/medics_img/females/f17.jpg",
 		"phone": "+375-17-930-35-38"
 	},
 	{
@@ -2346,7 +2346,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Витебский государственный медицинский университет в 2006 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m18.jpg",
+		"img": "assets/medics_img/males/m18.jpg",
 		"phone": "+375-17-462-92-74"
 	},
 	{
@@ -2356,7 +2356,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f18.jpg",
+		"img": "assets/medics_img/females/f18.jpg",
 		"phone": "+375-17-579-72-89"
 	},
 	{
@@ -2366,7 +2366,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1991 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m19.jpg",
+		"img": "assets/medics_img/males/m19.jpg",
 		"phone": "+375-17-713-96-50"
 	},
 	{
@@ -2376,7 +2376,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2010 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f19.jpg",
+		"img": "assets/medics_img/females/f19.jpg",
 		"phone": "+375-17-257-49-52"
 	},
 	{
@@ -2386,7 +2386,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Клиническая ординатура в 2006 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m20.jpg",
+		"img": "assets/medics_img/males/m20.jpg",
 		"phone": "+375-17-003-44-29"
 	},
 	{
@@ -2396,7 +2396,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Клиническая ординатура в 1996 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f20.jpg",
+		"img": "assets/medics_img/females/f20.jpg",
 		"phone": "+375-17-578-77-95"
 	},
 	{
@@ -2406,7 +2406,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Витебский государственный медицинский университет в 2008 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m21.jpg",
+		"img": "assets/medics_img/males/m21.jpg",
 		"phone": "+375-17-503-63-82"
 	},
 	{
@@ -2416,7 +2416,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2011 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f21.jpg",
+		"img": "assets/medics_img/females/f21.jpg",
 		"phone": "+375-17-971-27-86"
 	},
 	{
@@ -2426,7 +2426,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2000 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m22.jpg",
+		"img": "assets/medics_img/males/m22.jpg",
 		"phone": "+375-17-756-44-09"
 	},
 	{
@@ -2436,7 +2436,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1999 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f22.jpg",
+		"img": "assets/medics_img/females/f22.jpg",
 		"phone": "+375-17-882-93-40"
 	},
 	{
@@ -2446,7 +2446,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1992 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m23.jpg",
+		"img": "assets/medics_img/males/m23.jpg",
 		"phone": "+375-17-319-03-05"
 	},
 	{
@@ -2456,7 +2456,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2014 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f23.jpg",
+		"img": "assets/medics_img/females/f23.jpg",
 		"phone": "+375-17-512-40-57"
 	},
 	{
@@ -2466,7 +2466,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1995 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m24.jpg",
+		"img": "assets/medics_img/males/m24.jpg",
 		"phone": "+375-17-281-80-63"
 	},
 	{
@@ -2476,7 +2476,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Клиническая ординатура в 1996 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f24.jpg",
+		"img": "assets/medics_img/females/f24.jpg",
 		"phone": "+375-17-392-55-38"
 	},
 	{
@@ -2486,7 +2486,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2009 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m25.jpg",
+		"img": "assets/medics_img/males/m25.jpg",
 		"phone": "+375-17-888-21-17"
 	},
 	{
@@ -2496,7 +2496,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2001 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f25.jpg",
+		"img": "assets/medics_img/females/f25.jpg",
 		"phone": "+375-17-289-31-69"
 	},
 	{
@@ -2506,7 +2506,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1993 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m26.jpg",
+		"img": "assets/medics_img/males/m26.jpg",
 		"phone": "+375-17-854-32-45"
 	},
 	{
@@ -2516,7 +2516,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2012 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f26.jpg",
+		"img": "assets/medics_img/females/f26.jpg",
 		"phone": "+375-17-345-67-20"
 	},
 	{
@@ -2526,7 +2526,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Клиническая ординатура в 2013 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m27.jpg",
+		"img": "assets/medics_img/males/m27.jpg",
 		"phone": "+375-17-616-59-19"
 	},
 	{
@@ -2536,7 +2536,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2013 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f27.jpg",
+		"img": "assets/medics_img/females/f27.jpg",
 		"phone": "+375-17-610-35-65"
 	},
 	{
@@ -2546,7 +2546,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1987 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m28.jpg",
+		"img": "assets/medics_img/males/m28.jpg",
 		"phone": "+375-17-390-70-58"
 	},
 	{
@@ -2556,7 +2556,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Клиническая ординатура в 1999 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f28.jpg",
+		"img": "assets/medics_img/females/f28.jpg",
 		"phone": "+375-17-972-80-63"
 	},
 	{
@@ -2566,7 +2566,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m29.jpg",
+		"img": "assets/medics_img/males/m29.jpg",
 		"phone": "+375-17-156-00-42"
 	},
 	{
@@ -2576,7 +2576,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Клиническая ординатура в 2006 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f29.jpg",
+		"img": "assets/medics_img/females/f29.jpg",
 		"phone": "+375-17-586-09-43"
 	},
 	{
@@ -2586,7 +2586,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Клиническая ординатура в 2003 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m30.jpg",
+		"img": "assets/medics_img/males/m30.jpg",
 		"phone": "+375-17-508-57-19"
 	},
 	{
@@ -2596,7 +2596,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f30.jpg",
+		"img": "assets/medics_img/females/f30.jpg",
 		"phone": "+375-17-151-31-61"
 	},
 	{
@@ -2606,7 +2606,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Витебский государственный медицинский университет в 1986 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m31.jpg",
+		"img": "assets/medics_img/males/m31.jpg",
 		"phone": "+375-17-880-12-44"
 	},
 	{
@@ -2616,7 +2616,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Витебский государственный медицинский университет в 2005 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f31.jpg",
+		"img": "assets/medics_img/females/f31.jpg",
 		"phone": "+375-17-849-70-06"
 	},
 	{
@@ -2626,7 +2626,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1995 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m32.jpg",
+		"img": "assets/medics_img/males/m32.jpg",
 		"phone": "+375-17-244-83-41"
 	},
 	{
@@ -2636,7 +2636,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1998 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f32.jpg",
+		"img": "assets/medics_img/females/f32.jpg",
 		"phone": "+375-17-161-95-98"
 	},
 	{
@@ -2646,7 +2646,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1992 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m33.jpg",
+		"img": "assets/medics_img/males/m33.jpg",
 		"phone": "+375-17-219-88-37"
 	},
 	{
@@ -2656,7 +2656,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Клиническая ординатура в 2013 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f33.jpg",
+		"img": "assets/medics_img/females/f33.jpg",
 		"phone": "+375-17-437-30-39"
 	},
 	{
@@ -2666,7 +2666,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1994 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m34.jpg",
+		"img": "assets/medics_img/males/m34.jpg",
 		"phone": "+375-17-744-67-91"
 	},
 	{
@@ -2676,7 +2676,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2009 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f34.jpg",
+		"img": "assets/medics_img/females/f34.jpg",
 		"phone": "+375-17-224-51-08"
 	},
 	{
@@ -2686,7 +2686,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Клиническая ординатура в 1993 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m35.jpg",
+		"img": "assets/medics_img/males/m35.jpg",
 		"phone": "+375-17-087-80-08"
 	},
 	{
@@ -2696,7 +2696,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1993 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f35.jpg",
+		"img": "assets/medics_img/females/f35.jpg",
 		"phone": "+375-17-449-57-30"
 	},
 	{
@@ -2706,7 +2706,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2001 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m36.jpg",
+		"img": "assets/medics_img/males/m36.jpg",
 		"phone": "+375-17-458-22-65"
 	},
 	{
@@ -2716,7 +2716,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1999 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f36.jpg",
+		"img": "assets/medics_img/females/f36.jpg",
 		"phone": "+375-17-481-72-46"
 	},
 	{
@@ -2726,7 +2726,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2004 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m37.jpg",
+		"img": "assets/medics_img/males/m37.jpg",
 		"phone": "+375-17-033-07-53"
 	},
 	{
@@ -2736,7 +2736,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1982 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f37.jpg",
+		"img": "assets/medics_img/females/f37.jpg",
 		"phone": "+375-17-057-39-00"
 	},
 	{
@@ -2746,7 +2746,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Витебский государственный медицинский университет в 1985 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m38.jpg",
+		"img": "assets/medics_img/males/m38.jpg",
 		"phone": "+375-17-896-32-13"
 	},
 	{
@@ -2756,7 +2756,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f38.jpg",
+		"img": "assets/medics_img/females/f38.jpg",
 		"phone": "+375-17-775-83-87"
 	},
 	{
@@ -2766,7 +2766,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1986 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m39.jpg",
+		"img": "assets/medics_img/males/m39.jpg",
 		"phone": "+375-17-131-27-69"
 	},
 	{
@@ -2776,7 +2776,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f39.jpg",
+		"img": "assets/medics_img/females/f39.jpg",
 		"phone": "+375-17-584-94-77"
 	},
 	{
@@ -2786,7 +2786,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Клиническая ординатура в 1985 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m40.jpg",
+		"img": "assets/medics_img/males/m40.jpg",
 		"phone": "+375-17-865-23-78"
 	},
 	{
@@ -2796,7 +2796,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1986 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f40.jpg",
+		"img": "assets/medics_img/females/f40.jpg",
 		"phone": "+375-17-615-37-43"
 	},
 	{
@@ -2806,7 +2806,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Клиническая ординатура в 1997 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m41.jpg",
+		"img": "assets/medics_img/males/m41.jpg",
 		"phone": "+375-17-944-67-32"
 	},
 	{
@@ -2816,7 +2816,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f41.jpg",
+		"img": "assets/medics_img/females/f41.jpg",
 		"phone": "+375-17-429-54-26"
 	},
 	{
@@ -2826,7 +2826,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Витебский государственный медицинский университет в 2011 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m42.jpg",
+		"img": "assets/medics_img/males/m42.jpg",
 		"phone": "+375-17-557-47-88"
 	},
 	{
@@ -2836,7 +2836,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1992 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f42.jpg",
+		"img": "assets/medics_img/females/f42.jpg",
 		"phone": "+375-17-581-89-68"
 	},
 	{
@@ -2846,7 +2846,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1991 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m43.jpg",
+		"img": "assets/medics_img/males/m43.jpg",
 		"phone": "+375-17-540-76-39"
 	},
 	{
@@ -2856,7 +2856,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2012 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f43.jpg",
+		"img": "assets/medics_img/females/f43.jpg",
 		"phone": "+375-17-705-75-38"
 	},
 	{
@@ -2866,7 +2866,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m44.jpg",
+		"img": "assets/medics_img/males/m44.jpg",
 		"phone": "+375-17-574-41-41"
 	},
 	{
@@ -2876,7 +2876,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2005 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f44.jpg",
+		"img": "assets/medics_img/females/f44.jpg",
 		"phone": "+375-17-630-76-49"
 	},
 	{
@@ -2886,7 +2886,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Клиническая ординатура в 1998 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m45.jpg",
+		"img": "assets/medics_img/males/m45.jpg",
 		"phone": "+375-17-914-17-74"
 	},
 	{
@@ -2896,7 +2896,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1990 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f45.jpg",
+		"img": "assets/medics_img/females/f45.jpg",
 		"phone": "+375-17-981-59-02"
 	},
 	{
@@ -2906,7 +2906,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2001 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/males/m46.jpg",
+		"img": "assets/medics_img/males/m46.jpg",
 		"phone": "+375-17-552-67-88"
 	},
 	{
@@ -2916,7 +2916,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1987 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/females/f46.jpg",
+		"img": "assets/medics_img/females/f46.jpg",
 		"phone": "+375-17-169-08-55"
 	},
 	{
@@ -2926,7 +2926,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Клиническая ординатура в 1987 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/males/m47.jpg",
+		"img": "assets/medics_img/males/m47.jpg",
 		"phone": "+375-17-255-51-20"
 	},
 	{
@@ -2936,7 +2936,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Витебский государственный медицинский университет в 1986 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/females/f47.jpg",
+		"img": "assets/medics_img/females/f47.jpg",
 		"phone": "+375-17-578-13-80"
 	},
 	{
@@ -2946,7 +2946,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Клиническая ординатура в 2005 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/males/m48.jpg",
+		"img": "assets/medics_img/males/m48.jpg",
 		"phone": "+375-17-169-88-51"
 	},
 	{
@@ -2956,7 +2956,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2002 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/females/f48.jpg",
+		"img": "assets/medics_img/females/f48.jpg",
 		"phone": "+375-17-771-47-77"
 	},
 	{
@@ -2966,7 +2966,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Клиническая ординатура в 1992 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/males/m49.jpg",
+		"img": "assets/medics_img/males/m49.jpg",
 		"phone": "+375-17-086-00-64"
 	},
 	{
@@ -2976,7 +2976,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2003 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/females/f49.jpg",
+		"img": "assets/medics_img/females/f49.jpg",
 		"phone": "+375-17-633-57-20"
 	},
 	{
@@ -2986,7 +2986,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2000 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/males/m50.jpg",
+		"img": "assets/medics_img/males/m50.jpg",
 		"phone": "+375-17-085-25-52"
 	},
 	{
@@ -2996,7 +2996,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Клиническая ординатура в 2009 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/females/f50.jpg",
+		"img": "assets/medics_img/females/f50.jpg",
 		"phone": "+375-17-823-25-60"
 	},
 	{
@@ -3006,7 +3006,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/males/m51.jpg",
+		"img": "assets/medics_img/males/m51.jpg",
 		"phone": "+375-17-815-31-69"
 	},
 	{
@@ -3016,7 +3016,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Клиническая ординатура в 1985 году",
 		"medcenter": "ОПТИМЕД",
-		"img": "../../assets/medics_img/females/f51.jpg",
+		"img": "assets/medics_img/females/f51.jpg",
 		"phone": "+375-17-821-80-21"
 	},
 	{
@@ -3026,7 +3026,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m52.jpg",
+		"img": "assets/medics_img/males/m52.jpg",
 		"phone": "+375-17-403-54-42"
 	},
 	{
@@ -3036,7 +3036,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2000 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f52.jpg",
+		"img": "assets/medics_img/females/f52.jpg",
 		"phone": "+375-17-792-10-14"
 	},
 	{
@@ -3046,7 +3046,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m53.jpg",
+		"img": "assets/medics_img/males/m53.jpg",
 		"phone": "+375-17-254-81-73"
 	},
 	{
@@ -3056,7 +3056,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Клиническая ординатура в 2003 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f53.jpg",
+		"img": "assets/medics_img/females/f53.jpg",
 		"phone": "+375-17-095-49-63"
 	},
 	{
@@ -3066,7 +3066,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1997 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m54.jpg",
+		"img": "assets/medics_img/males/m54.jpg",
 		"phone": "+375-17-233-33-41"
 	},
 	{
@@ -3076,7 +3076,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1992 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f54.jpg",
+		"img": "assets/medics_img/females/f54.jpg",
 		"phone": "+375-17-669-34-99"
 	},
 	{
@@ -3086,7 +3086,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Витебский государственный медицинский университет в 1989 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m55.jpg",
+		"img": "assets/medics_img/males/m55.jpg",
 		"phone": "+375-17-642-78-35"
 	},
 	{
@@ -3096,7 +3096,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1995 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f55.jpg",
+		"img": "assets/medics_img/females/f55.jpg",
 		"phone": "+375-17-331-50-14"
 	},
 	{
@@ -3106,7 +3106,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Клиническая ординатура в 1987 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m56.jpg",
+		"img": "assets/medics_img/males/m56.jpg",
 		"phone": "+375-17-590-70-74"
 	},
 	{
@@ -3116,7 +3116,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2003 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f56.jpg",
+		"img": "assets/medics_img/females/f56.jpg",
 		"phone": "+375-17-399-89-33"
 	},
 	{
@@ -3126,7 +3126,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Клиническая ординатура в 1991 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m57.jpg",
+		"img": "assets/medics_img/males/m57.jpg",
 		"phone": "+375-17-423-76-49"
 	},
 	{
@@ -3136,7 +3136,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Клиническая ординатура в 2009 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f57.jpg",
+		"img": "assets/medics_img/females/f57.jpg",
 		"phone": "+375-17-613-55-83"
 	},
 	{
@@ -3146,7 +3146,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Клиническая ординатура в 2001 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m58.jpg",
+		"img": "assets/medics_img/males/m58.jpg",
 		"phone": "+375-17-389-95-78"
 	},
 	{
@@ -3156,7 +3156,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1984 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f58.jpg",
+		"img": "assets/medics_img/females/f58.jpg",
 		"phone": "+375-17-705-93-33"
 	},
 	{
@@ -3166,7 +3166,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Витебский государственный медицинский университет в 2005 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m59.jpg",
+		"img": "assets/medics_img/males/m59.jpg",
 		"phone": "+375-17-567-31-34"
 	},
 	{
@@ -3176,7 +3176,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2002 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f59.jpg",
+		"img": "assets/medics_img/females/f59.jpg",
 		"phone": "+375-17-357-32-13"
 	},
 	{
@@ -3186,7 +3186,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2007 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m60.jpg",
+		"img": "assets/medics_img/males/m60.jpg",
 		"phone": "+375-17-238-51-77"
 	},
 	{
@@ -3196,7 +3196,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Клиническая ординатура в 1985 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f60.jpg",
+		"img": "assets/medics_img/females/f60.jpg",
 		"phone": "+375-17-049-97-03"
 	},
 	{
@@ -3206,7 +3206,7 @@ export const medicsList = [
 		"experience": "Стаж 7 лет",
 		"graduation": "Клиническая ординатура в 2013 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m61.jpg",
+		"img": "assets/medics_img/males/m61.jpg",
 		"phone": "+375-17-768-79-05"
 	},
 	{
@@ -3216,7 +3216,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Витебский государственный медицинский университет в 2000 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f61.jpg",
+		"img": "assets/medics_img/females/f61.jpg",
 		"phone": "+375-17-843-12-74"
 	},
 	{
@@ -3226,7 +3226,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2009 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m62.jpg",
+		"img": "assets/medics_img/males/m62.jpg",
 		"phone": "+375-17-319-99-79"
 	},
 	{
@@ -3236,7 +3236,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Витебский государственный медицинский университет в 2006 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f62.jpg",
+		"img": "assets/medics_img/females/f62.jpg",
 		"phone": "+375-17-616-29-13"
 	},
 	{
@@ -3246,7 +3246,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2012 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m63.jpg",
+		"img": "assets/medics_img/males/m63.jpg",
 		"phone": "+375-17-971-40-19"
 	},
 	{
@@ -3256,7 +3256,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1996 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f63.jpg",
+		"img": "assets/medics_img/females/f63.jpg",
 		"phone": "+375-17-597-75-78"
 	},
 	{
@@ -3266,7 +3266,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Клиническая ординатура в 1986 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m64.jpg",
+		"img": "assets/medics_img/males/m64.jpg",
 		"phone": "+375-17-878-12-34"
 	},
 	{
@@ -3276,7 +3276,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2014 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f64.jpg",
+		"img": "assets/medics_img/females/f64.jpg",
 		"phone": "+375-17-572-83-81"
 	},
 	{
@@ -3286,7 +3286,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1996 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m65.jpg",
+		"img": "assets/medics_img/males/m65.jpg",
 		"phone": "+375-17-562-45-79"
 	},
 	{
@@ -3296,7 +3296,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1984 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f65.jpg",
+		"img": "assets/medics_img/females/f65.jpg",
 		"phone": "+375-17-121-00-42"
 	},
 	{
@@ -3306,7 +3306,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1993 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m66.jpg",
+		"img": "assets/medics_img/males/m66.jpg",
 		"phone": "+375-17-381-48-96"
 	},
 	{
@@ -3316,7 +3316,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f66.jpg",
+		"img": "assets/medics_img/females/f66.jpg",
 		"phone": "+375-17-902-48-64"
 	},
 	{
@@ -3326,7 +3326,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Клиническая ординатура в 2010 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m67.jpg",
+		"img": "assets/medics_img/males/m67.jpg",
 		"phone": "+375-17-258-79-16"
 	},
 	{
@@ -3336,7 +3336,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2004 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f67.jpg",
+		"img": "assets/medics_img/females/f67.jpg",
 		"phone": "+375-17-471-87-55"
 	},
 	{
@@ -3346,7 +3346,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1985 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m68.jpg",
+		"img": "assets/medics_img/males/m68.jpg",
 		"phone": "+375-17-705-10-06"
 	},
 	{
@@ -3356,7 +3356,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Клиническая ординатура в 1990 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f68.jpg",
+		"img": "assets/medics_img/females/f68.jpg",
 		"phone": "+375-17-902-64-17"
 	},
 	{
@@ -3366,7 +3366,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1988 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m69.jpg",
+		"img": "assets/medics_img/males/m69.jpg",
 		"phone": "+375-17-239-75-67"
 	},
 	{
@@ -3376,7 +3376,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1982 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f69.jpg",
+		"img": "assets/medics_img/females/f69.jpg",
 		"phone": "+375-17-334-12-06"
 	},
 	{
@@ -3386,7 +3386,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Клиническая ординатура в 1985 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m70.jpg",
+		"img": "assets/medics_img/males/m70.jpg",
 		"phone": "+375-17-303-77-86"
 	},
 	{
@@ -3396,7 +3396,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f70.jpg",
+		"img": "assets/medics_img/females/f70.jpg",
 		"phone": "+375-17-494-65-41"
 	},
 	{
@@ -3406,7 +3406,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2012 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m71.jpg",
+		"img": "assets/medics_img/males/m71.jpg",
 		"phone": "+375-17-820-26-28"
 	},
 	{
@@ -3416,7 +3416,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f71.jpg",
+		"img": "assets/medics_img/females/f71.jpg",
 		"phone": "+375-17-091-60-05"
 	},
 	{
@@ -3426,7 +3426,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Витебский государственный медицинский университет в 1992 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m72.jpg",
+		"img": "assets/medics_img/males/m72.jpg",
 		"phone": "+375-17-085-77-42"
 	},
 	{
@@ -3436,7 +3436,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f72.jpg",
+		"img": "assets/medics_img/females/f72.jpg",
 		"phone": "+375-17-976-71-53"
 	},
 	{
@@ -3446,7 +3446,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m73.jpg",
+		"img": "assets/medics_img/males/m73.jpg",
 		"phone": "+375-17-153-68-37"
 	},
 	{
@@ -3456,7 +3456,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Витебский государственный медицинский университет в 2002 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f73.jpg",
+		"img": "assets/medics_img/females/f73.jpg",
 		"phone": "+375-17-851-50-47"
 	},
 	{
@@ -3466,7 +3466,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Клиническая ординатура в 1997 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/males/m74.jpg",
+		"img": "assets/medics_img/males/m74.jpg",
 		"phone": "+375-17-583-81-83"
 	},
 	{
@@ -3476,7 +3476,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Клиническая ординатура в 1984 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/females/f74.jpg",
+		"img": "assets/medics_img/females/f74.jpg",
 		"phone": "+375-17-980-82-33"
 	},
 	{
@@ -3486,7 +3486,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2014 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/males/m75.jpg",
+		"img": "assets/medics_img/males/m75.jpg",
 		"phone": "+375-17-960-56-22"
 	},
 	{
@@ -3496,7 +3496,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Витебский государственный медицинский университет в 2014 году",
 		"medcenter": "ТЭС-терапия",
-		"img": "../../assets/medics_img/females/f75.jpg",
+		"img": "assets/medics_img/females/f75.jpg",
 		"phone": "+375-17-348-16-08"
 	},
 	{
@@ -3506,7 +3506,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1989 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m76.jpg",
+		"img": "assets/medics_img/males/m76.jpg",
 		"phone": "+375-17-014-54-73"
 	},
 	{
@@ -3516,7 +3516,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f76.jpg",
+		"img": "assets/medics_img/females/f76.jpg",
 		"phone": "+375-17-021-73-00"
 	},
 	{
@@ -3526,7 +3526,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2012 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m77.jpg",
+		"img": "assets/medics_img/males/m77.jpg",
 		"phone": "+375-17-270-70-79"
 	},
 	{
@@ -3536,7 +3536,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2004 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f77.jpg",
+		"img": "assets/medics_img/females/f77.jpg",
 		"phone": "+375-17-168-75-26"
 	},
 	{
@@ -3546,7 +3546,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m78.jpg",
+		"img": "assets/medics_img/males/m78.jpg",
 		"phone": "+375-17-217-48-62"
 	},
 	{
@@ -3556,7 +3556,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Клиническая ординатура в 2008 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f78.jpg",
+		"img": "assets/medics_img/females/f78.jpg",
 		"phone": "+375-17-016-88-96"
 	},
 	{
@@ -3566,7 +3566,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m79.jpg",
+		"img": "assets/medics_img/males/m79.jpg",
 		"phone": "+375-17-317-55-89"
 	},
 	{
@@ -3576,7 +3576,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f79.jpg",
+		"img": "assets/medics_img/females/f79.jpg",
 		"phone": "+375-17-699-24-26"
 	},
 	{
@@ -3586,7 +3586,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Клиническая ординатура в 2007 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m80.jpg",
+		"img": "assets/medics_img/males/m80.jpg",
 		"phone": "+375-17-224-59-63"
 	},
 	{
@@ -3596,7 +3596,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f80.jpg",
+		"img": "assets/medics_img/females/f80.jpg",
 		"phone": "+375-17-716-09-88"
 	},
 	{
@@ -3606,7 +3606,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Клиническая ординатура в 1993 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m81.jpg",
+		"img": "assets/medics_img/males/m81.jpg",
 		"phone": "+375-17-494-22-83"
 	},
 	{
@@ -3616,7 +3616,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f81.jpg",
+		"img": "assets/medics_img/females/f81.jpg",
 		"phone": "+375-17-978-56-48"
 	},
 	{
@@ -3626,7 +3626,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1988 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m82.jpg",
+		"img": "assets/medics_img/males/m82.jpg",
 		"phone": "+375-17-954-86-20"
 	},
 	{
@@ -3636,7 +3636,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f82.jpg",
+		"img": "assets/medics_img/females/f82.jpg",
 		"phone": "+375-17-723-66-33"
 	},
 	{
@@ -3646,7 +3646,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2000 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m83.jpg",
+		"img": "assets/medics_img/males/m83.jpg",
 		"phone": "+375-17-762-64-72"
 	},
 	{
@@ -3656,7 +3656,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1992 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f83.jpg",
+		"img": "assets/medics_img/females/f83.jpg",
 		"phone": "+375-17-549-31-46"
 	},
 	{
@@ -3666,7 +3666,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Витебский государственный медицинский университет в 2009 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m84.jpg",
+		"img": "assets/medics_img/males/m84.jpg",
 		"phone": "+375-17-443-98-51"
 	},
 	{
@@ -3676,7 +3676,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2007 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f84.jpg",
+		"img": "assets/medics_img/females/f84.jpg",
 		"phone": "+375-17-569-49-87"
 	},
 	{
@@ -3686,7 +3686,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2011 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m85.jpg",
+		"img": "assets/medics_img/males/m85.jpg",
 		"phone": "+375-17-620-88-14"
 	},
 	{
@@ -3696,7 +3696,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f85.jpg",
+		"img": "assets/medics_img/females/f85.jpg",
 		"phone": "+375-17-742-10-47"
 	},
 	{
@@ -3706,7 +3706,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2004 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m86.jpg",
+		"img": "assets/medics_img/males/m86.jpg",
 		"phone": "+375-17-461-99-54"
 	},
 	{
@@ -3716,7 +3716,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1991 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f86.jpg",
+		"img": "assets/medics_img/females/f86.jpg",
 		"phone": "+375-17-156-67-29"
 	},
 	{
@@ -3726,7 +3726,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2003 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m87.jpg",
+		"img": "assets/medics_img/males/m87.jpg",
 		"phone": "+375-17-736-10-91"
 	},
 	{
@@ -3736,7 +3736,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Клиническая ординатура в 2004 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f87.jpg",
+		"img": "assets/medics_img/females/f87.jpg",
 		"phone": "+375-17-270-60-84"
 	},
 	{
@@ -3746,7 +3746,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2005 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m88.jpg",
+		"img": "assets/medics_img/males/m88.jpg",
 		"phone": "+375-17-051-81-62"
 	},
 	{
@@ -3756,7 +3756,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1990 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f88.jpg",
+		"img": "assets/medics_img/females/f88.jpg",
 		"phone": "+375-17-655-14-37"
 	},
 	{
@@ -3766,7 +3766,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Витебский государственный медицинский университет в 1995 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m89.jpg",
+		"img": "assets/medics_img/males/m89.jpg",
 		"phone": "+375-17-070-30-35"
 	},
 	{
@@ -3776,7 +3776,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1986 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f89.jpg",
+		"img": "assets/medics_img/females/f89.jpg",
 		"phone": "+375-17-855-59-81"
 	},
 	{
@@ -3786,7 +3786,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2003 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m90.jpg",
+		"img": "assets/medics_img/males/m90.jpg",
 		"phone": "+375-17-182-29-30"
 	},
 	{
@@ -3796,7 +3796,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1999 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f90.jpg",
+		"img": "assets/medics_img/females/f90.jpg",
 		"phone": "+375-17-809-68-03"
 	},
 	{
@@ -3806,7 +3806,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m91.jpg",
+		"img": "assets/medics_img/males/m91.jpg",
 		"phone": "+375-17-698-36-01"
 	},
 	{
@@ -3816,7 +3816,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2008 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f91.jpg",
+		"img": "assets/medics_img/females/f91.jpg",
 		"phone": "+375-17-453-31-28"
 	},
 	{
@@ -3826,7 +3826,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1988 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m92.jpg",
+		"img": "assets/medics_img/males/m92.jpg",
 		"phone": "+375-17-929-91-34"
 	},
 	{
@@ -3836,7 +3836,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2007 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f92.jpg",
+		"img": "assets/medics_img/females/f92.jpg",
 		"phone": "+375-17-031-04-59"
 	},
 	{
@@ -3846,7 +3846,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2006 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m93.jpg",
+		"img": "assets/medics_img/males/m93.jpg",
 		"phone": "+375-17-151-74-91"
 	},
 	{
@@ -3856,7 +3856,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1986 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f93.jpg",
+		"img": "assets/medics_img/females/f93.jpg",
 		"phone": "+375-17-118-32-25"
 	},
 	{
@@ -3866,7 +3866,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2008 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m94.jpg",
+		"img": "assets/medics_img/males/m94.jpg",
 		"phone": "+375-17-593-39-93"
 	},
 	{
@@ -3876,7 +3876,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Витебский государственный медицинский университет в 1981 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f94.jpg",
+		"img": "assets/medics_img/females/f94.jpg",
 		"phone": "+375-17-665-23-39"
 	},
 	{
@@ -3886,7 +3886,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2011 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/males/m95.jpg",
+		"img": "assets/medics_img/males/m95.jpg",
 		"phone": "+375-17-415-03-20"
 	},
 	{
@@ -3896,7 +3896,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2008 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/females/f95.jpg",
+		"img": "assets/medics_img/females/f95.jpg",
 		"phone": "+375-17-537-67-55"
 	},
 	{
@@ -3906,7 +3906,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Витебский государственный медицинский университет в 1984 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/males/m96.jpg",
+		"img": "assets/medics_img/males/m96.jpg",
 		"phone": "+375-17-386-42-64"
 	},
 	{
@@ -3916,7 +3916,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2007 году",
 		"medcenter": "Белевромед",
-		"img": "../../assets/medics_img/females/f96.jpg",
+		"img": "assets/medics_img/females/f96.jpg",
 		"phone": "+375-17-890-86-85"
 	},
 	{
@@ -3926,7 +3926,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1986 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m97.jpg",
+		"img": "assets/medics_img/males/m97.jpg",
 		"phone": "+375-17-844-64-58"
 	},
 	{
@@ -3936,7 +3936,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Витебский государственный медицинский университет в 2008 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f97.jpg",
+		"img": "assets/medics_img/females/f97.jpg",
 		"phone": "+375-17-898-94-37"
 	},
 	{
@@ -3946,7 +3946,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2003 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m98.jpg",
+		"img": "assets/medics_img/males/m98.jpg",
 		"phone": "+375-17-860-76-74"
 	},
 	{
@@ -3956,7 +3956,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Клиническая ординатура в 1997 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f98.jpg",
+		"img": "assets/medics_img/females/f98.jpg",
 		"phone": "+375-17-654-53-77"
 	},
 	{
@@ -3966,7 +3966,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Витебский государственный медицинский университет в 2002 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m99.jpg",
+		"img": "assets/medics_img/males/m99.jpg",
 		"phone": "+375-17-619-72-63"
 	},
 	{
@@ -3976,7 +3976,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1996 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f99.jpg",
+		"img": "assets/medics_img/females/f99.jpg",
 		"phone": "+375-17-014-24-12"
 	},
 	{
@@ -3986,7 +3986,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2003 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m100.jpg",
+		"img": "assets/medics_img/males/m100.jpg",
 		"phone": "+375-17-470-83-64"
 	},
 	{
@@ -3996,7 +3996,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Витебский государственный медицинский университет в 1990 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f100.jpg",
+		"img": "assets/medics_img/females/f100.jpg",
 		"phone": "+375-17-803-96-17"
 	},
 	{
@@ -4006,7 +4006,7 @@ export const medicsList = [
 		"experience": "Стаж 31 лет",
 		"graduation": "Клиническая ординатура в 1989 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m1.jpg",
+		"img": "assets/medics_img/males/m1.jpg",
 		"phone": "+375-17-859-11-80"
 	},
 	{
@@ -4016,7 +4016,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f1.jpg",
+		"img": "assets/medics_img/females/f1.jpg",
 		"phone": "+375-17-718-06-69"
 	},
 	{
@@ -4026,7 +4026,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2012 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m2.jpg",
+		"img": "assets/medics_img/males/m2.jpg",
 		"phone": "+375-17-388-50-45"
 	},
 	{
@@ -4036,7 +4036,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2011 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f2.jpg",
+		"img": "assets/medics_img/females/f2.jpg",
 		"phone": "+375-17-990-26-57"
 	},
 	{
@@ -4046,7 +4046,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1995 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m3.jpg",
+		"img": "assets/medics_img/males/m3.jpg",
 		"phone": "+375-17-466-08-64"
 	},
 	{
@@ -4056,7 +4056,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f3.jpg",
+		"img": "assets/medics_img/females/f3.jpg",
 		"phone": "+375-17-859-37-28"
 	},
 	{
@@ -4066,7 +4066,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1984 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m4.jpg",
+		"img": "assets/medics_img/males/m4.jpg",
 		"phone": "+375-17-624-95-89"
 	},
 	{
@@ -4076,7 +4076,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1982 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f4.jpg",
+		"img": "assets/medics_img/females/f4.jpg",
 		"phone": "+375-17-832-79-62"
 	},
 	{
@@ -4086,7 +4086,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2002 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m5.jpg",
+		"img": "assets/medics_img/males/m5.jpg",
 		"phone": "+375-17-580-86-56"
 	},
 	{
@@ -4096,7 +4096,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1996 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f5.jpg",
+		"img": "assets/medics_img/females/f5.jpg",
 		"phone": "+375-17-990-95-17"
 	},
 	{
@@ -4106,7 +4106,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Клиническая ординатура в 2002 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m6.jpg",
+		"img": "assets/medics_img/males/m6.jpg",
 		"phone": "+375-17-247-97-29"
 	},
 	{
@@ -4116,7 +4116,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1987 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f6.jpg",
+		"img": "assets/medics_img/females/f6.jpg",
 		"phone": "+375-17-817-26-27"
 	},
 	{
@@ -4126,7 +4126,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m7.jpg",
+		"img": "assets/medics_img/males/m7.jpg",
 		"phone": "+375-17-810-81-55"
 	},
 	{
@@ -4136,7 +4136,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2000 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f7.jpg",
+		"img": "assets/medics_img/females/f7.jpg",
 		"phone": "+375-17-821-17-60"
 	},
 	{
@@ -4146,7 +4146,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1991 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m8.jpg",
+		"img": "assets/medics_img/males/m8.jpg",
 		"phone": "+375-17-948-32-13"
 	},
 	{
@@ -4156,7 +4156,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Клиническая ординатура в 1981 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f8.jpg",
+		"img": "assets/medics_img/females/f8.jpg",
 		"phone": "+375-17-272-52-80"
 	},
 	{
@@ -4166,7 +4166,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1997 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m9.jpg",
+		"img": "assets/medics_img/males/m9.jpg",
 		"phone": "+375-17-627-97-31"
 	},
 	{
@@ -4176,7 +4176,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Клиническая ординатура в 2011 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f9.jpg",
+		"img": "assets/medics_img/females/f9.jpg",
 		"phone": "+375-17-818-70-09"
 	},
 	{
@@ -4186,7 +4186,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1997 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m10.jpg",
+		"img": "assets/medics_img/males/m10.jpg",
 		"phone": "+375-17-091-59-59"
 	},
 	{
@@ -4196,7 +4196,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1983 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f10.jpg",
+		"img": "assets/medics_img/females/f10.jpg",
 		"phone": "+375-17-992-26-15"
 	},
 	{
@@ -4206,7 +4206,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Клиническая ординатура в 2005 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m11.jpg",
+		"img": "assets/medics_img/males/m11.jpg",
 		"phone": "+375-17-904-37-46"
 	},
 	{
@@ -4216,7 +4216,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Клиническая ординатура в 2007 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f11.jpg",
+		"img": "assets/medics_img/females/f11.jpg",
 		"phone": "+375-17-723-57-08"
 	},
 	{
@@ -4226,7 +4226,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Клиническая ординатура в 2008 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m12.jpg",
+		"img": "assets/medics_img/males/m12.jpg",
 		"phone": "+375-17-560-17-80"
 	},
 	{
@@ -4236,7 +4236,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1985 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f12.jpg",
+		"img": "assets/medics_img/females/f12.jpg",
 		"phone": "+375-17-588-30-12"
 	},
 	{
@@ -4246,7 +4246,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Витебский государственный медицинский университет в 2004 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m13.jpg",
+		"img": "assets/medics_img/males/m13.jpg",
 		"phone": "+375-17-210-12-01"
 	},
 	{
@@ -4256,7 +4256,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1999 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f13.jpg",
+		"img": "assets/medics_img/females/f13.jpg",
 		"phone": "+375-17-481-25-43"
 	},
 	{
@@ -4266,7 +4266,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1985 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m14.jpg",
+		"img": "assets/medics_img/males/m14.jpg",
 		"phone": "+375-17-201-02-99"
 	},
 	{
@@ -4276,7 +4276,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Витебский государственный медицинский университет в 2001 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f14.jpg",
+		"img": "assets/medics_img/females/f14.jpg",
 		"phone": "+375-17-171-37-53"
 	},
 	{
@@ -4286,7 +4286,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Витебский государственный медицинский университет в 1998 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m15.jpg",
+		"img": "assets/medics_img/males/m15.jpg",
 		"phone": "+375-17-327-80-33"
 	},
 	{
@@ -4296,7 +4296,7 @@ export const medicsList = [
 		"experience": "Стаж 14 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2006 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f15.jpg",
+		"img": "assets/medics_img/females/f15.jpg",
 		"phone": "+375-17-079-10-52"
 	},
 	{
@@ -4306,7 +4306,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Клиническая ординатура в 2002 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m16.jpg",
+		"img": "assets/medics_img/males/m16.jpg",
 		"phone": "+375-17-290-41-99"
 	},
 	{
@@ -4316,7 +4316,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1983 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f16.jpg",
+		"img": "assets/medics_img/females/f16.jpg",
 		"phone": "+375-17-887-18-68"
 	},
 	{
@@ -4326,7 +4326,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2014 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m17.jpg",
+		"img": "assets/medics_img/males/m17.jpg",
 		"phone": "+375-17-982-07-87"
 	},
 	{
@@ -4336,7 +4336,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1992 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f17.jpg",
+		"img": "assets/medics_img/females/f17.jpg",
 		"phone": "+375-17-610-49-07"
 	},
 	{
@@ -4346,7 +4346,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2002 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m18.jpg",
+		"img": "assets/medics_img/males/m18.jpg",
 		"phone": "+375-17-615-08-78"
 	},
 	{
@@ -4356,7 +4356,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f18.jpg",
+		"img": "assets/medics_img/females/f18.jpg",
 		"phone": "+375-17-143-17-32"
 	},
 	{
@@ -4366,7 +4366,7 @@ export const medicsList = [
 		"experience": "Стаж 25 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1995 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m19.jpg",
+		"img": "assets/medics_img/males/m19.jpg",
 		"phone": "+375-17-136-91-95"
 	},
 	{
@@ -4376,7 +4376,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1998 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f19.jpg",
+		"img": "assets/medics_img/females/f19.jpg",
 		"phone": "+375-17-750-16-25"
 	},
 	{
@@ -4386,7 +4386,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m20.jpg",
+		"img": "assets/medics_img/males/m20.jpg",
 		"phone": "+375-17-437-07-29"
 	},
 	{
@@ -4396,7 +4396,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Витебский государственный медицинский университет в 1991 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f20.jpg",
+		"img": "assets/medics_img/females/f20.jpg",
 		"phone": "+375-17-802-83-22"
 	},
 	{
@@ -4406,7 +4406,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1997 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m21.jpg",
+		"img": "assets/medics_img/males/m21.jpg",
 		"phone": "+375-17-945-62-11"
 	},
 	{
@@ -4416,7 +4416,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1990 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f21.jpg",
+		"img": "assets/medics_img/females/f21.jpg",
 		"phone": "+375-17-003-76-94"
 	},
 	{
@@ -4426,7 +4426,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Витебский государственный медицинский университет в 1988 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m22.jpg",
+		"img": "assets/medics_img/males/m22.jpg",
 		"phone": "+375-17-204-96-87"
 	},
 	{
@@ -4436,7 +4436,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f22.jpg",
+		"img": "assets/medics_img/females/f22.jpg",
 		"phone": "+375-17-718-21-57"
 	},
 	{
@@ -4446,7 +4446,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1984 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m23.jpg",
+		"img": "assets/medics_img/males/m23.jpg",
 		"phone": "+375-17-479-47-57"
 	},
 	{
@@ -4456,7 +4456,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1994 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f23.jpg",
+		"img": "assets/medics_img/females/f23.jpg",
 		"phone": "+375-17-595-40-21"
 	},
 	{
@@ -4466,7 +4466,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2008 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m24.jpg",
+		"img": "assets/medics_img/males/m24.jpg",
 		"phone": "+375-17-198-94-70"
 	},
 	{
@@ -4476,7 +4476,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Клиническая ординатура в 2008 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f24.jpg",
+		"img": "assets/medics_img/females/f24.jpg",
 		"phone": "+375-17-633-66-65"
 	},
 	{
@@ -4486,7 +4486,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2012 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m25.jpg",
+		"img": "assets/medics_img/males/m25.jpg",
 		"phone": "+375-17-544-59-09"
 	},
 	{
@@ -4496,7 +4496,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f25.jpg",
+		"img": "assets/medics_img/females/f25.jpg",
 		"phone": "+375-17-178-15-90"
 	},
 	{
@@ -4506,7 +4506,7 @@ export const medicsList = [
 		"experience": "Стаж 26 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1994 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m26.jpg",
+		"img": "assets/medics_img/males/m26.jpg",
 		"phone": "+375-17-842-16-30"
 	},
 	{
@@ -4516,7 +4516,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Клиническая ординатура в 1999 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f26.jpg",
+		"img": "assets/medics_img/females/f26.jpg",
 		"phone": "+375-17-566-39-91"
 	},
 	{
@@ -4526,7 +4526,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1991 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/males/m27.jpg",
+		"img": "assets/medics_img/males/m27.jpg",
 		"phone": "+375-17-019-80-62"
 	},
 	{
@@ -4536,7 +4536,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Клиническая ординатура в 2000 году",
 		"medcenter": "Эмбрио",
-		"img": "../../assets/medics_img/females/f27.jpg",
+		"img": "assets/medics_img/females/f27.jpg",
 		"phone": "+375-17-195-81-49"
 	},
 	{
@@ -4546,7 +4546,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1992 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m28.jpg",
+		"img": "assets/medics_img/males/m28.jpg",
 		"phone": "+375-17-987-47-16"
 	},
 	{
@@ -4556,7 +4556,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2010 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f28.jpg",
+		"img": "assets/medics_img/females/f28.jpg",
 		"phone": "+375-17-556-73-23"
 	},
 	{
@@ -4566,7 +4566,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m29.jpg",
+		"img": "assets/medics_img/males/m29.jpg",
 		"phone": "+375-17-659-25-83"
 	},
 	{
@@ -4576,7 +4576,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Витебский государственный медицинский университет в 1998 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f29.jpg",
+		"img": "assets/medics_img/females/f29.jpg",
 		"phone": "+375-17-962-26-25"
 	},
 	{
@@ -4586,7 +4586,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Клиническая ординатура в 2002 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m30.jpg",
+		"img": "assets/medics_img/males/m30.jpg",
 		"phone": "+375-17-287-18-77"
 	},
 	{
@@ -4596,7 +4596,7 @@ export const medicsList = [
 		"experience": "Стаж 34 лет",
 		"graduation": "Клиническая ординатура в 1986 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f30.jpg",
+		"img": "assets/medics_img/females/f30.jpg",
 		"phone": "+375-17-044-10-66"
 	},
 	{
@@ -4606,7 +4606,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Клиническая ординатура в 1983 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/males/m31.jpg",
+		"img": "assets/medics_img/males/m31.jpg",
 		"phone": "+375-17-532-42-68"
 	},
 	{
@@ -4616,7 +4616,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1999 году",
 		"medcenter": "МККДЦ",
-		"img": "../../assets/medics_img/females/f31.jpg",
+		"img": "assets/medics_img/females/f31.jpg",
 		"phone": "+375-17-344-24-39"
 	},
 	{
@@ -4626,7 +4626,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Витебский государственный медицинский университет в 1993 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/males/m32.jpg",
+		"img": "assets/medics_img/males/m32.jpg",
 		"phone": "+375-17-689-39-40"
 	},
 	{
@@ -4636,7 +4636,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/females/f32.jpg",
+		"img": "assets/medics_img/females/f32.jpg",
 		"phone": "+375-17-624-65-42"
 	},
 	{
@@ -4646,7 +4646,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Витебский государственный медицинский университет в 1985 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/males/m33.jpg",
+		"img": "assets/medics_img/males/m33.jpg",
 		"phone": "+375-17-900-66-34"
 	},
 	{
@@ -4656,7 +4656,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2012 году",
 		"medcenter": "Биомедика",
-		"img": "../../assets/medics_img/females/f33.jpg",
+		"img": "assets/medics_img/females/f33.jpg",
 		"phone": "+375-17-122-09-61"
 	},
 	{
@@ -4666,7 +4666,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Клиническая ординатура в 2009 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m34.jpg",
+		"img": "assets/medics_img/males/m34.jpg",
 		"phone": "+375-17-398-43-49"
 	},
 	{
@@ -4676,7 +4676,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1999 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f34.jpg",
+		"img": "assets/medics_img/females/f34.jpg",
 		"phone": "+375-17-780-90-11"
 	},
 	{
@@ -4686,7 +4686,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1983 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m35.jpg",
+		"img": "assets/medics_img/males/m35.jpg",
 		"phone": "+375-17-919-28-18"
 	},
 	{
@@ -4696,7 +4696,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Витебский государственный медицинский университет в 1996 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f35.jpg",
+		"img": "assets/medics_img/females/f35.jpg",
 		"phone": "+375-17-867-79-36"
 	},
 	{
@@ -4706,7 +4706,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Витебский государственный медицинский университет в 2009 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m36.jpg",
+		"img": "assets/medics_img/males/m36.jpg",
 		"phone": "+375-17-160-04-91"
 	},
 	{
@@ -4716,7 +4716,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1981 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f36.jpg",
+		"img": "assets/medics_img/females/f36.jpg",
 		"phone": "+375-17-670-59-58"
 	},
 	{
@@ -4726,7 +4726,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2014 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m37.jpg",
+		"img": "assets/medics_img/males/m37.jpg",
 		"phone": "+375-17-596-84-05"
 	},
 	{
@@ -4736,7 +4736,7 @@ export const medicsList = [
 		"experience": "Стаж 27 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1993 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f37.jpg",
+		"img": "assets/medics_img/females/f37.jpg",
 		"phone": "+375-17-839-63-40"
 	},
 	{
@@ -4746,7 +4746,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2005 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m38.jpg",
+		"img": "assets/medics_img/males/m38.jpg",
 		"phone": "+375-17-710-90-24"
 	},
 	{
@@ -4756,7 +4756,7 @@ export const medicsList = [
 		"experience": "Стаж 28 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1992 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f38.jpg",
+		"img": "assets/medics_img/females/f38.jpg",
 		"phone": "+375-17-458-30-62"
 	},
 	{
@@ -4766,7 +4766,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2015 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m39.jpg",
+		"img": "assets/medics_img/males/m39.jpg",
 		"phone": "+375-17-675-32-66"
 	},
 	{
@@ -4776,7 +4776,7 @@ export const medicsList = [
 		"experience": "Стаж 22 лет",
 		"graduation": "Клиническая ординатура в 1998 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f39.jpg",
+		"img": "assets/medics_img/females/f39.jpg",
 		"phone": "+375-17-205-50-11"
 	},
 	{
@@ -4786,7 +4786,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1987 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m40.jpg",
+		"img": "assets/medics_img/males/m40.jpg",
 		"phone": "+375-17-902-76-45"
 	},
 	{
@@ -4796,7 +4796,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2004 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f40.jpg",
+		"img": "assets/medics_img/females/f40.jpg",
 		"phone": "+375-17-939-11-49"
 	},
 	{
@@ -4806,7 +4806,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1996 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m41.jpg",
+		"img": "assets/medics_img/males/m41.jpg",
 		"phone": "+375-17-264-80-33"
 	},
 	{
@@ -4816,7 +4816,7 @@ export const medicsList = [
 		"experience": "Стаж 36 лет",
 		"graduation": "Клиническая ординатура в 1984 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f41.jpg",
+		"img": "assets/medics_img/females/f41.jpg",
 		"phone": "+375-17-512-36-51"
 	},
 	{
@@ -4826,7 +4826,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2002 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/males/m42.jpg",
+		"img": "assets/medics_img/males/m42.jpg",
 		"phone": "+375-17-485-06-68"
 	},
 	{
@@ -4836,7 +4836,7 @@ export const medicsList = [
 		"experience": "Стаж 35 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1985 году",
 		"medcenter": "Доктор Профи",
-		"img": "../../assets/medics_img/females/f42.jpg",
+		"img": "assets/medics_img/females/f42.jpg",
 		"phone": "+375-17-469-59-15"
 	},
 	{
@@ -4846,7 +4846,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Клиническая ординатура в 2015 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m43.jpg",
+		"img": "assets/medics_img/males/m43.jpg",
 		"phone": "+375-17-110-45-66"
 	},
 	{
@@ -4856,7 +4856,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Клиническая ординатура в 2008 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f43.jpg",
+		"img": "assets/medics_img/females/f43.jpg",
 		"phone": "+375-17-242-52-04"
 	},
 	{
@@ -4866,7 +4866,7 @@ export const medicsList = [
 		"experience": "Стаж 33 лет",
 		"graduation": "Гродненский государственный медицинский университет в 1987 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m44.jpg",
+		"img": "assets/medics_img/males/m44.jpg",
 		"phone": "+375-17-296-83-01"
 	},
 	{
@@ -4876,7 +4876,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Витебский государственный медицинский университет в 2011 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f44.jpg",
+		"img": "assets/medics_img/females/f44.jpg",
 		"phone": "+375-17-809-90-83"
 	},
 	{
@@ -4886,7 +4886,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Клиническая ординатура в 2008 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m45.jpg",
+		"img": "assets/medics_img/males/m45.jpg",
 		"phone": "+375-17-092-53-07"
 	},
 	{
@@ -4896,7 +4896,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f45.jpg",
+		"img": "assets/medics_img/females/f45.jpg",
 		"phone": "+375-17-944-46-91"
 	},
 	{
@@ -4906,7 +4906,7 @@ export const medicsList = [
 		"experience": "Стаж 6 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2014 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/males/m46.jpg",
+		"img": "assets/medics_img/males/m46.jpg",
 		"phone": "+375-17-095-57-50"
 	},
 	{
@@ -4916,7 +4916,7 @@ export const medicsList = [
 		"experience": "Стаж 18 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2002 году",
 		"medcenter": "Седьмое небо",
-		"img": "../../assets/medics_img/females/f46.jpg",
+		"img": "assets/medics_img/females/f46.jpg",
 		"phone": "+375-17-111-06-73"
 	},
 	{
@@ -4926,7 +4926,7 @@ export const medicsList = [
 		"experience": "Стаж 32 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1988 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m47.jpg",
+		"img": "assets/medics_img/males/m47.jpg",
 		"phone": "+375-17-500-18-94"
 	},
 	{
@@ -4936,7 +4936,7 @@ export const medicsList = [
 		"experience": "Стаж 37 лет",
 		"graduation": "Витебский государственный медицинский университет в 1983 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f47.jpg",
+		"img": "assets/medics_img/females/f47.jpg",
 		"phone": "+375-17-121-92-06"
 	},
 	{
@@ -4946,7 +4946,7 @@ export const medicsList = [
 		"experience": "Стаж 30 лет",
 		"graduation": "Клиническая ординатура в 1990 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m48.jpg",
+		"img": "assets/medics_img/males/m48.jpg",
 		"phone": "+375-17-463-79-72"
 	},
 	{
@@ -4956,7 +4956,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1999 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f48.jpg",
+		"img": "assets/medics_img/females/f48.jpg",
 		"phone": "+375-17-582-04-69"
 	},
 	{
@@ -4966,7 +4966,7 @@ export const medicsList = [
 		"experience": "Стаж 15 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2005 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m49.jpg",
+		"img": "assets/medics_img/males/m49.jpg",
 		"phone": "+375-17-378-57-04"
 	},
 	{
@@ -4976,7 +4976,7 @@ export const medicsList = [
 		"experience": "Стаж 8 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2012 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f49.jpg",
+		"img": "assets/medics_img/females/f49.jpg",
 		"phone": "+375-17-258-24-03"
 	},
 	{
@@ -4986,7 +4986,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2000 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m50.jpg",
+		"img": "assets/medics_img/males/m50.jpg",
 		"phone": "+375-17-444-37-99"
 	},
 	{
@@ -4996,7 +4996,7 @@ export const medicsList = [
 		"experience": "Стаж 23 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1997 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f50.jpg",
+		"img": "assets/medics_img/females/f50.jpg",
 		"phone": "+375-17-475-93-22"
 	},
 	{
@@ -5006,7 +5006,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1996 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/males/m51.jpg",
+		"img": "assets/medics_img/males/m51.jpg",
 		"phone": "+375-17-287-03-55"
 	},
 	{
@@ -5016,7 +5016,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Клиническая ординатура в 2000 году",
 		"medcenter": "Альфамед",
-		"img": "../../assets/medics_img/females/f51.jpg",
+		"img": "assets/medics_img/females/f51.jpg",
 		"phone": "+375-17-411-04-57"
 	},
 	{
@@ -5026,7 +5026,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2010 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m52.jpg",
+		"img": "assets/medics_img/males/m52.jpg",
 		"phone": "+375-17-011-87-10"
 	},
 	{
@@ -5036,7 +5036,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2000 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f52.jpg",
+		"img": "assets/medics_img/females/f52.jpg",
 		"phone": "+375-17-751-49-01"
 	},
 	{
@@ -5046,7 +5046,7 @@ export const medicsList = [
 		"experience": "Стаж 16 лет",
 		"graduation": "Витебский государственный медицинский университет в 2004 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/males/m53.jpg",
+		"img": "assets/medics_img/males/m53.jpg",
 		"phone": "+375-17-462-74-98"
 	},
 	{
@@ -5056,7 +5056,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Витебский государственный медицинский университет в 2007 году",
 		"medcenter": "РКМЦ",
-		"img": "../../assets/medics_img/females/f53.jpg",
+		"img": "assets/medics_img/females/f53.jpg",
 		"phone": "+375-17-367-68-46"
 	},
 	{
@@ -5066,7 +5066,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/males/m54.jpg",
+		"img": "assets/medics_img/males/m54.jpg",
 		"phone": "+375-17-622-77-37"
 	},
 	{
@@ -5076,7 +5076,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2007 году",
 		"medcenter": "ЛОДЭ",
-		"img": "../../assets/medics_img/females/f54.jpg",
+		"img": "assets/medics_img/females/f54.jpg",
 		"phone": "+375-17-435-49-94"
 	},
 	{
@@ -5086,7 +5086,7 @@ export const medicsList = [
 		"experience": "Стаж 10 лет",
 		"graduation": "Витебский государственный медицинский университет в 2010 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m55.jpg",
+		"img": "assets/medics_img/males/m55.jpg",
 		"phone": "+375-17-497-39-27"
 	},
 	{
@@ -5096,7 +5096,7 @@ export const medicsList = [
 		"experience": "Стаж 20 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2000 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f55.jpg",
+		"img": "assets/medics_img/females/f55.jpg",
 		"phone": "+375-17-498-25-45"
 	},
 	{
@@ -5106,7 +5106,7 @@ export const medicsList = [
 		"experience": "Стаж 24 лет",
 		"graduation": "Гомельский государственный медицинский институт в 1996 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/males/m56.jpg",
+		"img": "assets/medics_img/males/m56.jpg",
 		"phone": "+375-17-927-62-20"
 	},
 	{
@@ -5116,7 +5116,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2007 году",
 		"medcenter": "Нордин",
-		"img": "../../assets/medics_img/females/f56.jpg",
+		"img": "assets/medics_img/females/f56.jpg",
 		"phone": "+375-17-405-96-57"
 	},
 	{
@@ -5126,7 +5126,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2011 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m57.jpg",
+		"img": "assets/medics_img/males/m57.jpg",
 		"phone": "+375-17-662-57-55"
 	},
 	{
@@ -5136,7 +5136,7 @@ export const medicsList = [
 		"experience": "Стаж 13 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2007 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f57.jpg",
+		"img": "assets/medics_img/females/f57.jpg",
 		"phone": "+375-17-147-90-57"
 	},
 	{
@@ -5146,7 +5146,7 @@ export const medicsList = [
 		"experience": "Стаж 21 лет",
 		"graduation": "Клиническая ординатура в 1999 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/males/m58.jpg",
+		"img": "assets/medics_img/males/m58.jpg",
 		"phone": "+375-17-830-02-32"
 	},
 	{
@@ -5156,7 +5156,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2003 году",
 		"medcenter": "Авиценна",
-		"img": "../../assets/medics_img/females/f58.jpg",
+		"img": "assets/medics_img/females/f58.jpg",
 		"phone": "+375-17-404-46-32"
 	},
 	{
@@ -5166,7 +5166,7 @@ export const medicsList = [
 		"experience": "Стаж 29 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 1991 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m59.jpg",
+		"img": "assets/medics_img/males/m59.jpg",
 		"phone": "+375-17-045-85-24"
 	},
 	{
@@ -5176,7 +5176,7 @@ export const medicsList = [
 		"experience": "Стаж 38 лет",
 		"graduation": "Витебский государственный медицинский университет в 1982 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f59.jpg",
+		"img": "assets/medics_img/females/f59.jpg",
 		"phone": "+375-17-592-65-66"
 	},
 	{
@@ -5186,7 +5186,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Витебский государственный медицинский университет в 2015 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/males/m60.jpg",
+		"img": "assets/medics_img/males/m60.jpg",
 		"phone": "+375-17-519-90-02"
 	},
 	{
@@ -5196,7 +5196,7 @@ export const medicsList = [
 		"experience": "Стаж 17 лет",
 		"graduation": "Клиническая ординатура в 2003 году",
 		"medcenter": "Кравира",
-		"img": "../../assets/medics_img/females/f60.jpg",
+		"img": "assets/medics_img/females/f60.jpg",
 		"phone": "+375-17-946-53-32"
 	},
 	{
@@ -5206,7 +5206,7 @@ export const medicsList = [
 		"experience": "Стаж 5 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2015 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/males/m61.jpg",
+		"img": "assets/medics_img/males/m61.jpg",
 		"phone": "+375-17-330-24-03"
 	},
 	{
@@ -5216,7 +5216,7 @@ export const medicsList = [
 		"experience": "Стаж 19 лет",
 		"graduation": "Гродненский государственный медицинский университет в 2001 году",
 		"medcenter": "Новый Лекарь",
-		"img": "../../assets/medics_img/females/f61.jpg",
+		"img": "assets/medics_img/females/f61.jpg",
 		"phone": "+375-17-401-69-73"
 	},
 	{
@@ -5226,7 +5226,7 @@ export const medicsList = [
 		"experience": "Стаж 12 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2008 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m62.jpg",
+		"img": "assets/medics_img/males/m62.jpg",
 		"phone": "+375-17-918-98-69"
 	},
 	{
@@ -5236,7 +5236,7 @@ export const medicsList = [
 		"experience": "Стаж 39 лет",
 		"graduation": "Клиническая ординатура в 1981 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f62.jpg",
+		"img": "assets/medics_img/females/f62.jpg",
 		"phone": "+375-17-995-08-90"
 	},
 	{
@@ -5246,7 +5246,7 @@ export const medicsList = [
 		"experience": "Стаж 9 лет",
 		"graduation": "Белорусский Государственный Медицинский Институт в 2011 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/males/m63.jpg",
+		"img": "assets/medics_img/males/m63.jpg",
 		"phone": "+375-17-738-12-46"
 	},
 	{
@@ -5256,7 +5256,7 @@ export const medicsList = [
 		"experience": "Стаж 11 лет",
 		"graduation": "Гомельский государственный медицинский институт в 2009 году",
 		"medcenter": "Терра Медика",
-		"img": "../../assets/medics_img/females/f63.jpg",
+		"img": "assets/medics_img/females/f63.jpg",
 		"phone": "+375-17-438-17-75"
 	}
 ]

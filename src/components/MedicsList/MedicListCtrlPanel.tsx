@@ -12,7 +12,7 @@ import ThumbDown from '@material-ui/icons/ThumbDown';
 import ThumbUp from '@material-ui/icons/ThumbUp';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import './MedicListCtrlPanel.scss';
+import './MedicsListCtrlPanel.module.scss';
 import services_category from '../../data/servicesList'
 
 interface TabPanelProps {

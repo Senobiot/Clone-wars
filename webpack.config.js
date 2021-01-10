@@ -21,7 +21,8 @@ module.exports = env => {
     devtool: isDevEnv ? 'inline-source-map' : 'source-map',
     ...(isDevEnv) && {
       devServer: {
-        contentBase: './',
+        contentBase: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
         historyApiFallback: true,
         hot: true
       },

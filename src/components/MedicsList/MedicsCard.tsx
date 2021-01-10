@@ -1,7 +1,6 @@
 import React from 'react';
-
 import '../../global/variables.scss';
-import './MedicsCard.scss';
+import styles from './MedicsCard.module.scss';
 
 interface Props {
     name: string;
@@ -12,15 +11,16 @@ interface Props {
   }
 
 const MedicsCard: React.FC<Props> = ({name, category, speciality, experience, imgSource}) => {
+
     return (
-        <div className='medicsCard'>
+        <div className={styles.medicsCard}>
            <img src={imgSource} />
-           <div className='medicFullname'>{name}</div>
-           <div className='medicCallbacks'>Пока нет отзывов</div>
-           <div className='medicExperience'>{experience}</div>
-           <div className='medicCategory'>{category}</div>
-           <div className='medicSpecs'>{speciality}</div>
-           <button value='Записаться' className='medicAppointmentBtn'>Записаться</button>        
+           <div className={styles.medicFullname}>{name}</div>
+           <div className={styles.medicCallbacks}>Пока нет отзывов</div>
+           <div className={styles.medicExperience}>{experience}</div>
+           <div className={styles.medicCategory}>{category}</div>
+           <div className={styles.medicSpecs}>{speciality}</div>
+           <button value='Записаться' className={styles.medicAppointmentBtn}>Записаться</button>        
         </div>
     );
 };
