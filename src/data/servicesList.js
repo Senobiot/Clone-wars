@@ -259,15 +259,6 @@ const services_category = [
         }
     },
     {
-        id: 'gepatology',
-        category_name: 'Гепатология',
-        medic: 'Гепатолог',
-        services: {
-            serv_0: 'Консультация гепатолога',
-            serv_1: '',
-        }
-    },
-    {
         id: 'func_diag',
         category_name: 'Функциональная диагностика',
         medic: 'Функциональный диагност',
@@ -497,16 +488,6 @@ const services_category = [
             serv_4: 'Лифтинговый массаж лица ',
             serv_5: 'Массаж детский',
             serv_6: 'Массаж спины',
-        }
-    },
-    {
-        id: 'dietology',
-        category_name: 'Диетология',
-        medic: 'Диетолог',
-        services: {
-            serv_0: 'Консультация диетолога',
-            serv_2: 'Составление индивидуального рациона',
-            serv_3: 'Предоставление рецептов блюд',
         }
     },
     {

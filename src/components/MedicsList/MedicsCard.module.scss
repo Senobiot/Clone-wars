@@ -19,7 +19,7 @@
     border-radius: 5px;
     background-color: rgba(63,81,181, 0.05);
     transition: all .5s;
-    font-size: 1rem;
+    font-size: 20px;
     cursor: pointer;
     &:hover {
         background-color: rgba(63,81,181, 0.2);
@@ -30,7 +30,8 @@
         grid-area: 1 / 1 / 5 / 2;
         border-radius: 5%;
         display: block;
-        height: 100%;
+        // max-height: 50%;
+        // width: auto;
         // justify-self: center;
     }
     .medicFullname {
@@ -40,18 +41,21 @@
         font-size: 1.2em;
     }
     .medicExperience {
+        font-size: 1em;
         grid-area: 3 / 2 / 4 / 4;
     }
     .medicCallbacks {
+        font-size: 0.9em;
         grid-area: 4 / 2 / 5 / 4;
         color: grey;
     }
     .medicSpecs {
         @include font-bolder;
-        font-size: 1.5em;
+        font-size: 1.3em;
         grid-area: 5 / 1 / 6 / 4;
     }
     .medicCategory {
+        font-size: 0.8em;
         grid-area: 6 / 1 / 7 / 4;
     }
     .medicAppointmentBtn {
@@ -61,6 +65,7 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         text-shadow: 2px 2px 5px #0c0146;
+        height: 45px;
         font-size: 1rem;
         grid-area: 7 / 1 / 8 / 2;
         background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
@@ -86,12 +91,12 @@
 }
 @media (max-width: 767px) {
    .medicsCard {
-        font-size: 0.7rem;
+        font-size: 20px;
    } 
 }
 @media (max-width: 576px) {
     .medicsCard {
-        font-size: 1rem;
+        font-size: 24px;
         max-width: 95%;
         width: 95%;
         margin: 5px auto;
@@ -99,6 +104,6 @@
  }
  @media (max-width: 400px) {
     .medicsCard {
-        font-size: 0.7rem;
+        font-size: 18px;
     } 
  }
