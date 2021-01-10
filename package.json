@@ -73,10 +73,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
-<<<<<<< HEAD
     "@material-ui/lab": "^4.0.0-alpha.57",
-=======
->>>>>>> 6ba8ec2... fix: fix modules
     "firebase": "^8.2.2",
     "postcss": "^8.2.3",
     "postcss-cli": "^8.3.1",
