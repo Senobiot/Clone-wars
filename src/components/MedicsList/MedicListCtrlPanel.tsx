@@ -26,43 +26,44 @@ interface Props {
 }
 
 const MedicListCtrlPanel: React.FC<Props> = ({handler}) => {
-    const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
   
-    const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-      setValue(newValue);
-    };
-    return (
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            className={styles.tabsWrapper}
-            value={value}
-            onChange={handleChange}
-            variant="scrollable"
-            scrollButtons="on"
-            indicatorColor="primary"
-            textColor="primary"
-            aria-label="scrollable force tabs example"
-          >
-             <Tab label='Все врачи'
+  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+  setValue(newValue);
+  };
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          className={styles.tabsWrapper}
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="on"
+          indicatorColor="primary"
+          textColor="primary"
+          aria-label="scrollable force tabs example"
+        >
+          <Tab label='Все врачи'
               className={styles.tabsTile}
               key={0}
               onClick={(e) => handler(e)}
+          />
+          {catBtnsArray.sort().map((e, index) => {
+            let medicSpesc = services_category.find(elem => elem.id === e).medic;
+          return (
+              <Tab label={medicSpesc}
+                className={styles.tabsTile}
+                key={index + 1}
+                onClick={(e) => handler(e)}
               />
-               {catBtnsArray.sort().map((e, index) => {
-                 let medicSpesc = services_category.find(elem => elem.id === e).medic;
-                return (
-                    <Tab label={medicSpesc}
-                    className={styles.tabsTile}
-                    key={index + 1}
-                    onClick={(e) => handler(e)}
-                 />
-               )})}        
-          </Tabs>
-        </AppBar>
-      </div>
-    );
-  }
+          )})}        
+        </Tabs>
+      </AppBar>
+    </div>
+  );
+}
 
 export default MedicListCtrlPanel;

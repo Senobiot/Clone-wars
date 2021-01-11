@@ -1,15 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, useParams, useHistory} from "react-router-dom";
+import { useParams, useHistory} from "react-router-dom";
 import { medicsList } from '../../data/medicsList';
 import { med_centers } from '../../data/medcentersList';
 import { services_category } from '../../data/servicesList';
 import styles from './MedicPage.modlule.scss';
-
 import IconButton from '@material-ui/core/IconButton';
 import PhoneCallbackIcon from '@material-ui/icons/PhoneCallback';
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
-
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
@@ -58,10 +56,7 @@ function IconButtons() {
 const MedicPage = () => {
     const { id } = useParams();
     const history = useHistory();
-    const func =history.goBack;
-
-    // const medicData = (medicsList.find(e => e.name === 'Овчаренко Феликс Львович'));
-
+    const func = history.goBack;
     const medicData = (medicsList.find(e => e.name === id));
     const centerData = (med_centers.find(e => e.name === medicData.medcenter));
     const serviceData = (services_category.find(e => e.medic === medicData.speciality));
@@ -106,14 +101,8 @@ const MedicPage = () => {
                 <div className={styles.medicPageCenterScheduleBtn}>
                   {ContainedButtons({func})}
                 </div>    
-                {/* <div className={styles.medicPageCenterBackBtn}
-                    onClick={history.goBack}>
-                    К списку врчаей
-                </div>           */}
             </div>
-            </div>
-
-
+        </div>
     );
 };
 
