@@ -12,8 +12,9 @@ export default function App() {
     <>
      <BrowserRouter>
       <Header></Header>
-          <Route path={'/MedicsList'} exact component={MedicsList}></Route>
-          <Route path='/MedicPage/:id' component={MedicPage}></Route>
+          <Route path={'/'} exact component={null}></Route>
+          <Route path={'/MedicsList/'} component={MedicsList}></Route>
+          <Route path={'/MedicPage/:id'} component={MedicPage}></Route>
         <Footer></Footer> 
      </BrowserRouter>
     </>
