@@ -6,7 +6,7 @@ import { medicsList } from '../../data/medicsList'
 
 let data = medicsList;
 
-const MedicsList: React.FC = () => {
+const MedicsList = () => {
     const [medics, setCategories] = useState(data)
     const [category, setCategory] = useState('Все врачи')
 

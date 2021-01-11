@@ -6,13 +6,13 @@ import Tab from '@material-ui/core/Tab';
 import styles from './MedicsListCtrlPanel.module.scss';
 import services_category from '../../data/servicesList'
  
-  const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
       flexGrow: 1,
       width: '100%',
       backgroundColor: theme.palette.background.paper,
     },
-  }));
+}));
   
 const catBtnsArray = [];
 services_category.map(e => {
