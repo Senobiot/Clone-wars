@@ -14,9 +14,11 @@ export default function App() {
     <>
       <Header></Header>
         <BrowserRouter>
-          <Route path='/' exact component={MedicsList}>
+          <Route path={'/'} exact component={MedicsList}>
           </Route>
-          <Route path='./MedicPage' component={MedicPage}>
+          {/* <Route path={'/MedicPage'} exact component={MedicPage}>
+            <MedicPage></MedicPage> */}
+          <Route exact path='/MedicPage/:id' component={MedicPage}>
           </Route>
         </BrowserRouter>
       <Footer></Footer>

@@ -12,11 +12,11 @@ interface Props {
   }
 
 const MedicsCard: React.FC<Props> = ({name, category, speciality, experience, imgSource}) => {
-    const newTo = { 
-        pathname: "/medicPage", 
-        prop1: {name},
-        prop2: {category}
-      };
+    // const newTo = { 
+    //     pathname: "/MedicPage", 
+    //     prop1: {name},
+    //     prop2: {category}
+    //   };
       
     return (
         <div className={styles.medicsCard}>
@@ -26,7 +26,8 @@ const MedicsCard: React.FC<Props> = ({name, category, speciality, experience, im
            <div className={styles.medicExperience}>{experience}</div>
            <div className={styles.medicCategory}>{category}</div>
            <div className={styles.medicSpecs}>{speciality}</div>
-           <Link to='/medicPage'>
+           {/* <Link to={`/MedicPage/${name}`}> */}
+           <Link to={`/MedicPage/${name}`}>
               <button value='Записаться' className={styles.medicAppointmentBtn}>Записаться</button>     
           </Link>
         </div>

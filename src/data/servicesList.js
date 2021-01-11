@@ -1,4 +1,4 @@
-const services_category = [
+export const services_category = [
     {
         id: 'uzi_diagnistic',
         category_name: 'Ультразвуковая диагностика (УЗИ)',
