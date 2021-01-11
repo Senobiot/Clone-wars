@@ -1,4 +1,5 @@
-import { db, storageRef } from '../../firebase';
+import { db, storageRef, provider } from '../../firebase';
+import firebase from 'firebase';
 
 export const getCollection = async (collection: string): Promise<any[]> => {
   let data = [];
@@ -60,6 +61,52 @@ export const deleteDocument = (collection: string, doc: string): void => {
     })
     .catch(function (error) {
       console.error('Error removing document: ', error);
+    });
+};
+
+export const signUp = (email: string, password: string, toggleDialog: () => void, setstateAlert: any): void => {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then((user) => {
+      toggleDialog();
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      setstateAlert({ open: true, message: errorMessage });
+    });
+};
+export const signIn = (email: string, password: string, toggleDialog: () => void, setstateAlert: any): void => {
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((user) => {
+      toggleDialog();
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      setstateAlert({ open: true, message: errorMessage });
+    });
+};
+
+export const singUpGoogle = (toggleDialog: () => void): void => {
+  firebase
+    .auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      const user: firebase.User = result.user;
+      console.log(user.providerData);
+      toggleDialog();
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      const credential = error.credential;
+      // ...
     });
 };
 
