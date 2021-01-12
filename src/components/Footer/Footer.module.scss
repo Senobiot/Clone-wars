@@ -8,15 +8,13 @@
   width: 100%;
   height: 90px;
   padding: 10px 20px;
-}
-
-a {
-  text-decoration: none;
-  color: $very-light-blue;
-}
-
-span {
-  color: $very-light-blue;
+  span {
+    color: $very-light-blue;
+  }
+  a {
+    text-decoration: none;
+    color: $very-light-blue;
+  }
 }
 
 .githubLinksContainer {
