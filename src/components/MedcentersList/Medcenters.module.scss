@@ -1,0 +1,80 @@
+@import "../../global/mixin.scss";
+
+.MedcentersListWrapper {
+    height: calc(100vh - 154px);
+    width: 100%;
+    @include flex;
+    flex-wrap: wrap;
+    .leafletContainer {
+        height: 100%;
+        width: 65%;
+        .leafletPopup {
+            a {
+                color: cornsilk !important;
+                font-size: 18px;
+                top: 5px;
+                right: 4px;
+            }
+            > div:first-child {
+                font-size: 16px;
+                @include font-regular;
+                border: 1px solid rgba(63,81,181, 0.05);
+                background-color: rgba(38, 127, 202, 0.9);
+                box-shadow: 0px -1px 5px 5px rgba(63,81,181, 0.5) inset;
+                color: #fff;
+                text-shadow: 2px 2px 5px #020b3d;
+                > div:first-child {
+                    @include flex;
+                    flex-wrap: wrap;
+                    img {
+                        width: 30%
+                    }
+                    > div:nth-child(2) {
+                        width: 65%;
+                    }
+                    > div:nth-child(3) {
+                        margin-top: 8px;
+                        font-size: 1.1em;
+                    }
+                    button {
+                        margin-top: 10px;
+                        transition: 0.3s;
+                        &:active {
+                            box-shadow: 2px 2px 3px rgba(231, 233, 241, 0.2);
+                            transform: translate(2px, 2px);
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+    .MedcentersListBlock {
+        width: 35%;
+        height: 100%;
+        background-color: cadetblue;
+    }
+}
+
+@media (max-width: 1023px) {
+    .MedcentersListWrapper {
+        .MedcentersListBlock, .leafletContainer {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 567px) {
+    .MedcentersListWrapper {
+        .MedcentersListBlock, .leafletContainer {
+            width: 100%;
+        }
+        .MedcentersListBlock {
+            height: auto
+        }
+        .leafletContainer {
+            height: 300px;
+            order: -1;
+        }
+    }
+}
