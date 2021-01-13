@@ -50,9 +50,27 @@
         }
     }
     .MedcentersListBlock {
+        overflow-y: scroll;
+        -ms-overflow-style: none !important; 
+        scrollbar-width: none !important;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
         width: 35%;
         height: 100%;
-        background-color: cadetblue;
+        background-color: #3f51b5;
+        .MuiCard-root {
+            margin-bottom: 5px;
+            .MuiCardHeader-root {
+                .MuiAvatar-root {
+                    width: 100px;
+                }
+            }
+        }
+    .avatar {
+        height: 40px;
+        width: auto;
+    }
     }
 }
 
