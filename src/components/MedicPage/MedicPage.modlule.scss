@@ -1,137 +1,170 @@
 @import "../../global/mixin.scss";
 
 .medicPageWrapper {
-    @include flex;
-    @include font-regular;
-    max-width: 900px;
-    margin: 10px auto;
-    border-radius: 5px;
-    flex-wrap: wrap;
-    border: 1px solid rgba(63,81,181, 0.05);
-    background-color: rgba(63,81,181, 0.1);
-    box-shadow: 0px -1px 5px 5px rgba(63,81,181, 0.5) inset;
-    font-size: 20px;
-     > div {
-        padding: 5px 10px;
-        width: 100%;
-    }
-    .icons {
-        text-align: center;
-        > button {
-            color: #3f51b5;
-        }
-    }
-    .medicPagePhoto {
-        padding: 5px;
-        margin: 10px auto;
-        height: 300px;
-        width: auto;
-        box-shadow: 1px 1px 5px  rgba(63,81,181, 0.5);
-        border-radius: 3px;
-        overflow: hidden;
-    }
-    .medicPageName {
-        @include font-bold;
-        font-size: 1.3em;
-        text-align: center;
-        color: #fff;
-        text-shadow: 2px 2px 5px #020b3d;
-    }
-    .medicPageSpec {
-        color: #3f51b5;
-        font-size: 1.5em;
-        @include font-bold;
-        text-align: center;
-        text-shadow: 2px 2px 5px rgba(63,81,181, 0.5);
-    }
-    .medicPageCat {
-        color: rgb(90, 90, 90);
-    }
-    .medicPageExp {
-        @include font-bold;
-        font-size: 0.8em;
-    }
-    .medicPageGraduation {
-        color: rgb(90, 90, 90);
-        font-size: 0.8em;
-    }
-    hr {
-        width: 100%;
-        height: 5px;
-        box-shadow: 0px -1px 2px 2px rgba(63,81,181, 0.5) inset;
-        margin: 10px 0;
-    }
-    .medicPageCenter {
-        span {
-            @include font-bold;
-            color: #3f51b5;
-        }
-        > div {
-            padding: 5px 10px;
-        }
-        padding: 5px 15px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 2fr repeat(6, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        .medicPageLogo {
-            grid-area: 1 / 1 / 3 / 2;
-            padding: 5px;
-            box-shadow: 1px 1px 5px  rgba(63,81,181, 0.5);
-        }
-        .medicPageCenterFullName {
-            grid-area: 1 / 2 / 2 / 3;
-            color: #3f51b5;
-            font-size: 1.3em;
-            @include font-bold;
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(63,81,181, 0.5);
+  @include flex;
+  @include font-regular;
 
-        }
-        .medicPageCenterAdress {
-            text-align: center;
-            grid-area: 2 / 2 / 3 / 3;
-            color: rgb(90, 90, 90);
-            font-size: 0.8em;
-        }
-        .medicPageCenterTime {
-            grid-area: 3 / 1 / 4 / 3; 
-        }
-        .medicPageCenterPhones {
-            grid-area: 4 / 1 / 5 / 3; 
-        }
-        .medicPageCenterPrices {
-            grid-area: 5 / 1 / 6 / 3;
-            color: rgb(90, 90, 90);
-            > div:first-child {
-                margin-bottom: 8px;
-            }
-        }
-        .medicPageCenterScheduleBtn {
-            grid-area: 6 / 1 / 7 / 3;
-            span:first-child {
-                color: cornsilk;
-            }
-        }
-        .medicPageCenterBackBtn {
-            grid-area: 7 / 1 / 8 / 3;
-        }
+  max-width: 900px;
+  margin: 10px auto;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(63, 81, 181, 0.05);
+  background-color: rgba(63, 81, 181, 0.1);
+  box-shadow: 0 -1px 5px 5px rgba(63, 81, 181, 0.5) inset;
+  font-size: 20px;
+
+  > div {
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .icons {
+    text-align: center;
+
+    > button {
+      color: #3f51b5;
     }
+  }
+
+  .medicPagePhoto {
+    padding: 5px;
+    margin: 10px auto;
+    height: 300px;
+    width: auto;
+    box-shadow: 1px 1px 5px  rgba(63, 81, 181, 0.5);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .medicPageName {
+    @include font-bold;
+
+    font-size: 1.3em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px #020b3d;
+  }
+
+  .medicPageSpec {
+    color: #3f51b5;
+    font-size: 1.5em;
+
+    @include font-bold;
+
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(63, 81, 181, 0.5);
+  }
+
+  .medicPageCat {
+    color: rgb(90, 90, 90);
+  }
+
+  .medicPageExp {
+    @include font-bold;
+
+    font-size: 0.8em;
+  }
+
+  .medicPageGraduation {
+    color: rgb(90, 90, 90);
+    font-size: 0.8em;
+  }
+
+  hr {
+    width: 100%;
+    height: 5px;
+    box-shadow: 0 -1px 2px 2px rgba(63, 81, 181, 0.5) inset;
+    margin: 10px 0;
+  }
+
+  .medicPageCenter {
+    span {
+      @include font-bold;
+
+      color: #3f51b5;
+    }
+
+    > div {
+      padding: 5px 10px;
+    }
+
+    padding: 5px 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr repeat(6, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+
+    .medicPageLogo {
+      grid-area: 1 / 1 / 3 / 2;
+      padding: 5px;
+      box-shadow: 1px 1px 5px  rgba(63, 81, 181, 0.5);
+    }
+
+    .medicPageCenterFullName {
+      grid-area: 1 / 2 / 2 / 3;
+      color: #3f51b5;
+      font-size: 1.3em;
+
+      @include font-bold;
+
+      text-align: center;
+      text-shadow: 2px 2px 5px rgba(63, 81, 181, 0.5);
+    }
+
+    .medicPageCenterAdress {
+      text-align: center;
+      grid-area: 2 / 2 / 3 / 3;
+      color: rgb(90, 90, 90);
+      font-size: 0.8em;
+    }
+
+    .medicPageCenterTime {
+      grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .medicPageCenterPhones {
+      grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .medicPageCenterPrices {
+      grid-area: 5 / 1 / 6 / 3;
+      color: rgb(90, 90, 90);
+
+      > div:first-child {
+        margin-bottom: 8px;
+      }
+    }
+
+    .medicPageCenterScheduleBtn {
+      grid-area: 6 / 1 / 7 / 3;
+
+      span:first-child {
+        color: cornsilk;
+      }
+    }
+
+    .medicPageCenterBackBtn {
+      grid-area: 7 / 1 / 8 / 3;
+    }
+  }
 }
 
 @media (max-width: 576px) {
-    .medicPageWrapper {
-        .medicPageCenter {
-            @include flex;
-            flex-wrap: wrap;
-            img {
-                margin: 0 auto;
-            }
-            > div {
-                text-align: left;
-                width: 100%;
-            }
-        }
+  .medicPageWrapper {
+    .medicPageCenter {
+      @include flex;
+
+      flex-wrap: wrap;
+
+      img {
+        margin: 0 auto;
+      }
+
+      > div {
+        text-align: left;
+        width: 100%;
+      }
     }
+  }
 }

@@ -1,11 +1,12 @@
 @import "../../global/mixin.scss";
 
 .medicsListWrapper {
-    @include flex;
-    flex-wrap: wrap;
-    max-width: 850px;
-    max-height: 79vh;
-    overflow-y: scroll;
-    justify-content: space-around;
-    margin: 0 auto;
+  @include flex;
+
+  flex-wrap: wrap;
+  max-width: 850px;
+  max-height: 79vh;
+  overflow-y: scroll;
+  justify-content: space-around;
+  margin: 0 auto;
 }
