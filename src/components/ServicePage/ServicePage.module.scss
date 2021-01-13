@@ -1,0 +1,12 @@
+@import "../../global/mixin.scss";
+
+.container {
+  @include flex;
+
+  row-gap: 1rem;
+  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Footer.module.scss'
+import styles from './Footer.module.scss';
 
 export function Footer() {
   const links = [
@@ -10,15 +10,15 @@ export function Footer() {
   ];
   return (
     <div className={styles.footer}>
-        <div className={styles.githubLinksContainer}>
-      {links.map((link, index) => {
-        return (
-          <a href={link} key={index}>
-            @{link.replace('https://github.com/', '')}
-          </a>
-        );
-      })}
-    </div>
+      <div className={styles.githubLinksContainer}>
+        {links.map((link, index) => {
+          return (
+            <a href={link} key={index}>
+              @{link.replace('https://github.com/', '')}
+            </a>
+          );
+        })}
+      </div>
       <span>2021</span>
     </div>
   );
