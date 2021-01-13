@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <>
-      <AppBar position="static" >
+      <AppBar position="static">
         <Toolbar classes={{ root: classes.toolBar }}>
           <a href="#">
             <div className={styles.heartbeatloader}>
