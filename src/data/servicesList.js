@@ -1,6 +1,7 @@
 export const services_category = [
     {
         id: 'uzi_diagnistic',
+        logo: 'assets/services_logo/uzi_diagnistic.svg',
         category_name: 'Ультразвуковая диагностика (УЗИ)',
         medic: null,
         services: {
@@ -34,6 +35,7 @@ export const services_category = [
     },
     {
         id: 'ginecology',
+        logo: 'assets/services_logo/ginecology.svg',
         category_name: 'Гинекология',
         medic: 'Гинеколог',
         services: {
@@ -54,6 +56,7 @@ export const services_category = [
     },
     {
         id: 'lor',
+        logo: 'assets/services_logo/lor.svg',
         category_name: 'Оториноларингология (ЛОР)',
         medic: 'Оториноларинголог',
         services: {
@@ -66,6 +69,7 @@ export const services_category = [
     },
     {
         id: 'hirurgy',
+        logo: 'assets/services_logo/hirurgy.svg',
         category_name: 'Хирургия',
         medic: 'Хирург',
         services: {
@@ -89,6 +93,7 @@ export const services_category = [
     },
     {
         id: 'onkolog',
+        logo: 'assets/services_logo/onkolog.svg',
         category_name: 'Онкология',
         medic: 'Онколог',
         services: {
@@ -100,6 +105,7 @@ export const services_category = [
     },
     {
         id: 'urology',
+        logo: 'assets/services_logo/urology.svg',
         category_name: 'Урология',
         medic: 'Уролог',
         services: {
@@ -121,6 +127,7 @@ export const services_category = [
     },
     {
         id: 'dermatology',
+        logo: 'assets/services_logo/dermatology.svg',
         category_name: 'Дерматология',
         medic: 'Дерматолог',
         services: {
@@ -143,6 +150,7 @@ export const services_category = [
     },
     {
         id: 'cardiology',
+        logo: 'assets/services_logo/cardiology.svg',
         category_name: 'Кардиология',
         medic: 'Кардиолог',
         services: {
@@ -162,6 +170,7 @@ export const services_category = [
     },
     {
         id: 'gastroenterology',
+        logo: 'assets/services_logo/gastroenterology.svg',
         category_name: 'Гастроэнтерология',
         medic: 'Гастроэнтеролог',
         services: {
@@ -184,6 +193,7 @@ export const services_category = [
     },
     {
         id: 'allergology',
+        logo: 'assets/services_logo/allergology.svg',
         category_name: 'Аллергология',
         medic: 'Аллерголог',
         services: {
@@ -200,6 +210,7 @@ export const services_category = [
     },
     {
         id: 'pediatry',
+        logo: 'assets/services_logo/pediatry.svg',
         category_name: 'Педиатрия',
         medic: 'Педиатр',
         services: {
@@ -219,6 +230,7 @@ export const services_category = [
     },
     {
         id: 'nevrology',
+        logo: 'assets/services_logo/nevrology.svg',
         category_name: 'Неврология',
         medic: 'Невролог',
         services: {
@@ -238,6 +250,7 @@ export const services_category = [
     },
     {
         id: 'oftalmology',
+        logo: 'assets/services_logo/oftalmology.svg',
         category_name: 'Офтальмология',
         medic: 'Офтальмолог',
         services: {
@@ -260,6 +273,7 @@ export const services_category = [
     },
     {
         id: 'func_diag',
+        logo: 'assets/services_logo/func_diag.svg',
         category_name: 'Функциональная диагностика',
         medic: 'Функциональный диагност',
         services: {
@@ -280,6 +294,7 @@ export const services_category = [
     },
     {
         id: 'lab_diag',
+        logo: 'assets/services_logo/lab_diag.svg',
         category_name: 'Лабораторная диагностика',
         medic: null,
         services: {
@@ -316,6 +331,7 @@ export const services_category = [
     },
     {
         id: 'flebology',
+        logo: 'assets/services_logo/flebology.svg',
         category_name: 'Флебология',
         medic: 'Флеболог',
         services: {
@@ -331,6 +347,7 @@ export const services_category = [
     },
     {
         id: 'endocrinology',
+        logo: 'assets/services_logo/endocrinology.svg',
         category_name: 'Эндокринология',
         medic: 'Эндокринолог',
         services: {
@@ -345,6 +362,7 @@ export const services_category = [
     },
     {
         id: 'therapy',
+        logo: 'assets/services_logo/therapy.svg',
         category_name: 'Терапия',
         medic: 'Терапевт',
         services: {
@@ -362,6 +380,7 @@ export const services_category = [
     },
     {
         id: 'revmatology',
+        logo: 'assets/services_logo/revmatology.svg',
         category_name: 'Ревматология',
         medic: 'Ревматолог',
         services: {
@@ -377,6 +396,7 @@ export const services_category = [
     },
     {
         id: 'cosmetology',
+        logo: 'assets/services_logo/cosmetology.svg',
         category_name: 'Косметология',
         medic: 'Косметолог',
         services: {
@@ -392,6 +412,7 @@ export const services_category = [
     },
     {
         id: 'x-ray_diag',
+        logo: 'assets/services_logo/x-ray_diag.svg',
         category_name: 'Лучевая диагностика',
         medic: null,
         services: {
@@ -406,6 +427,7 @@ export const services_category = [
     },
     {
         id: 'mammology',
+        logo: 'assets/services_logo/mammology.svg',
         category_name: 'Маммология',
         medic: 'Маммолог',
         services: {
@@ -424,6 +446,7 @@ export const services_category = [
     },
     {
         id: 'psychotherapy',
+        logo: 'assets/services_logo/psychotherapy.svg',
         category_name: 'Психотерапия',
         medic: 'Психотерапевт',
         services: {
@@ -434,6 +457,7 @@ export const services_category = [
     },
     {
         id: 'reabilitation',
+        logo: 'assets/services_logo/reabilitation.svg',
         category_name: 'Реабилитация',
         medic: 'Реабилитолог',
         services: {
@@ -449,7 +473,7 @@ export const services_category = [
         }
     },
     {
-        id: 'narcology',
+        logo: 'assets/services_logo/narcology.svg',
         category_name: 'Наркология',
         medic: 'Нарколог',
         services: {
@@ -462,6 +486,7 @@ export const services_category = [
     },
     {
         id: 'stomatology',
+        logo: 'assets/services_logo/stomatology.svg',
         category_name: 'Стоматология',
         medic: 'Стоматолог',
         services: {
@@ -479,6 +504,7 @@ export const services_category = [
     },
     {
         id: 'massage',
+        logo: 'assets/services_logo/massage.svg',
         category_name: 'Массаж',
         medic: 'Массажист',
         services: {
@@ -492,6 +518,7 @@ export const services_category = [
     },
     {
         id: 'proctology',
+        logo: 'assets/services_logo/proctology.svg',
         category_name: 'Проктология',
         medic: 'Проктолог',
         services: {
@@ -520,6 +547,7 @@ export const services_category = [
     },
         {
             id: 'procedure',
+            logo: 'assets/services_logo/procedure.svg',
             category_name: 'Процедурный кабинет',
             medic: null,
             services: {
@@ -534,6 +562,7 @@ export const services_category = [
     },
     {
         id: 'pulmonology',
+        logo: 'assets/services_logo/pulmonology.svg',
         category_name: 'Пульмонология',
         medic: 'Пульмонолог',
         services: {
@@ -550,6 +579,7 @@ export const services_category = [
     },
     {
         id: 'ortopedy',
+        logo: 'assets/services_logo/ortopedy.svg',
         category_name: 'Ортопедия',
         medic: 'Ортопед',
         services: {
