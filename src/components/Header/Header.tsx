@@ -50,7 +50,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function Header() {
+export function Header({ term, data, update }: any) {
+  const dataSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+
+    const filter = data.filter((user) => {
+      return user.name.toLowerCase().includes(value);
+    });
+
+    update({
+      data: filter,
+      active: 0,
+      term: value,
+    });
+  };
   const classes = useStyles();
 
   return (
@@ -83,6 +96,7 @@ export function Header() {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={dataSearch}
             />
           </div>
           <HeaderMenu></HeaderMenu>

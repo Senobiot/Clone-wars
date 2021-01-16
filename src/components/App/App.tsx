@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
+import { PersonalPage } from '../PersonalPage';
 import { ServicesPage } from '../ServicePage';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import MedicsList from '../MedicsList/MedicsList';
@@ -21,6 +22,7 @@ export default function App() {
           <Route exact path={'/MedicsList/'} component={MedicsList}></Route>
           <Route exact path={'/MedicPage/:id'} component={MedicPage}></Route>
           <Route exact path={'/ServicesPage/'} component={ServicesPage}></Route>
+          <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
           <Route path={'*'} component={NotFoundPage}/>
         </Switch>
         <Footer></Footer>

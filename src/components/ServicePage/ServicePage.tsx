@@ -41,50 +41,50 @@ function BlockList({ element, index }: Props) {
     setOpen(!open);
   };
 
-    return (
-      <List
-        key={index}
-        component="nav"
-        subheader={
-          <ListItem component="div" className={classes.category} key={index}>
-            <ListItemIcon key={index}>
-              <SendIcon />
-            </ListItemIcon>
-            {element.category_name}
-          </ListItem>
-        }
-        classes={{ root: classes.root }}
-      >
-        {Object.values(element.services).map((value, index) => {
-          while (count < 3 && value != null) {
-            count++;
-            return (
-              <ListItem button key={index}>
-                <Link>{value}</Link>
-              </ListItem>
-            );
-          }
-        })}
-        <ListItem button onClick={handleClick} key={index}>
-          <Link key={index}>more</Link>
-          {open ? <ExpandLess /> : <ExpandMore />}
+  return (
+    <List
+      key={index}
+      component="nav"
+      subheader={
+        <ListItem component="div" className={classes.category} key={index}>
+          <ListItemIcon key={index}>
+            <SendIcon />
+          </ListItemIcon>
+          {element.category_name}
         </ListItem>
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {Object.values(element.services).map((value, key) => {
-              while (count >= 3 && value != null) {
-                return (
-                  <ListItem button className={classes.nested} key={key}>
-                    {' '}
-                    <Link>{value}</Link>{' '}
-                  </ListItem>
-                );
-              }
-            })}
-          </List>
-        </Collapse>
-      </List>
-    );
+      }
+      classes={{ root: classes.root }}
+    >
+      {Object.values(element.services).map((value, index) => {
+        while (count < 3 && value != null) {
+          count++;
+          return (
+            <ListItem button key={index}>
+              <Link>{value}</Link>
+            </ListItem>
+          );
+        }
+      })}
+      <ListItem button onClick={handleClick} key={index}>
+        <Link key={index}>more</Link>
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          {Object.values(element.services).map((value, key) => {
+            while (count >= 3 && value != null) {
+              return (
+                <ListItem button className={classes.nested} key={key}>
+                  {' '}
+                  <Link>{value}</Link>{' '}
+                </ListItem>
+              );
+            }
+          })}
+        </List>
+      </Collapse>
+    </List>
+  );
 }
 
 export function ServicesPage() {
