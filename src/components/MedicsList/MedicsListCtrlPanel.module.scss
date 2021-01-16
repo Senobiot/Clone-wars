@@ -14,4 +14,10 @@
       color: beige !important;
     }
   }
+  img {
+    width: 48px !important;
+    height: 48px !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+  }
 }

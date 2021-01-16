@@ -31,7 +31,8 @@ const MedicsList = () => {
         {medics.map((e, index) => {
           return (
             <MedicsCard
-              key={index}
+              key={index}         
+              id={e.id}
               name={e.name}
               category={e.category}
               speciality={e.speciality}

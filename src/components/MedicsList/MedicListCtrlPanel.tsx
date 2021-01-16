@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import styles from './MedicsListCtrlPanel.module.scss';
 import services_category from '../../data/servicesList';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -46,10 +47,20 @@ const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
           textColor="primary"
           aria-label="scrollable force tabs example"
         >
-          <Tab label="Все врачи" className={styles.tabsTile} key={0} onClick={(e) => handler(e)} />
+          <Tab label="Все врачи"
+           className={styles.tabsTile}
+            key={0} onClick={(e) => handler(e)}
+            icon={<img src={'assets/services_logo/all.svg'} />}
+             />
           {catBtnsArray.sort().map((e, index) => {
             const medicSpesc = services_category.find((elem) => elem.id === e).medic;
-            return <Tab label={medicSpesc} className={styles.tabsTile} key={index + 1} onClick={(e) => handler(e)} />;
+            const medicLogo = services_category.find((elem) => elem.id === e).logo;
+            return <Tab label={medicSpesc} 
+            className={styles.tabsTile}
+             key={index + 1} onClick={(e) => handler(e)}
+             icon={<img src={medicLogo} />}
+             >
+            </Tab>;
           })}
         </Tabs>
       </AppBar>

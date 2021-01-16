@@ -19,7 +19,8 @@
                 font-size: 16px;
                 @include font-regular;
                 border: 1px solid rgba(63,81,181, 0.05);
-                background-color: rgba(38, 127, 202, 0.9);
+                // background-color: rgba(38, 127, 202, 0.9);
+                background-color: #3f51b5;
                 box-shadow: 0px -1px 5px 5px rgba(63,81,181, 0.5) inset;
                 color: #fff;
                 text-shadow: 2px 2px 5px #020b3d;
@@ -59,19 +60,32 @@
         width: 35%;
         height: 100%;
         background-color: #3f51b5;
-        .MuiCard-root {
-            margin-bottom: 5px;
-            .MuiCardHeader-root {
-                .MuiAvatar-root {
-                    width: 100px;
-                }
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            > div:nth-child(2) {
+                max-width: calc(100% - 130px);
+            }
+            > div:nth-child(3) {
+                margin: 15px 0 0 auto;
             }
         }
-    .avatar {
-        height: 40px;
-        width: auto;
+        .avatar {
+            height: 40px;
+            width: auto;
+        }
     }
+    .marker {
+        
     }
+}
+@media (max-width: 1279px) {
+    .MuiCard-root {
+        .MuiCardHeader-root {
+        flex-wrap: wrap;
+        }   
+    }
+
 }
 
 @media (max-width: 1023px) {
@@ -82,7 +96,7 @@
     }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 767px) {
     .MedcentersListWrapper {
         .MedcentersListBlock, .leafletContainer {
             width: 100%;
