@@ -473,6 +473,7 @@ export const services_category = [
         }
     },
     {
+        id: 'narcology',
         logo: 'assets/services_logo/narcology.svg',
         category_name: 'Наркология',
         medic: 'Нарколог',
