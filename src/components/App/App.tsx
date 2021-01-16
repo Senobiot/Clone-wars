@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
+import { PersonalPage } from '../PersonalPage';
 import { ServicesPage } from '../ServicePage';
 import MedicsList from '../MedicsList/MedicsList';
 import MedicPage from '../MedicPage/MedicPage';
@@ -17,6 +18,7 @@ export default function App() {
         <Route path={'/MedicsList/'} component={MedicsList}></Route>
         <Route path={'/MedicPage/:id'} component={MedicPage}></Route>
         <Route path={'/ServicesPage/'} component={ServicesPage}></Route>
+        <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
         <Footer></Footer>
       </BrowserRouter>
     </>
