@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './Medcenters.module.scss';
 import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvent, useMapEvents } from 'react-leaflet';
 import {  iconPerson  } from './Marker';
-
 import Button from '@material-ui/core/Button';
 import { getCollection } from '../../services/updateFirebase';
 import { med_centers } from '../../data/medcentersList';
@@ -17,7 +16,6 @@ import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-// import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -138,6 +136,14 @@ function centerCard({centerImg, logo, fullname, adress, history, handler, text} 
 
 const MedcentersList = () => {
   // const [med_centers, setCenters] = useState([])
+    // const fetchCenters = getCollection('med_centers').then((data) => {
+  //   setCenters(data);
+  //   });
+
+  // useEffect(() => {
+  //   fetchCenters;
+  // }, [])
+  
   const [leafMap, setMap] = useState(null)
   const [centers, setCenters] = useState([])
 
@@ -176,14 +182,6 @@ const MedcentersList = () => {
   const handleFly = (e) => {
     handleClick(e.target.parentNode.parentNode.parentNode.childNodes[2].textContent);
   };
-
-  // const fetchCenters = getCollection('med_centers').then((data) => {
-  //   setCenters(data);
-  //   });
-
-  // useEffect(() => {
-  //   fetchCenters;
-  // }, [])
   
   useEffect(() => {
     setCenters(med_centers);

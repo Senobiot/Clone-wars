@@ -2,25 +2,53 @@
 @import "../../global/mixin.scss";
 
 .footer {
-  background: $dark-blue-crayola;
-  color: $very-light-blue;
-
-  @include flex;
-
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 10px;
+  background-color: rgba(35,35,3, 0.2);
+  font-size: 30px;
+  color: #fffaf0;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                    0px -5px 35px rgba(255,255,255,0.3);
+  padding: 15px;
+  z-index: 5000;
+  top: auto;
+  bottom: 0;
   width: 100%;
-  height: 90px;
-  padding: 10px 20px;
-
-  span {
-    color: $very-light-blue;
+  height: 40px;
+  font-size: 14px;
+  justify-content: space-between;
+  background-color: #3f51b5;
+  text-transform: none;
+  .logo {
+      display: block;
+      width: 30px;
+      height: 20px;
+      background: url('../../assets/rs_logo.svg') 50%/contain no-repeat;
   }
-
-  a {
-    text-decoration: none;
-    color: $very-light-blue;
+  .footerNames {
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-around;
+      & > a {
+          transition: 0.4s;
+          &:visited {
+              color: #fffaf0;
+          }
+          &:hover {
+              color: #842727;
+              text-shadow: 1px 1px 2px #fffaf0;
+          }
+          font-weight: 700;
+          &:not(:last-child) {
+              margin-right: 10px;
+          }
+      }
   }
 }
-
-.githubLinksContainer {
-  @include flex-column;
+@media  (max-width: 767px)  {
+  .header {
+      font-size: 18px;
+  }
 }
