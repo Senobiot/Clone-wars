@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import styles from './Notfound.module.scss';
 
 const NotFoundPage = () => {
-        return <div className={styles.wrapper}>
-            <p className={styles.article}>
-             <span>404</span>
-             <span>Нет такой страницы</span>
-            </p> 
-            <Link to="/" className={styles.button}>На главную</Link>
-          </div>
+  return (
+    <div className={styles.wrapper}>
+      <p className={styles.article}>
+        <span>404</span>
+        <span>Нет такой страницы</span>
+      </p> 
+      <Link to="/" className={styles.button}>На главную</Link>
+    </div>
+  )
 }
+
 export default NotFoundPage;
