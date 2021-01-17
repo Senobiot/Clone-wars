@@ -73,7 +73,25 @@ export function Header({ term, data, update }: any) {
     <>
       <AppBar position="static">
         <Toolbar classes={{ root: classes.toolBar }}>
+<<<<<<< HEAD
           <MenuSide />
+=======
+          <a href="/MainContainer">
+            <div className={styles.heartbeatloader}>
+              <svg width="100%" height="100%" viewBox="0 0 150 400" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  className={styles.path}
+                  d="M 0 200 l 40 0 l 5 -40 l 5 40 l 10 0 l 5 15 l 10 -140 l 10 220 l 5 -95 l 10 0 l 5 20 l 5 -20 l 30 0"
+                  fill="transparent"
+                  strokeWidth="4"
+                  stroke="black"
+                />
+              </svg>
+              <div className={styles.heartbeatloader}></div>
+              <div className={styles.outercircle}></div>
+            </div>
+          </a>
+>>>>>>> c54ea23 (feat: add page transitions)
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

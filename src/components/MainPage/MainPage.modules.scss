@@ -1,7 +1,7 @@
-@import "../../global/variables.scss";
-@import "../../global/mixin.scss";
+@import '../../global/variables.scss';
+@import '../../global/mixin.scss';
 
-.mainContainer{
+.mainContainer {
   height: calc(100vh - 154px);
   width: 100%;
   background-color: $smoky-white;
@@ -9,7 +9,7 @@
   justify-content: space-around;
   position: relative;
 
-  .tagline{
+  .tagline {
     position: absolute;
     top: 40px;
     font-size: 30px;
@@ -17,24 +17,29 @@
   }
 }
 
-.searchContainer{
+a {
   flex-grow: 1;
-  margin: 0 60px;
   height: 50%;
-  border: 2px solid $very-pale-blue;
-  border-radius: 10px;
-  background-color: $white;
-  @include flex-column;
-  align-items: center;
-  justify-content: space-around;
+  display: block;
+  .searchContainer {
 
-  &:hover{
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
+    margin: 0 60px;
+    height: 100%;
+    border: 2px solid $very-pale-blue;
+    border-radius: 10px;
+    background-color: $white;
+    @include flex-column;
+    align-items: center;
+    justify-content: space-around;
 
-  span{
-    color: $dull-gray;
-    font-size: $text_big;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    span {
+      color: $dull-gray;
+      font-size: $text_big;
+    }
   }
 }
