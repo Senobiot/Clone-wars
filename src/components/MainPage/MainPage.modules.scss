@@ -2,7 +2,7 @@
 @import '../../global/mixin.scss';
 
 .mainContainer {
-  height: calc(100vh - 154px);
+  height: calc(100vh - 105px);
   width: 100%;
   background-color: $smoky-white;
   @include flex;
