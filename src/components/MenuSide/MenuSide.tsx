@@ -21,6 +21,7 @@ import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import BusinessIcon from '@material-ui/icons/Business';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import styles from '../Header/Header.module.scss';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'fixed',
       top: 10,
       left: 10,
-      zIndex: 999,
+      zIndex: 5000,
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
@@ -162,17 +163,25 @@ export default function MenuSide() {
         </div>
         <Divider />
         <List>
-          {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, index) => (
+          {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, i) => (
+             <Link key={i} to={
+               i === 0 ? '/HomePage' :
+               i === 1 ? '/' :
+               i === 2 ? '/MedicsList/' :
+               i === 3 ? '/ServicesPage/' :
+               '/PersonalPage/'
+              }>
             <ListItem button key={text}>
               <ListItemIcon>{
-              index  === 0 ? <HomeIcon /> :
-              index === 1 ?  <BusinessIcon /> :
-              index === 2 ?  <AssignmentIndIcon /> :
-              index === 3 ?  <LocalHospitalIcon /> :
+              i  === 0 ?  <HomeIcon /> :
+              i === 1 ?   <BusinessIcon /> :
+              i === 2 ?   <AssignmentIndIcon /> :
+              i === 3 ?   <LocalHospitalIcon /> :
               < AccountCircleIcon/>}
             </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
+            </Link> 
           ))}
         </List>
         <Divider />

@@ -190,8 +190,7 @@ const MedcentersList = () => {
   return (
     <div className={styles.MedcentersListWrapper}>
       <div className={styles.MedcentersListBlock}>
-      {med_centers.map((e) => {
-        
+      {med_centers.map((e) => { 
         const centerImg = e.img;
         const logo = e.logo;
         const fullname = e.fullname;
@@ -215,12 +214,12 @@ const MedcentersList = () => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {med_centers.map((e) => {      
+        {med_centers.map((e, i) => {      
           const coords = e.coord.split(',');
           coordObject[e.fullname] = coords;
 
           return (
-            <Marker position={[parseFloat(coords[0]), parseFloat(coords[1])]} ref={markerRefs[e.fullname]} icon={ iconPerson }>
+            <Marker key={i} position={[parseFloat(coords[0]), parseFloat(coords[1])]} ref={markerRefs[e.fullname]} icon={ iconPerson }>
               <Popup className={styles.leafletPopup}>
                 <img src={e.logo}></img>
                 <div>{e.adress}</div>

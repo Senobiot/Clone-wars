@@ -1,7 +1,7 @@
 @import "../../global/mixin.scss";
 
 .MedcentersListWrapper {
-    height: calc(100vh - 154px);
+    height: calc(100vh - 104px);
     width: 100%;
     @include flex;
     flex-wrap: wrap;
