@@ -1,7 +1,7 @@
 import { Dialog, IconButton, Slide, SlideProps } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
-import Authorization from '../Authorization/Authorization';
+import { Authorization } from '../Authorization';
 import style from './DialogAutorization.module.scss';
 
 const Transition = React.forwardRef(function Transition(props: SlideProps, ref): JSX.Element {

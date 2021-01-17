@@ -5,12 +5,12 @@ import HeaderMenu from '../HeaderMenu';
 import useStyles from './UIStyles';
 import styles from './Header.module.scss';
 
-export function Header() {
+export function Header(): JSX.Element {
   const classes = useStyles();
 
   return (
     <>
-      <AppBar position="static" >
+      <AppBar position="static">
         <Toolbar classes={{ root: classes.toolBar }}>
           <a href="#">
             <div className={styles.heartbeatloader}>

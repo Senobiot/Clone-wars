@@ -15,10 +15,13 @@ import {
 import Alert from '@material-ui/lab/Alert';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import LockIcon from '@material-ui/icons/Lock';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import style from './authorizatio.module.scss';
-import { signIn, signUp } from '../../services/updateFirebase';
+import { getDocument, signIn, signUp, singUpGoogle } from '../../services/updateFirebase';
+import { IUser, Role } from '../../model/data.model';
+import { useHistory } from 'react-router-dom';
+import { auth } from '../../../firebase';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -45,16 +48,52 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () => void }): JSX.Element {
+export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () => void }): JSX.Element {
   const classes = useStyles();
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useState<IUser>({
     email: '',
     password: '',
-    role: '',
+    role: Role.Patient,
+    category: '',
+    experience: '',
+    graduation: '',
+    id: '',
+    img: '',
+    medcenter: '',
+    name: '',
+    phone: '',
+    speciality: '',
+    gender: '',
+    birthday: '',
   });
   const [error, setError] = useState<{ email: boolean; password: boolean }>({ email: false, password: false });
   const [isRegistration, setIsregistration] = useState<boolean>(false);
   const [stateAlert, setstateAlert] = useState<{ open: boolean; message: string }>({ open: false, message: '' });
+  const [isLoggin, setIsLogin] = useState<boolean>(false);
+  const history = useHistory();
+
+  useEffect(() => {
+    const q = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setIsLogin(true);
+      } else {
+        setIsLogin(false);
+      }
+    });
+
+    if (isLoggin) {
+      goUserPage();
+    }
+    return () => q();
+  }, [isLoggin]);
+
+  const goUserPage = async () => {
+    const uid = auth.currentUser.uid;
+    const state = await getDocument('users', uid);
+    setFormState(state);
+    handleClickOpenDialog();
+    history.push({ pathname: '/User', state: { user: state, authorized: true } });
+  };
 
   const isValidation = (name: string, value: string) => {
     const reg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -84,9 +123,7 @@ function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () =>
   };
   const handleSabmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    isRegistration
-      ? signUp(formState.email, formState.password, handleClickOpenDialog, setstateAlert)
-      : signIn(formState.email, formState.password, handleClickOpenDialog, setstateAlert);
+    isRegistration ? signUp(formState, setstateAlert) : signIn(formState, setstateAlert);
   };
 
   const changeSing = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -151,8 +188,8 @@ function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () =>
                   label="Role"
                   /* IconComponent={() => <RecentActorsIcon />} */
                 >
-                  <MenuItem value={'Doctor'}>Doctor</MenuItem>
-                  <MenuItem value={'Patient'}>Patient</MenuItem>
+                  <MenuItem value={'doctor'}>Doctor</MenuItem>
+                  <MenuItem value={'patient'}>Patient</MenuItem>
                 </Select>
               </FormControl>
             ) : (
@@ -175,7 +212,7 @@ function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () =>
                 </Link>
               </Grid>
 
-              {!isRegistration ? (
+              {isRegistration ? (
                 <>
                   <Grid item>
                     <div className={style.line}>
@@ -183,7 +220,7 @@ function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () =>
                     </div>
                   </Grid>
                   <Grid item xs>
-                    <IconButton color="secondary" aria-label="add an alarm" onClick={handleClickOpenDialog}>
+                    <IconButton color="secondary" aria-label="add an alarm" onClick={() => singUpGoogle(formState)}>
                       <span className={style.logo}></span>
                     </IconButton>
                   </Grid>
@@ -206,5 +243,3 @@ function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () =>
     </>
   );
 }
-
-export default Authorization;

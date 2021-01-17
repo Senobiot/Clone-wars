@@ -1,9 +1,23 @@
-import { Avatar, createStyles, Grid, IconButton, makeStyles, Theme } from '@material-ui/core';
+import {
+  Avatar,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  createStyles,
+  Grid,
+  IconButton,
+  makeStyles,
+  Theme,
+  Typography,
+} from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import style from './User.module.scss';
-import { TextFieldEditor } from './TextFieldEditor/TextFieldEditor';
+import { TextFieldEditor } from './TextFieldEditor';
 import { PhotoCamera } from '@material-ui/icons';
-import { getImageUrl, uploudImage } from '../../services/updateFirebase';
+import { setDocument, updateObjectField, uploudImage } from '../../services/updateFirebase';
+import { useLocation } from 'react-router-dom';
+import { IUser, Role } from '../../model/data.model';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -39,6 +53,7 @@ export function User(): JSX.Element {
   const classes = useStyles();
   const dataUser = [
     { name: 'name', type: 'text' },
+    { name: 'gender', type: 'select' },
     { name: 'birthday', type: 'date' },
     { name: 'phone', type: 'tel' },
     { name: 'email', type: 'email' },
@@ -46,6 +61,7 @@ export function User(): JSX.Element {
   const dataDoctor = [
     { name: 'name', type: 'text' },
     { name: 'birthday', type: 'date' },
+    { name: 'gender', type: 'select' },
     { name: 'phone', type: 'tel' },
     { name: 'email', type: 'email' },
     { name: 'speciality', type: 'text' },
@@ -53,52 +69,109 @@ export function User(): JSX.Element {
     { name: 'graduation', type: 'text' },
     { name: 'medcenter', type: 'text' },
   ];
-  const [formStateUser, setFormStateUser] = useState({ name: '', birthday: '', phone: '', email: '' });
+  const [formStateUser, setFormStateUser] = useState<IUser>({
+    email: '',
+    password: '',
+    role: Role.Patient,
+    category: '',
+    experience: '',
+    graduation: '',
+    id: '',
+    img: '',
+    medcenter: '',
+    name: '',
+    phone: '',
+    speciality: '',
+    gender: '',
+    birthday: '',
+  });
   const [file, setFile] = useState<FileList>();
-  const [image, setImage] = useState<string>();
+  const location = useLocation();
+  const [data, setData] = useState<any>(dataUser);
+  const [isEdit, setIsEdit] = useState(false);
 
   useEffect(() => {
+    if (location.state) {
+      setFormStateUser(location.state.user);
+      location.state.user.role === 'patient' ? setData(dataUser) : setData(dataDoctor);
+    }
+  }, [location.state]);
+  useEffect(() => {
     if (file) {
-      uploudImage(file);
-      getImageUrl(file).then((url) => setImage(url));
-      console.log();
+      uploudImage(file).then(async (url) => {
+        await setFormStateUser((prevState) => ({ ...prevState, img: url }));
+        updateObjectField('users', formStateUser.id, { img: url });
+      });
     }
   }, [file]);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target as HTMLInputElement;
     setFormStateUser((prevState) => ({ ...prevState, [name]: value }));
   };
 
+  const saveUser = () => {
+    if (isEdit) setDocument('users', formStateUser.id, formStateUser);
+    setIsEdit(!isEdit);
+  };
   return (
     <div className={style.wrapper}>
-      <Grid className={style.wrapper} container direction="column" justify="space-around" alignItems="center">
-        <Grid className={style.avatar} item>
-          <Avatar style={{ height: '100px', width: '100px' }} src={image ? image : ''}></Avatar>
-          <input
-            accept="image/"
-            className={classes.input}
-            id="icon-button-file"
-            type="file"
-            onChange={(e: any) => setFile(e.target.files[0])}
-          />
-          <label className={style.upload} htmlFor="icon-button-file">
-            <IconButton color="primary" aria-label="upload picture" component="span">
-              <PhotoCamera />
-            </IconButton>
-          </label>{' '}
-        </Grid>
-        {dataUser.map((item, i) => {
-          return (
-            <TextFieldEditor
-              key={item.name}
-              name={item.name}
-              type={item.type}
-              formStateUser={formStateUser[item.name]}
-              handleChange={handleChange}
-            />
-          );
-        })}
+      <Grid className={style.item__profile} container justify="center" alignItems="center">
+        <Card className={style.card}>
+          <CardContent className={style.cardContent}>
+            <Grid className={style.avatar} item md={4} sm={4}>
+              <Avatar style={{ height: '100px', width: '100px' }} src={formStateUser.img}></Avatar>
+              <input
+                accept="image/"
+                className={classes.input}
+                id="icon-button-file"
+                type="file"
+                onChange={(e: any) => setFile(e.target.files[0])}
+              />
+              <label className={style.upload} htmlFor="icon-button-file">
+                <IconButton color="primary" aria-label="upload picture" component="span">
+                  <PhotoCamera />
+                </IconButton>
+              </label>{' '}
+            </Grid>
+            <Grid item xs md>
+              {data.map((item) => {
+                return (
+                  <TextFieldEditor
+                    key={item.name}
+                    name={item.name}
+                    type={item.type}
+                    isEdit={isEdit}
+                    formStateUser={formStateUser[item.name]}
+                    handleChange={handleChange}
+                  />
+                );
+              })}
+            </Grid>
+          </CardContent>
+          <CardActions>
+            <Button size="small" onClick={saveUser}>
+              {isEdit ? 'Save profile' : 'Edit profile'}
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid className={style.item__nearest_visits}>
+        <Card className={style.cardVisit}>
+          <CardContent>
+            <Typography color="textSecondary" gutterBottom>
+              Nearest visits
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid className={style.item__past_visits}>
+        <Card className={style.cardVisit}>
+          <CardContent>
+            <Typography color="textSecondary" gutterBottom>
+              Past visits
+            </Typography>
+          </CardContent>
+        </Card>
       </Grid>
     </div>
   );

@@ -1,22 +1,24 @@
 import React from 'react';
-import {Footer} from '../Footer';
-import {Header} from '../Header';
+import { Footer } from '../Footer';
+import { Header } from '../Header';
 import MedicsList from '../MedicsList/MedicsList';
 import MedicPage from '../MedicPage/MedicPage';
 import '../../global/variables.scss';
 import '../../global/reset.scss';
-import { BrowserRouter, Route} from "react-router-dom";
+import { BrowserRouter, Route } from 'react-router-dom';
+import { User } from '../User';
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <>
-     <BrowserRouter>
-      <Header></Header>
-          <Route path={'/'} exact component={null}></Route>
-          <Route path={'/MedicsList/'} component={MedicsList}></Route>
-          <Route path={'/MedicPage/:id'} component={MedicPage}></Route>
-        <Footer></Footer> 
-     </BrowserRouter>
+      <BrowserRouter>
+        <Header></Header>
+        <Route path={'/'} exact component={null}></Route>
+        <Route path={'/MedicsList/'} component={MedicsList}></Route>
+        <Route path={'/MedicPage/:id'} component={MedicPage}></Route>
+        <Route path={'/User'} component={User}></Route>
+        <Footer></Footer>
+      </BrowserRouter>
     </>
   );
 }

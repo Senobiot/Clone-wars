@@ -1,5 +1,6 @@
-import { db, storageRef, provider } from '../../firebase';
+import { db, storageRef, provider, auth } from '../../firebase';
 import firebase from 'firebase';
+import { IUser } from '../model/data.model';
 
 export const getCollection = async (collection: string): Promise<any[]> => {
   let data = [];
@@ -40,6 +41,11 @@ export const setDocument = (collection: string, doc: string, object: any): void 
     });
 };
 
+export const addUser = async (object: any) => {
+  const uid = auth.currentUser.uid;
+  await setDocument('users', uid, { ...object, id: uid });
+};
+
 export const updateObjectField = (collection: string, doc: string, objectField: any): void => {
   db.collection(collection)
     .doc(doc)
@@ -64,39 +70,57 @@ export const deleteDocument = (collection: string, doc: string): void => {
     });
 };
 
-export const signUp = (email: string, password: string, toggleDialog: () => void, setstateAlert: any): void => {
+export const signUp = (state: IUser, setstateAlert: any): void => {
   firebase
     .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then((user) => {
-      toggleDialog();
+    .createUserWithEmailAndPassword(state.email, state.password)
+    .then(async (user) => {
+      console.log(user.user.providerData);
+      addUser(state);
     })
     .catch((error) => {
       const errorMessage = error.message;
       setstateAlert({ open: true, message: errorMessage });
     });
 };
-export const signIn = (email: string, password: string, toggleDialog: () => void, setstateAlert: any): void => {
+export const signIn = (state: IUser, setstateAlert: any): void => {
   firebase
     .auth()
-    .signInWithEmailAndPassword(email, password)
-    .then((user) => {
-      toggleDialog();
-    })
+    .signInWithEmailAndPassword(state.email, state.password)
     .catch((error) => {
       const errorMessage = error.message;
       setstateAlert({ open: true, message: errorMessage });
     });
 };
 
-export const singUpGoogle = (toggleDialog: () => void): void => {
+export const signOut = (): void => {
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      // Sign-out successful.
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+};
+
+export const singUpGoogle = (state: IUser): void => {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then((result) => {
+    .then(async (result) => {
       const user: firebase.User = result.user;
-      console.log(user.providerData);
-      toggleDialog();
+      if (result.additionalUserInfo.isNewUser) {
+        await addUser({
+          ...state,
+          name: user.providerData[0].displayName || '',
+          email: user.providerData[0].email || '',
+          phone: user.providerData[0].phoneNumber || '',
+          img: user.providerData[0].photoURL || '',
+          id: user.providerData[0].uid,
+        });
+      }
     })
     .catch((error) => {
       // Handle Errors here.
@@ -110,9 +134,14 @@ export const singUpGoogle = (toggleDialog: () => void): void => {
     });
 };
 
-export const uploudImage = (file: any): void => {
+export const uploudImage = async (file: any): Promise<string> => {
   const puth = `${file.type}/${file.name}`;
-  storageRef.child(puth).put(file);
+  let urlImage;
+  await storageRef
+    .child(puth)
+    .put(file)
+    .then((data) => data.ref.getDownloadURL().then((url) => (urlImage = url)));
+  return urlImage;
 };
 export const getImageUrl = async (file): Promise<string> => {
   const puth = `${file.type}/${file.name}`;
