@@ -4,6 +4,7 @@ import '../../global/variables.scss';
 import styles from './MedicsCard.module.scss';
 
 interface Props {
+  id: number;
   name: string;
   category: string;
   speciality: string;
@@ -11,7 +12,7 @@ interface Props {
   imgSource: string;
 }
 
-const MedicsCard: React.FC<Props> = ({ name, category, speciality, experience, imgSource }) => {
+const MedicsCard: React.FC<Props> = ({ id, name, category, speciality, experience, imgSource }) => {
   return (
     <div className={styles.medicsCard}>
       <img src={imgSource} />
@@ -20,7 +21,7 @@ const MedicsCard: React.FC<Props> = ({ name, category, speciality, experience, i
       <div className={styles.medicExperience}>{experience}</div>
       <div className={styles.medicCategory}>{category}</div>
       <div className={styles.medicSpecs}>{speciality}</div>
-      <Link to={`/MedicPage/${name}`}>
+      <Link to={`/MedicPage/${id}`}>
         <button value="Записаться" className={styles.medicAppointmentBtn}>
           Записаться
         </button>

@@ -2,11 +2,21 @@
 
 .medicsListWrapper {
   @include flex;
-
   flex-wrap: wrap;
   max-width: 850px;
-  max-height: 79vh;
+  max-height: calc(100vh - 198px);
   overflow-y: scroll;
   justify-content: space-around;
   margin: 0 auto;
+}
+
+@media (max-width: 650px) {
+  .medicsListWrapper {
+    max-height: 100%;
+    -ms-overflow-style: none !important; 
+    scrollbar-width: none !important;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+  }
 }

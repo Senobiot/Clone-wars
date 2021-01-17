@@ -1,15 +1,18 @@
 import React from 'react';
 import { AppBar, InputBase, Toolbar } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import HeaderMenu from '../HeaderMenu';
+import HeaderMenu from './HeaderMenu';
 import styles from './Header.module.scss';
 import { fade, makeStyles } from '@material-ui/core/styles';
+import MenuSide from '../MenuSide/MenuSide'
 
 const useStyles = makeStyles((theme) => ({
   toolBar: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    position: 'relative',
+    backgroundColor: '#3f51b5',
+    boxShadow: 'inset 0 0 10px'
   },
   search: {
     position: 'relative',
@@ -18,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    marginLeft: 0,
+    margin: '0 auto',
     width: '40vw',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-    },
+    // [theme.breakpoints.up('sm')]: {
+    //   marginLeft: theme.spacing(1),
+    // },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -70,21 +73,7 @@ export function Header({ term, data, update }: any) {
     <>
       <AppBar position="static">
         <Toolbar classes={{ root: classes.toolBar }}>
-          <a href="#">
-            <div className={styles.heartbeatloader}>
-              <svg width="100%" height="100%" viewBox="0 0 150 400" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  className={styles.path}
-                  d="M 0 200 l 40 0 l 5 -40 l 5 40 l 10 0 l 5 15 l 10 -140 l 10 220 l 5 -95 l 10 0 l 5 20 l 5 -20 l 30 0"
-                  fill="transparent"
-                  strokeWidth="4"
-                  stroke="black"
-                />
-              </svg>
-              <div className={styles.heartbeatloader}></div>
-              <div className={styles.outercircle}></div>
-            </div>
-          </a>
+          <MenuSide />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
