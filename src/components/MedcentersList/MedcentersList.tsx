@@ -21,6 +21,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -197,7 +198,12 @@ const MedcentersList = () => {
         const adress = e.adress;
         const history = e.history;
         const latings = e.coord.split(',').map( e => parseFloat(e) );
-        const handler = () => mapMove({latings, fullname});
+        const handler = () => {
+          if (window.innerWidth < 768) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          mapMove({latings, fullname})
+        };
         const text = 'на карте';
         return (
           <div  key={e.name}

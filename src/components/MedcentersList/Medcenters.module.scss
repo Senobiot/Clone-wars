@@ -9,6 +9,7 @@
         height: 100%;
         width: 65%;
         .leafletPopup {
+            max-width: 295px;
             a {
                 color: cornsilk !important;
                 font-size: 18px;
@@ -95,6 +96,7 @@
 
 @media (max-width: 767px) {
     .MedcentersListWrapper {
+        height: auto;
         .MedcentersListBlock, .leafletContainer {
             width: 100%;
         }
@@ -104,6 +106,36 @@
         .leafletContainer {
             height: 300px;
             order: -1;
+            .leafletPopup {
+                max-width: 295px;
+                > div:first-child {
+                    > div:first-child {
+                        img {
+                            max-height: 34px;
+                            width: auto;
+                        }
+                        > div:nth-child(2) {
+                            font-size: 0.8em;
+                        }
+                        > div:nth-child(3) {
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
+.show {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+.hide {
+    display: none;
+} 

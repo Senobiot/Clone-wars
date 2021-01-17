@@ -10,14 +10,14 @@ import MedcentersList from '../MedcentersList/MedcentersList';
 import '../../global/variables.scss';
 import '../../global/reset.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ArrowUp from '../ArrowUP/ArrowUp';
 
 export default function App() {
   return (
-    <>
       <BrowserRouter>
+        <ArrowUp />
         <Header></Header>
         <Switch>
-          {/* <Route exact  path={'/'} component={null}></Route> */}
           <Route exact path={'/'} component={MedcentersList}></Route>
           {/* <Route exact path={'/MedcentersList/'} component={MedcentersList}></Route> */}
           <Route exact path={'/MedicsList/'} component={MedicsList}></Route>
@@ -28,6 +28,5 @@ export default function App() {
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
-    </>
   );
 }

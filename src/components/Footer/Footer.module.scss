@@ -5,7 +5,6 @@
   font-weight: 400;
   display: flex;
   align-items: center;
-  font-size: 30px;
   color: #fffaf0;
   text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
                     0px -5px 35px rgba(255,255,255,0.3);
@@ -20,13 +19,13 @@
   background-color: #3f51b5;
   box-shadow: inset 0 0 10px;
   text-transform: none;
-  .logo {
+  .rsSchoolLogo {
       display: block;
       width: 30px;
       height: 20px;
       background: url('../../assets/rs_logo.svg') 50%/contain no-repeat;
   }
-  .footerNames {
+  .githubLinksContainer {
       padding: 0 10px;
       display: flex;
       justify-content: space-around;
@@ -47,8 +46,42 @@
   }
 }
 
-@media  (max-width: 767px)  {
-  .header {
-      font-size: 18px;
+@media  (max-width: 600px)  {
+  .footer {
+    flex-wrap: wrap;
+    height: 80px;
+      .githubLinksContainer {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        order: -1;
+        width: 100%;
+      }
+      .rsSchoolLogo, .year {
+        margin-top: 5px;
+        width: 48%;
+    }
+    .rsSchoolLogo {
+        background-position-x: 0;
+    }
   }
 }
+
+@media  (max-width: 400px)  {
+    .footer {
+        flex-wrap: wrap;
+        height: 80px;
+        padding: 5px 15px;
+        .githubLinksContainer {
+            > a {
+                display: block;
+                width: 48%;
+                &:nth-child(n+1) {
+                    margin-right: 0;
+                }
+            }
+            font-size: 16px;
+            flex-wrap: wrap;
+        }
+    }
+  }

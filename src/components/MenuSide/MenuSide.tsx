@@ -29,10 +29,10 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      position: 'fixed',
+      position: 'absolute',
       top: 10,
       left: 10,
-      zIndex: 5000,
+      zIndex: 1100,
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
