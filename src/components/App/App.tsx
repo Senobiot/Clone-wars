@@ -1,6 +1,8 @@
 import React from 'react';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
+import { PersonalPage } from '../PersonalPage';
+import { ServicesPage } from '../ServicePage';
 import MedicsList from '../MedicsList/MedicsList';
 import MedicPage from '../MedicPage/MedicPage';
 import '../../global/variables.scss';
@@ -16,6 +18,8 @@ export default function App(): JSX.Element {
         <Route path={'/'} exact component={null}></Route>
         <Route path={'/MedicsList/'} component={MedicsList}></Route>
         <Route path={'/MedicPage/:id'} component={MedicPage}></Route>
+        <Route path={'/ServicesPage/'} component={ServicesPage}></Route>
+        <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
         <Route path={'/User'} component={User}></Route>
         <Footer></Footer>
       </BrowserRouter>
