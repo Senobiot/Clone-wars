@@ -35,13 +35,7 @@ export default function MedcentersInfo({category, centerName} : ICat) {
   return (
     <div className={classes.root}>
         {
-        categoryEntries.map( (cats, idx) => {
-            console.log(Object.values(cats[1]).map(e=> {
-                const a = Object.keys(e);
-                const b = Object.values(e);
-                const c = a + String(b);
-                console.log(c)
-            }))    
+        categoryEntries.map( (cats, idx) => {  
         return (
         <Accordion key={idx}>
             <AccordionSummary
@@ -101,7 +95,7 @@ export default function MedcentersInfo({category, centerName} : ICat) {
                                 Object.values(services_category.find((elem) => elem.id === cats[0]).services).sort().map( (e, idx)=>{
                                     if (e) {
                                         return (
-                                            <span key={idx} className={styles.spanService}>&#9745; {e}</span>
+                                            <span key={idx + 20} className={styles.spanService}>&#9745; {e}</span>
                                         )
                                     }
                                 })}
@@ -118,12 +112,12 @@ export default function MedcentersInfo({category, centerName} : ICat) {
                     </AccordionSummary>
                         <AccordionDetails>
                             <Typography className={styles.pService}>{                      
-                                Object.values(cats[1]).map(e=> {
+                                Object.values(cats[1]).map((e, idx)=> {
                                     const a = Object.keys(e);
                                     const b = Object.values(e);
                                     const c = (services_category.find((elem) => elem.id === cats[0]).services)[a];
                                     return (
-                                        <span key={idx} className={styles.spanService}>{c}: <b>{b} руб.</b></span>
+                                        <span key={idx + 40} className={styles.spanService}>{c}: <b>{b} руб.</b></span>
                                     )
                                 })
                                 }
