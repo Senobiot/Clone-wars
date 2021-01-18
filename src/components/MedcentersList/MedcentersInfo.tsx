@@ -30,13 +30,18 @@ interface ICat {
 
 export default function MedcentersInfo({category, centerName} : ICat) {
     const classes = useStyles();
-    const cats = Object.keys(category).sort();
-
+    const categoryEntries = Object.entries(category);
 
   return (
     <div className={classes.root}>
         {
-        cats.map( (cats, idx) =>{
+        categoryEntries.map( (cats, idx) => {
+            console.log(Object.values(cats[1]).map(e=> {
+                const a = Object.keys(e);
+                const b = Object.values(e);
+                const c = a + String(b);
+                console.log(c)
+            }))    
         return (
         <Accordion key={idx}>
             <AccordionSummary
@@ -45,8 +50,8 @@ export default function MedcentersInfo({category, centerName} : ICat) {
             id="panel1a-header"
             >
               <Typography>
-                <img src={services_category.find((elem) => elem.id === cats).logo} className={styles.avatar}></img>
-                <span>{services_category.find((elem) => elem.id === cats).category_name}</span>
+                <img src={services_category.find((elem) => elem.id === cats[0]).logo} className={styles.avatar}></img>
+                <span>{services_category.find((elem) => elem.id === cats[0]).category_name}</span>
                </Typography>
             </AccordionSummary>
             <AccordionDetails className={styles.detailsWrapped}>
@@ -63,7 +68,7 @@ export default function MedcentersInfo({category, centerName} : ICat) {
                             {
                              medicsList.map( (e,idx) => {
                                  if (e.medcenter === centerName &&
-                                    e.speciality === services_category.find((elem) => elem.id === cats).medic
+                                    e.speciality === services_category.find((elem) => elem.id === cats[0]).medic
                                     ) {
                                      return (
                                          <span key={idx} className={styles.doctorTile}>
@@ -88,17 +93,40 @@ export default function MedcentersInfo({category, centerName} : ICat) {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <Typography className={styles.pService}>Услуги: </Typography>
+                    <Typography className={styles.pService}>Наши услуги: </Typography>
                     </AccordionSummary>
                         <AccordionDetails>
-                            <Typography className={styles.pService}>{
-                                Object.values(services_category.find((elem) => elem.id === cats).services).sort().map( (e, idx)=>{
+                            <Typography className={styles.pService}>
+                                {
+                                Object.values(services_category.find((elem) => elem.id === cats[0]).services).sort().map( (e, idx)=>{
                                     if (e) {
                                         return (
-                                            <span key={idx} className={styles.spanService}>{`- ${e}`}</span>
+                                            <span key={idx} className={styles.spanService}>&#9745; {e}</span>
                                         )
                                     }
                                 })}
+                            </Typography>
+                    </AccordionDetails> 
+                </Accordion>
+                <Accordion className={styles.details}>
+                    <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <Typography className={styles.pService}>Наши цены: </Typography>
+                    </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography className={styles.pService}>{                      
+                                Object.values(cats[1]).map(e=> {
+                                    const a = Object.keys(e);
+                                    const b = Object.values(e);
+                                    const c = (services_category.find((elem) => elem.id === cats[0]).services)[a];
+                                    return (
+                                        <span key={idx} className={styles.spanService}>{c}: <b>{b} руб.</b></span>
+                                    )
+                                })
+                                }
                             </Typography>
                     </AccordionDetails> 
                 </Accordion>
