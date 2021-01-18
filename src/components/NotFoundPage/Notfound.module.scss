@@ -1,0 +1,66 @@
+@import "../../global/mixin.scss";
+.wrapper {
+    height: calc(100vh - 104px);
+    width: 100%;
+    background: url('../../assets/medics_bg.png') no-repeat 50%/contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .article {
+        @include font-bolder;
+        width: 100%;
+        font-size: 60px;
+        padding-left: 20px;
+        color: #fff;
+        text-shadow: 2px 2px 10px #020b3d;
+        > span:first-child {
+            display: block;
+            font-size: 3em;
+        }
+    }
+    .button {
+        @include font-bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        margin: 0 auto;
+        padding: 0 10px;
+        color: honeydew;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px #0c0146;
+        height: 45px;
+        font-size: 1rem;
+        grid-area: 7 / 1 / 8 / 2;
+        background-image: linear-gradient(to right, #9eefe1 0%, #4830f0 51%, #9eefe1 100%);
+        background-size: 200% auto;
+        transition: 0.2s;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(255,255,255,.9);
+        &:hover {
+          animation: growing 0.5s linear 2;
+        }
+    
+        @keyframes growing {
+          25% { transform: scale(1.05); }
+          50% { transform: scale(1.1); }
+          75% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+        }
+    
+        &:active {
+          transform: translate(2px, 2px);
+          text-shadow: inset 2px 2px 1px #0c0146;
+        }
+      }
+}
+@media (max-width: 600px) {
+    .wrapper {
+      height: calc(100vh - 138px);
+         .article {
+        font-size: 40px;
+        text-align: center;
+        }
+    }
+}
