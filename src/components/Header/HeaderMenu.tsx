@@ -20,7 +20,7 @@ export default function HeaderMenu() {
   };
   return (
     <div className={styles.profile}>
-      <Button onClick={handleClick}>Профиль</Button>
+      <Button onClick={handleClick}></Button>
       <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={!!anchorEl} onClose={handleClose}>
         <MenuItem onClick={handleClickOpenDialog}>Авторизация</MenuItem>
         <MenuItem onClick={handleClose}>Войти</MenuItem>

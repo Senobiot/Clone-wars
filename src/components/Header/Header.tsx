@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     position: 'relative',
     backgroundColor: '#3f51b5',
-    boxShadow: 'inset 0 0 10px'
   },
   search: {
     position: 'relative',
@@ -75,10 +74,10 @@ export function Header({ term, data, update }: any) {
         <Toolbar classes={{ root: classes.toolBar }}>
           <MenuSide />
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
+            {/* <div className={classes.searchIcon}>
               <SearchIcon />
-            </div>
-            <InputBase
+            </div> */}
+            {/* <InputBase
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
@@ -86,7 +85,7 @@ export function Header({ term, data, update }: any) {
               }}
               inputProps={{ 'aria-label': 'search' }}
               onChange={dataSearch}
-            />
+            /> */}
           </div>
           <HeaderMenu></HeaderMenu>
         </Toolbar>

@@ -12,8 +12,8 @@
   .tagline {
     position: absolute;
     top: 40px;
-    font-size: 30px;
-    color: $dark-blue-crayola;
+    font-size: $text_extra_big;
+    color:  rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -39,7 +39,7 @@ a {
 
     span {
       color: $dull-gray;
-      font-size: $text_big;
+      font-size: $text_extra_big;
     }
   }
 }

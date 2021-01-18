@@ -7,7 +7,7 @@ export function MainContainer() {
   return (
     <>
       <div className={styles.mainContainer}>
-        <span className={styles.tagline}>Great to be healthy!</span>
+        <span className={styles.tagline}>Сreated for your health!</span>
         <DoctorSearch></DoctorSearch>
         <ServiseSearch></ServiseSearch>
       </div>

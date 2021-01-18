@@ -19,8 +19,8 @@ export default function App() {
       <ArrowUp />
       <Header></Header>
       <Switch>
-        <Route path={'/MainContainer'} exact component={MainContainer}></Route>
-        <Route exact path={'/'} component={MedcentersList}></Route>
+        <Route path={'/'} exact component={MainContainer}></Route>
+        <Route exact path={'/MedcentersList'} component={MedcentersList}></Route>
         {/* <Route exact path={'/MedcentersList/'} component={MedcentersList}></Route> */}
         <Route exact path={'/MedicsList/'} component={MedicsList}></Route>
         <Route exact path={'/MedicPage/:id'} component={MedicPage}></Route>

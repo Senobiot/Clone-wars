@@ -6,13 +6,7 @@
 
   &:hover {
     transition: all 0.5s !important;
-    text-shadow: 2px 2px 5px #0c0146;
-    background-color: rgba(63, 81, 181, 0.5);
-    border-radius: 5px;
-
-    span {
-      color: beige !important;
-    }
+    border-bottom: 2px solid rgb(63, 81, 181);
   }
   img {
     width: 48px !important;

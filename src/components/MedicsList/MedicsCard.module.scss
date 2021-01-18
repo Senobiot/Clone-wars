@@ -76,17 +76,16 @@
     color: honeydew;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px #0c0146;
     height: 45px;
     font-size: 1rem;
     grid-area: 7 / 1 / 8 / 2;
-    background-image: linear-gradient(to right, #9eefe1 0%, #4830f0 51%, #9eefe1 100%);
+    background-image: linear-gradient(to right, #6a7788 0%, #8c84c0 51%, #5e5e74 100%);
     background-size: 200% auto;
     transition: 0.2s;
     border-radius: 5px;
 
     &:hover {
-      box-shadow: 2px 2px 5px #0c0146;
+      box-shadow: 1px 1 px 2px #0c0146;
       animation: growing 0.5s linear 2;
     }
 

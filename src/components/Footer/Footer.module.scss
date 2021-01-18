@@ -1,13 +1,14 @@
 @import "../../global/variables.scss";
 @import "../../global/mixin.scss";
 
+.nav{
+  width: 100vw;
+}
 .footer {
   font-weight: 400;
   display: flex;
   align-items: center;
   color: #fffaf0;
-  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-                    0px -5px 35px rgba(255,255,255,0.3);
   padding: 15px;
   z-index: 5000;
   top: auto;
@@ -16,7 +17,7 @@
   height: 40px;
   font-size: 14px;
   justify-content: space-between;
-  background-color: #3f51b5;
+  background-color:$dark-blue-crayola;
   box-shadow: inset 0 0 10px;
   text-transform: none;
   .rsSchoolLogo {
@@ -32,11 +33,10 @@
       & > a {
           transition: 0.4s;
           &:visited {
-              color: #fffaf0;
+              color: rgba(255,255,255,0.5);
           }
           &:hover {
-              color: #0b1222;
-              text-shadow: 1px 1px 4px #c3def6;
+              color:$very-dark-blue-crayola;
           }
           font-weight: 700;
           &:not(:last-child) {
