@@ -165,7 +165,7 @@ export default function MenuSide() {
         <List>
           {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, i) => (
              <Link key={i} to={
-               i === 0 ? '/HomePage' :
+               i === 0 ? '/MainContainer' :
                i === 1 ? '/' :
                i === 2 ? '/MedicsList/' :
                i === 3 ? '/ServicesPage/' :
@@ -181,7 +181,7 @@ export default function MenuSide() {
             </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-            </Link> 
+            </Link>
           ))}
         </List>
         <Divider />
