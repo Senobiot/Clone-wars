@@ -20,6 +20,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MedcentersInfo from './MedcentersInfo'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -71,9 +72,11 @@ interface ICard {
   history: string;
   handler: Function;
   text: string;
+  centerName: string;
+  category: {};
 }
 
-function centerCard({centerImg, logo, fullname, adress, history, handler, text} : ICard) {
+function centerCard({centerImg, logo, fullname, adress, history, handler, text, category, centerName} : ICard) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -124,11 +127,7 @@ function centerCard({centerImg, logo, fullname, adress, history, handler, text} 
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          {/* <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography> */}
+          <MedcentersInfo category={category} centerName={centerName}/>
         </CardContent>
       </Collapse>
     </Card>
@@ -195,8 +194,10 @@ const MedcentersList = () => {
         const centerImg = e.img;
         const logo = e.logo;
         const fullname = e.fullname;
+        const centerName = e.name;
         const adress = e.adress;
         const history = e.history;
+        const category = e.services;
         const latings = e.coord.split(',').map( e => parseFloat(e) );
         const handler = () => {
           if (window.innerWidth < 768) {
@@ -209,7 +210,7 @@ const MedcentersList = () => {
           <div  key={e.name}
           ref={refs[e.fullname]}
           >
-            {centerCard({centerImg, logo, fullname, adress, history, handler, text})}
+            {centerCard({centerImg, logo, fullname, adress, history, handler, text, category, centerName})}
           </div>     
         )
       })}
