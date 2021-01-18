@@ -1,141 +1,172 @@
 @import "../../global/mixin.scss";
 
 .MedcentersListWrapper {
-    height: calc(100vh - 104px);
-    width: 100%;
-    @include flex;
-    flex-wrap: wrap;
-    .leafletContainer {
-        height: 100%;
-        width: 65%;
-        .leafletPopup {
-            max-width: 295px;
-            a {
-                color: cornsilk !important;
-                font-size: 18px;
-                top: 5px;
-                right: 4px;
-            }
-            > div:first-child {
-                font-size: 16px;
-                @include font-regular;
-                border: 1px solid rgba(63,81,181, 0.05);
-                // background-color: rgba(38, 127, 202, 0.9);
-                background-color: #3f51b5;
-                box-shadow: 0px -1px 5px 5px rgba(63,81,181, 0.5) inset;
-                color: #fff;
-                text-shadow: 2px 2px 5px #020b3d;
-                > div:first-child {
-                    @include flex;
-                    flex-wrap: wrap;
-                    img {
-                        width: 30%
-                    }
-                    > div:nth-child(2) {
-                        width: 65%;
-                    }
-                    > div:nth-child(3) {
-                        margin-top: 8px;
-                        font-size: 1.1em;
-                    }
-                    button {
-                        margin-top: 10px;
-                        transition: 0.3s;
-                        &:active {
-                            box-shadow: 2px 2px 3px rgba(231, 233, 241, 0.2);
-                            transform: translate(2px, 2px);
-                        }
-                    }
-                }
-            }
-        
-        }
-    }
-    .MedcentersListBlock {
-        overflow-y: scroll;
-        -ms-overflow-style: none !important; 
-        scrollbar-width: none !important;
-        &::-webkit-scrollbar {
-            width: 0;
-        }
-        width: 35%;
-        height: 100%;
+  height: calc(100vh - 104px);
+  width: 100%;
+
+  @include flex;
+
+  flex-wrap: wrap;
+
+  .leafletContainer {
+    height: 100%;
+    width: 65%;
+
+    .leafletPopup {
+      max-width: 295px;
+
+      a {
+        color: cornsilk !important;
+        font-size: 18px;
+        top: 5px;
+        right: 4px;
+      }
+
+      > div:first-child {
+        font-size: 16px;
+
+        @include font-regular;
+
+        border: 1px solid rgba(63, 81, 181, 0.05);
+        // background-color: rgba(38, 127, 202, 0.9);
         background-color: #3f51b5;
-        .header {
-            display: flex;
-            flex-wrap: wrap;
-            > div:nth-child(2) {
-                max-width: calc(100% - 130px);
+        box-shadow: 0 -1px 5px 5px rgba(63, 81, 181, 0.5) inset;
+        color: #fff;
+        text-shadow: 2px 2px 5px #020b3d;
+
+        > div:first-child {
+          @include flex;
+
+          flex-wrap: wrap;
+
+          img {
+            width: 30%;
+          }
+
+          > div:nth-child(2) {
+            width: 65%;
+          }
+
+          > div:nth-child(3) {
+            margin-top: 8px;
+            font-size: 1.1em;
+          }
+
+          button {
+            margin-top: 10px;
+            transition: 0.3s;
+
+            &:active {
+              box-shadow: 2px 2px 3px rgba(231, 233, 241, 0.2);
+              transform: translate(2px, 2px);
             }
-            > div:nth-child(3) {
-                margin: 15px 0 0 auto;
-            }
+          }
         }
-        .avatar {
-            height: 40px;
-            width: auto;
-        }
+      }
     }
-}
-@media (max-width: 1279px) {
-    .MuiCard-root {
-        .MuiCardHeader-root {
-        flex-wrap: wrap;
-        }   
+  }
+
+  .MedcentersListBlock {
+    overflow-y: scroll;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+
+    &::-webkit-scrollbar {
+      width: 0;
     }
 
+    width: 35%;
+    height: 100%;
+    background-color: #3f51b5;
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+
+      > div:nth-child(2) {
+        max-width: calc(100% - 130px);
+      }
+
+      > div:nth-child(3) {
+        margin: 15px 0 0 auto;
+      }
+    }
+
+    .avatar {
+      height: 40px;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .MuiCard-root {
+    .MuiCardHeader-root {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 @media (max-width: 1023px) {
-    .MedcentersListWrapper {
-        .MedcentersListBlock, .leafletContainer {
-            width: 50%;
-        }
+  .MedcentersListWrapper {
+    .MedcentersListBlock,
+    .leafletContainer {
+      width: 50%;
     }
+  }
 }
 
 @media (max-width: 767px) {
-    .MedcentersListWrapper {
-        height: auto;
-        .MedcentersListBlock, .leafletContainer {
-            width: 100%;
-        }
-        .MedcentersListBlock {
-            height: auto
-        }
-        .leafletContainer {
-            height: 300px;
-            order: -1;
-            .leafletPopup {
-                max-width: 295px;
-                > div:first-child {
-                    > div:first-child {
-                        img {
-                            max-height: 34px;
-                            width: auto;
-                        }
-                        > div:nth-child(2) {
-                            font-size: 0.8em;
-                        }
-                        > div:nth-child(3) {
-                            font-size: 0.8em;
-                        }
-                    }
-                }
-            }
-        }
+  .MedcentersListWrapper {
+    height: auto;
+
+    .MedcentersListBlock,
+    .leafletContainer {
+      width: 100%;
     }
+
+    .MedcentersListBlock {
+      height: auto;
+    }
+
+    .leafletContainer {
+      height: 300px;
+      order: -1;
+
+      .leafletPopup {
+        max-width: 295px;
+
+        > div:first-child {
+          > div:first-child {
+            img {
+              max-height: 34px;
+              width: auto;
+            }
+
+            > div:nth-child(2) {
+              font-size: 0.8em;
+            }
+
+            > div:nth-child(3) {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .show {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #000;
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
 }
+
 .hide {
-    display: none;
-} 
+  display: none;
+}

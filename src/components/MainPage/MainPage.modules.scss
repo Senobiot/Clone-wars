@@ -5,7 +5,9 @@
   height: calc(100vh - 105px);
   width: 100%;
   background-color: $smoky-white;
+
   @include flex;
+
   justify-content: space-around;
   position: relative;
 
@@ -13,7 +15,7 @@
     position: absolute;
     top: 40px;
     font-size: $text_extra_big;
-    color:  rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -21,14 +23,16 @@ a {
   flex-grow: 1;
   height: 50%;
   display: block;
-  .searchContainer {
 
+  .searchContainer {
     margin: 0 60px;
     height: 100%;
     border: 2px solid $very-pale-blue;
     border-radius: 10px;
     background-color: $white;
+
     @include flex-column;
+
     align-items: center;
     justify-content: space-around;
 

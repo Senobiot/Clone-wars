@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import HeaderMenu from './HeaderMenu';
 import styles from './Header.module.scss';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuSide from '../MenuSide/MenuSide'
+import MenuSide from '../MenuSide/MenuSide';
 
 const useStyles = makeStyles((theme) => ({
   toolBar: {

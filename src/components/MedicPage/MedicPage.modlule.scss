@@ -38,6 +38,7 @@
 
   .medicPageName {
     @include font-bold;
+
     font-size: 1.3em;
     text-align: center;
     color: #fff;
@@ -46,15 +47,19 @@
 
   .medicPageSpec {
     @include flex;
+
     align-items: center;
     justify-content: center;
 
     > img {
       margin-right: 20px;
     }
+
     color: #3f51b5;
     font-size: 1.5em;
+
     @include font-bold;
+
     text-align: center;
   }
 
@@ -79,6 +84,7 @@
     box-shadow: 0 -1px 2px 2px rgba(63, 81, 181, 0.5) inset;
     margin: 10px 0;
   }
+
   .medicPageCategoryLogo {
     width: 48px !important;
     height: 48px !important;
@@ -89,6 +95,7 @@
   .medicPageCenter {
     span {
       @include font-bold;
+
       color: #3f51b5;
     }
 
@@ -97,8 +104,11 @@
     }
 
     padding: 5px 15px;
+
     @include flex;
+
     flex-wrap: wrap;
+
     .medicPageLogo {
       width: 175px;
       padding: 5px;
@@ -110,7 +120,9 @@
       width: calc(99% - 190px);
       color: #3f51b5;
       font-size: 1.3em;
+
       @include font-bold;
+
       text-align: center;
     }
 
@@ -121,16 +133,21 @@
       color: rgb(90, 90, 90);
       font-size: 0.8em;
     }
+
     .medicPageSubWrapper {
       max-height: 350px;
+
       @include flex;
+
       flex-direction: column;
       flex-wrap: wrap;
       width: 100%;
+
       > div {
         width: 48%;
         margin-bottom: 10px;
       }
+
       .iframeMap {
         height: 300px;
         width: 48%;
@@ -146,7 +163,6 @@
     }
 
     .medicPageCenterScheduleBtn {
-
       span:first-child {
         color: cornsilk;
       }
@@ -160,17 +176,22 @@
       .medicPageCenterFullName {
         width: 100%;
       }
+
       .medicPageCenterAdress {
         text-align: center;
       }
+
       .medicPageLogo {
         margin: 0 auto 20px;
       }
+
       .medicPageSubWrapper {
         max-height: inherit;
+
         > div {
           width: 100%;
         }
+
         .iframeMap {
           width: 98%;
           margin: 0 auto;
@@ -178,6 +199,7 @@
           margin-bottom: 20px;
         }
       }
+
       > div {
         width: 100%;
       }
