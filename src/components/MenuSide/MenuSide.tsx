@@ -23,6 +23,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import styles from '../Header/Header.module.scss';
 import { Link } from 'react-router-dom';
 
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -71,14 +72,13 @@ const useStyles = makeStyles((theme: Theme) =>
       flexShrink: 0,
     },
     drawerPaper: {
-        backgroundColor: 'rgb(220, 225, 253)',
+      background: 'linear-gradient(180deg, rgba(33,148,224,1) 0%, rgba(33,148,224,1) 30%, rgba(33,148,224,0) 100%)',
       width: drawerWidth,
     },
     drawerHeader: {
       display: 'flex',
       alignItems: 'center',
       padding: theme.spacing(0, 1),
-      // necessary for content to be below app bar
       ...theme.mixins.toolbar,
       justifyContent: 'flex-end',
     },
@@ -164,15 +164,15 @@ export default function MenuSide() {
         <Divider />
         <List>
           {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, i) => (
-             <Link key={i} to={
-               i === 0 ? '/MainContainer' :
-               i === 1 ? '/' :
+             <Link key={i} onClick={handleDrawerClose} className={styles.link} to={
+               i === 0 ? '/' :
+               i === 1 ? '/MedcentersList/' :
                i === 2 ? '/MedicsList/' :
                i === 3 ? '/ServicesPage/' :
                '/PersonalPage/'
               }>
             <ListItem button key={text}>
-              <ListItemIcon>{
+              <ListItemIcon  className={styles.icon}>{
               i  === 0 ?  <HomeIcon /> :
               i === 1 ?   <BusinessIcon /> :
               i === 2 ?   <AssignmentIndIcon /> :
@@ -185,14 +185,6 @@ export default function MenuSide() {
           ))}
         </List>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
     </div>
   );

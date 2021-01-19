@@ -101,6 +101,18 @@ a {
   } 
 }
 
+.link {
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+}
+.icon {
+  > svg {
+     color: #fff;
+  }
+}
+
 @media (max-width: 599px) {
   .heartbeatloader {
     width: 28px;
