@@ -94,11 +94,23 @@ a {
     @include flex;
     align-items: flex-end;
     height: 100%;
-    background: url('../../assets/logo2.png') no-repeat 50%/contain;
+    background: url('../../assets/logo.png') no-repeat 50%/contain;
     > span {
       color: #fff !important;
     }
   } 
+}
+
+.link {
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+}
+.icon {
+  > svg {
+     color: #fff;
+  }
 }
 
 @media (max-width: 599px) {

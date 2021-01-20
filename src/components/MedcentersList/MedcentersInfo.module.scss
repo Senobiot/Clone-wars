@@ -1,0 +1,87 @@
+@import "../../global/mixin.scss";
+
+.pService {
+    display: block;
+    width: 100%;
+    color: rgb(0, 23, 66);
+    display: block; 
+}
+.spanService {
+    display: block;
+    padding-left: 5px;
+    color: rgb(0, 23, 66);
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    background-color: rgb(223, 232, 250);
+    margin-bottom: 3px;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.details {
+    display: block;
+    width: 100%;
+    background-color: rgb(227, 232, 241);
+    > div:first-child {
+        width: 100%;
+        background-color: rgb(227, 232, 241);
+    }
+    > div:nth-child(2) {
+        background-color: rgb(227, 232, 241);
+    }
+}
+.detailsWrapped {
+    flex-wrap: wrap;
+}
+.doctorTile{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    background-color: rgb(223, 232, 250);
+    .doctorTileImg {
+        width: auto;
+        padding: 5px;
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+        height: 50px;
+        margin-right: 5px;
+    }
+    span {
+        flex-grow: 1;
+    }
+}
+.medicAppointmentBtn {
+    @include font-bolder;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    color: honeydew;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px #0c0146;
+    height: 30px;
+    font-size: 0.7rem;
+    background-image: linear-gradient(to right, #9eefe1 0%, #4830f0 51%, #9eefe1 100%);
+    background-size: 200% auto;
+    transition: 0.2s;
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: 2px 2px 5px #0c0146;
+      animation: growing 0.5s linear 2;
+    }
+
+    @keyframes growing {
+      25% { transform: scale(1.05); }
+      50% { transform: scale(1.1); }
+      75% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    &:active {
+      transform: translate(2px, 2px);
+      text-shadow: inset 2px 2px 1px #0c0146;
+    }
+  }

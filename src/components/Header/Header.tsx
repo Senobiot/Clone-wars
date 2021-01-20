@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
-    backgroundColor: '#3f51b5',
+    backgroundColor: '#2194E0',
     boxShadow: 'inset 0 0 10px'
   },
   search: {
