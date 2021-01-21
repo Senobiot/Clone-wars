@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import styles from './MainPage.module.scss';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring'
@@ -10,6 +10,7 @@ const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`
 const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 10}px,0)`
 const trans5 = (x, y) => `translate3d(${x / 10}px,${y / 15}px,0)`
 const trans6 = (x, y) => `translate3d(${x / 50}px,${y / 25}px,0)`
+
 
 export function MainPage() {
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
@@ -25,16 +26,14 @@ export function MainPage() {
             <div className={styles.mainPageBtnWrapper}>
             {['Найти свой медцентр', ' Найти своего врача', ' Посмотреть услуги', 'Зайти в свой кабинет'].map((text, i) => {
                 return (
-                    <Link key={i} to={
-                        i === 0 ? '/MedcentersList/' :
-                        i === 1 ? '/MedicsList/' :
-                        i === 2 ? '/ServicesPage/' :
-                        '/PersonalPage/'
-                       }>
-                       <div className={styles.mainPageButton}>
-                        {text}
-                        </div>  
-                       </Link>
+                  <Link key={i} to={
+                    i === 0 ? '/MedcentersList/' :
+                    i === 1 ? '/MedicsList/' :
+                    i === 2 ? '/ServicesPage/' :
+                    '/PersonalPage/'
+                    }>
+                    <div className={styles.mainPageButton}>{text}</div>  
+                  </Link>
                 )          
             })}
         </div>

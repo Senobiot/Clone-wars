@@ -1,0 +1,1 @@
+export { MedicPage } from './MedicPage';

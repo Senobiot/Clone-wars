@@ -124,7 +124,7 @@ function centerCard({centerImg, logo, fullname, adress, history, handler, text, 
   );
 }
 
-const MedcentersList = () => {
+export const MedcentersList = () => {
   // const [med_centers, setCenters] = useState([])
     // const fetchCenters = getCollection('med_centers').then((data) => {
   //   setCenters(data);
@@ -232,4 +232,3 @@ const MedcentersList = () => {
   );
 };
 
-export default MedcentersList;

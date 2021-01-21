@@ -6,7 +6,7 @@ import { medicsList } from '../../data/medicsList';
 
 const data = medicsList;
 
-const MedicsList = () => {
+export const MedicsList = () => {
   const [medics, setCategories] = useState(data);
   const [category, setCategory] = useState('Все врачи');
 
@@ -46,4 +46,3 @@ const MedicsList = () => {
   );
 };
 
-export default MedicsList;

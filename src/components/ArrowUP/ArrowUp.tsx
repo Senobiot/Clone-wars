@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ArrowUp.scss';
 
-const ArrowUp = () => {
+export const ArrowUp = () => {
     const [isActive, setActive] = useState(null);
     const handler = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -24,5 +24,3 @@ const ArrowUp = () => {
             </div>
         )
 }
-
-export default ArrowUp;

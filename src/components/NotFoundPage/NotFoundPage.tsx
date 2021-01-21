@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Notfound.module.scss';
 
-const NotFoundPage = () => {
+export const NotFoundPage = () => {
   return (
     <div className={styles.wrapper}>
       <p className={styles.article}>
@@ -13,5 +13,3 @@ const NotFoundPage = () => {
     </div>
   )
 }
-
-export default NotFoundPage;

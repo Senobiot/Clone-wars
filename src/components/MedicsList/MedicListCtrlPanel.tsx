@@ -5,7 +5,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import styles from './MedicsListCtrlPanel.module.scss';
 import services_category from '../../data/servicesList';
-import PhoneIcon from '@material-ui/icons/Phone';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
