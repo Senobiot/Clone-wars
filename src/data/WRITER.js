@@ -1,5 +1,5 @@
 
- const med_centers = [
+const med_centers = [
     {
         name: 'Альфамед',
         fullname: 'Медицинский центр «Альфамед»',
@@ -124,13 +124,12 @@
                 {visit_1: 40 }, {visit_2: 35 }, 
              ],
             'procedure': [ 
-                { serv_0: null },
                 { serv_1: 14.10 },
                 { serv_2: 8.92 },
                 { serv_3: 8.80 },
                 { serv_4: 21.22 },
-                { serv_8: 11.25 },
-                { serv_9: 8 },
+                { serv_5: 11.25 },
+                { serv_6: 8 },
             ],
             'therapy': [ 
                 {visit_1: 40}, {visit_2: 30 },
@@ -255,7 +254,6 @@
                 {visit_1:  35.95}
              ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8.25 },
@@ -416,7 +414,6 @@
                 {visit_1: 35 }, {visit_2: 29  }, {visit_home: 65 },
              ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8 },
@@ -1068,7 +1065,6 @@
                 {visit_1: 37 }, {visit_2: 32 },
                 ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8 },
@@ -1172,7 +1168,6 @@
                 {visit_1: 11.14 },
                 ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8 },
@@ -1331,8 +1326,8 @@
         }
     },
 ]
- 
- const services_category = [
+
+const services_category = [
     {
         id: 'uzi_diagnistic',
         logo: 'assets/services_logo/uzi_diagnistic.svg',
@@ -1409,6 +1404,7 @@
         services: {
             visit_1: 'Первичный прием врача-хирурга',
             visit_2: 'Повторный прием врача-хирурга',
+            visit_candidate: 'Прием врача-хирурга, кандидата медицинских наук',
             serv_0: 'Консультация хирурга',
             serv_1: 'Осмотр хирурга',
             serv_2: 'Удаление различных образований кожи и подкожной жировой клетчатки',
@@ -1785,8 +1781,8 @@
         category_name: 'Психотерапия',
         medic: 'Психотерапевт',
         services: {
-            serv_0: 'Консультация психотерапевта',
-            serv_2: 'Психотерапевтический сеанс',
+            visit_1: 'Консультация психотерапевта',
+            visit_2: 'Психотерапевтический сеанс',
             serv_3: 'Сеансы индивидуальной комплексной терапии зависимостей ',
         }
     },
@@ -1796,6 +1792,7 @@
         category_name: 'Реабилитация',
         medic: 'Реабилитолог',
         services: {
+            visit_1: 'Первичный прием врача-реабилитолога',
             serv_0: 'Консультация реабилитолога',
             serv_2: 'Мануальная терапия',
             serv_3: 'Дозированное аппаратное вытяжение',
@@ -1813,6 +1810,8 @@
         category_name: 'Наркология',
         medic: 'Нарколог',
         services: {
+            visit_1: 'Первичный прием врача-нарколога',
+            visit_2: 'Повторный прием врача-нарколога',
             serv_0: 'Консультация нарколога',
             serv_2: 'Лечение зависимостей',
             serv_3: 'Лечение депрессий',
@@ -1826,7 +1825,7 @@
         category_name: 'Стоматология',
         medic: 'Стоматолог',
         services: {
-            serv_0: 'Консультация стоматолога',
+            visit_1: 'Консультация стоматолога',
             serv_2: 'Диагностика в стоматологии',
             serv_3: 'Отбеливание зубов',
             serv_4: 'Профилактика, гигиена полости рта',
@@ -1844,6 +1843,7 @@
         category_name: 'Массаж',
         medic: 'Массажист',
         services: {
+            visit_1: 'Первичный прием массажиста',
             serv_0: null,
             serv_2: 'Терапевтическая косметология',
             serv_3: 'Косметический массаж лица',
@@ -1961,10 +1961,21 @@ let centers = [];
                 }
             })
 
+        }) 
+        const ats = new RegExp('')
+        arrDetailedValues = arrDetailedValues.map(e => {
+            if (e.match(/Первичный прием/ig)) {
+                e = e.replace(/Первичный прием/ig, 'Приём')
+            } else if (e.match(/Повторный прием/ig)) {
+                e = e.replace(/Повторный прием/ig, 'Приём')
+            }
+            return e
         })
-        arrDetailedValues = arrDetailedValues.filter((e,idx, arr) => idx === arr.indexOf(e))
-        obj.services = obj.services.concat(arrDetailedValues);
-        centers.push(obj)
+           
+        arrDetailedValues = arrDetailedValues.filter((e,idx, arr) => idx === arr.indexOf(e));
+
+        obj.detailedServices = arrDetailedValues;
+        centers.push(obj);
     })
 
 

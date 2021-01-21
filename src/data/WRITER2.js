@@ -1535,3 +1535,36 @@ const medcenters = [
 		]
 	}
 ]
+
+let services = [];
+
+let detailedServices = [];
+   let servicesObj = {};
+
+(function(){
+    
+    medcenters.map(e=> services.push(e.detailedServices));
+    services = services.flat(Infinity).filter((e,idx, arr) => idx === arr.indexOf(e)).sort();
+    
+ 
+    services.map(service=> {
+        servicesObj[service] = [];
+
+        medcenters.map(center=> {
+            if(center.detailedServices.indexOf(service) !== -1 ) {      
+                servicesObj[service].push(center.center)
+                
+            }
+        })
+    })
+})();
+
+require('fs').writeFile(
+    './searchCats.js',
+    JSON.stringify(servicesObj, null, '\t'),
+    function (err) {
+        if (err) {
+            console.error('Aaaaa');
+        }
+    }
+);
