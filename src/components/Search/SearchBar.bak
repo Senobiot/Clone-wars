@@ -68,35 +68,13 @@ export const SearchBar = () => {
             searchResultContent.push(medicsSpecsFiltered);
             searchResultTitles.push(`В именах ${medicsNamesFiltered.length} результатов`);
             searchResultContent.push(medicsNamesFiltered);
-
+        
             setValue(searchResultTitles);
             setContent(searchResultContent);
         } else {
             setValue([]);
             setContent([]);
         }
-    }
-    const handlerMedcenters = (e) => {
-        // LOGIC
-        return window.location.href=`/MedcentersList`;
-    }
-    const handlerDepartments = (e) => {
-        // LOGIC
-        return window.location.href=`/MedcentersList`;
-    }
-    const handlerServices = (e) => {
-        // LOGIC
-        return window.location.href=`/MedcentersList`;
-    }
-    const handlerSpecialities = (e) => {
-        // LOGIC
-        return window.location.href=`/MedicsList`;
-    }
-
-    const handlerMedicNames = (e) => {
-        const id = medicsList.find(el => el.name === e.target.textContent).id;
-        console.log(id)
-        return window.location.href=`/MedicPage/${id}`;
     }
 
         return (
@@ -114,19 +92,10 @@ export const SearchBar = () => {
                                 aria-controls="panel1a"
                                 id="r"
                                 >
-                                    <Typography className={styles.headerTitle}>{accordeons} </Typography>
+                                    <Typography >{accordeons}</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className={styles.resultElement1}>
-                                    {content[index].map((e,ids)=>
-                                    <div key={ids + 50} 
-                                    onClick={ index === 0 ? handlerMedcenters : 
-                                        index === 1 ? handlerDepartments :
-                                        index === 2 ? handlerServices : 
-                                        index === 3 ? handlerSpecialities :
-                                        handlerMedicNames}
-                                    className={styles.resultElement}>
-                                        {e}
-                                    </div>)}
+                                    {content[index].map((e,ids)=> <div key={ids + 10} className={styles.resultElement}>{e}</div>)}
                                 </AccordionDetails> 
                             </Accordion>
                             )
