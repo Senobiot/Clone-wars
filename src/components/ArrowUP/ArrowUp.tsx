@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './ArrowUp.scss';
+import styles from './ArrowUP.module.scss';
 
 export const ArrowUp = () => {
     const [isActive, setActive] = useState(null);
