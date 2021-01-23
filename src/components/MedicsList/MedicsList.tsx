@@ -3,25 +3,28 @@ import styles from './MedicslList.modlule.scss';
 import MedicsCard from './MedicsCard';
 import MedicListCtrlPanel from './MedicListCtrlPanel';
 import { medicsList } from '../../data/medicsList';
+import { useLocation } from "react-router-dom";
 
-const data = medicsList;
+
 
 export const MedicsList = () => {
-  const [medics, setCategories] = useState(data);
-  const [category, setCategory] = useState('Все врачи');
+  const data = medicsList;
+  const location = useLocation();
+  const [medics, setCategories] = useState(location.category ? data.filter((medic) => medic.speciality === location.category) : data);
+  const [category, setCategory] = useState(location.category ? location.category : 'Все врачи');
 
-  const handleCategoryChange = (e) => {
+   const handleCategoryChange = (e) => {
     setCategory(e.target.textContent);
   };
 
   useEffect(() => {
-    let allMedics = medicsList;
+    let currentData;
     if (category !== 'Все врачи') {
-      allMedics = allMedics.filter((medic) => medic.speciality === category);
+      currentData = data.filter((medic) => medic.speciality === category);
     } else {
-      allMedics = medicsList;
+      currentData = data;
     }
-    setCategories(allMedics);
+    setCategories(currentData);
   }, [category]);
 
   return (

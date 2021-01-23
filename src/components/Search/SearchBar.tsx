@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { useHistory } from "react-router-dom";
 import styles from './SearchBar.module.scss';
 import { centers , services, detailedServ } from '../../data/searchKeys';
 import { medicsList } from '../../data/medicsList';
@@ -27,7 +28,9 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const SearchBar = () => {
+    let history = useHistory();
     const classes = useStyles();
+    const searchBar = useRef(null);
 
     const centersNames = [...centers];
     const medics = [...medicsList];
@@ -77,7 +80,6 @@ export const SearchBar = () => {
         }
     }
     const handlerMedcenters = (e) => {
-        // LOGIC
         return window.location.href=`/MedcentersList`;
     }
     const handlerDepartments = (e) => {
@@ -89,21 +91,27 @@ export const SearchBar = () => {
         return window.location.href=`/MedcentersList`;
     }
     const handlerSpecialities = (e) => {
-        // LOGIC
-        return window.location.href=`/MedicsList`;
+        history.push({
+            pathname: '/MedicsList',
+            category: e.target.textContent,
+          });
     }
 
     const handlerMedicNames = (e) => {
+        // let ats = searchBar as unknown as <HTMLElement>;
+        // ats.classList.remove('resultsWrapper');
         const id = medicsList.find(el => el.name === e.target.textContent).id;
-        console.log(id)
-        return window.location.href=`/MedicPage/${id}`;
+
+        history.push({
+            pathname: `/MedicPage/${id}`,
+          });
     }
 
         return (
         <div className={styles.searchWrapper}>
-            <input className={styles.input} type='search' onChange={handler}>
+            <input className={styles.input} type='search' placeholder='Найти услугу, врача, медцентр...' onChange={handler} >
             </input>
-                <div className={content.length ? styles.resultsWrapper : styles.hidden}> 
+                <div className={content.length ? styles.resultsWrapper : styles.hidden} ref={searchBar}> 
                     {
                         title.map((accordeons,index) => {
                             return (
