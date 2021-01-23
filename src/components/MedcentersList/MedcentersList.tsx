@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './Medcenters.module.scss';
-import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvent, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import {  iconPerson  } from './Marker';
 import Button from '@material-ui/core/Button';
 import { getCollection } from '../../services/updateFirebase';
@@ -14,12 +14,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+// import FavoriteIcon from '@material-ui/icons/Favorite';
+// import ShareIcon from '@material-ui/icons/Share';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MedcentersInfo from './MedcentersInfo'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -71,9 +72,11 @@ interface ICard {
   history: string;
   handler: Function;
   text: string;
+  centerName: string;
+  category: {};
 }
 
-function centerCard({centerImg, logo, fullname, adress, history, handler, text} : ICard) {
+function centerCard({centerImg, logo, fullname, adress, history, handler, text, category, centerName} : ICard) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -104,31 +107,17 @@ function centerCard({centerImg, logo, fullname, adress, history, handler, text} 
           {history}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
+      <CardActions disableSpacing className={styles.infoAboutCenter}>
+        <div onClick={handleExpandClick} className={styles.expandInfo}>
+        <span>Информация об услугах центра: </span>
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          {/* <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography> */}
+          <MedcentersInfo category={category} centerName={centerName}/>
         </CardContent>
       </Collapse>
     </Card>
@@ -195,8 +184,10 @@ const MedcentersList = () => {
         const centerImg = e.img;
         const logo = e.logo;
         const fullname = e.fullname;
+        const centerName = e.name;
         const adress = e.adress;
         const history = e.history;
+        const category = e.services;
         const latings = e.coord.split(',').map( e => parseFloat(e) );
         const handler = () => {
           if (window.innerWidth < 768) {
@@ -209,7 +200,7 @@ const MedcentersList = () => {
           <div  key={e.name}
           ref={refs[e.fullname]}
           >
-            {centerCard({centerImg, logo, fullname, adress, history, handler, text})}
+            {centerCard({centerImg, logo, fullname, adress, history, handler, text, category, centerName})}
           </div>     
         )
       })}

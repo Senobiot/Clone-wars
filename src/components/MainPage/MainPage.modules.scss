@@ -15,31 +15,31 @@
     font-size: 30px;
     color: $dark-blue-crayola;
   }
-}
-
-a {
-  flex-grow: 1;
-  height: 50%;
-  display: block;
-  .searchContainer {
-
-    margin: 0 60px;
-    height: 100%;
-    border: 2px solid $very-pale-blue;
-    border-radius: 10px;
-    background-color: $white;
-    @include flex-column;
-    align-items: center;
-    justify-content: space-around;
-
-    &:hover {
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    span {
-      color: $dull-gray;
-      font-size: $text_big;
+  a {
+    flex-grow: 1;
+    height: 50%;
+    display: block;
+    .searchContainer {
+  
+      margin: 0 60px;
+      height: 100%;
+      border: 2px solid $very-pale-blue;
+      border-radius: 10px;
+      background-color: $white;
+      @include flex-column;
+      align-items: center;
+      justify-content: space-around;
+  
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      span {
+        color: $dull-gray;
+        font-size: $text_big;
+      }
     }
   }
 }
+
