@@ -49,3 +49,9 @@ export interface IMmedCenters {
 interface IPrice {
   [name: string]: number;
 }
+
+export interface IData {
+  users: IUser[];
+  services_category: IServicesCategory[];
+  med_centers: IMmedCenters[];
+}

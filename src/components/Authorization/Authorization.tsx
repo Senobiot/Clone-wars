@@ -22,6 +22,8 @@ import { getDocument, signIn, signUp, singUpGoogle } from '../../services/update
 import { IUser, Role } from '../../model/data.model';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateNewUser, updateUser, updateUserAuthorization } from '../../../store/actions/actionUser';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -50,22 +52,9 @@ const useStyles = makeStyles((theme) => ({
 
 export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () => void }): JSX.Element {
   const classes = useStyles();
-  const [formState, setFormState] = useState<IUser>({
-    email: '',
-    password: '',
-    role: Role.Patient,
-    category: '',
-    experience: '',
-    graduation: '',
-    id: '',
-    img: '',
-    medcenter: '',
-    name: '',
-    phone: '',
-    speciality: '',
-    gender: '',
-    birthday: '',
-  });
+  const userData = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const [formState, setFormState] = useState<IUser>(userData.data);
   const [error, setError] = useState<{ email: boolean; password: boolean }>({ email: false, password: false });
   const [isRegistration, setIsregistration] = useState<boolean>(false);
   const [stateAlert, setstateAlert] = useState<{ open: boolean; message: string }>({ open: false, message: '' });
@@ -75,6 +64,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
   useEffect(() => {
     const q = auth.onAuthStateChanged(async (user) => {
       if (user) {
+        console.log(user);
         setIsLogin(true);
       } else {
         setIsLogin(false);
@@ -90,9 +80,12 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
   const goUserPage = async () => {
     const uid = auth.currentUser.uid;
     const state = await getDocument('users', uid);
+    dispatch(updateUser(state));
+    dispatch(updateNewUser(isRegistration));
+    dispatch(updateUserAuthorization(true));
     setFormState(state);
     handleClickOpenDialog();
-    history.push({ pathname: '/User', state: { user: state, authorized: true } });
+    isRegistration ? history.push('/User/') : '';
   };
 
   const isValidation = (name: string, value: string) => {

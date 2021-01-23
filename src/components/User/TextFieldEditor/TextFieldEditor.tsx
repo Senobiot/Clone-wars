@@ -4,6 +4,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import style from './TextFieldEditor.module.scss';
 
 interface Props {
+  options: string[];
   name: string;
   formStateUser: string;
   type: string;
@@ -11,8 +12,9 @@ interface Props {
   handleChange: (e) => void;
 }
 
-export function TextFieldEditor({ formStateUser, type, name, isEdit, handleChange }: Props): JSX.Element {
+export function TextFieldEditor({ formStateUser, type, name, isEdit, options, handleChange }: Props): JSX.Element {
   /* const [isEdit, setIsEdit] = useState(false); */
+  console.log(options);
   return (
     <Grid container direction="row" justify="space-between" alignItems="center">
       <Grid item xs={3}>
@@ -37,8 +39,16 @@ export function TextFieldEditor({ formStateUser, type, name, isEdit, handleChang
             autoFocus
             fullWidth
           >
-            <MenuItem value={'male'}>Male</MenuItem>
-            <MenuItem value={'female'}>Female</MenuItem>
+            {options
+              ? options.map((item, i) => {
+                  if (item)
+                    return (
+                      <MenuItem key={i} value={item}>
+                        {item}
+                      </MenuItem>
+                    );
+                })
+              : ''}
           </TextField>
         )}
       </Grid>

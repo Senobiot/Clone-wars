@@ -1,0 +1,23 @@
+@import '../../global/mixin.scss';
+
+.wrapper {
+  margin: 15px !important;
+  border-top: 1px solid #cccccc;
+  padding: 15px 0;
+
+  .item {
+    margin: 10px 0;
+
+    .link {
+      @include flex;
+      justify-content: flex-start;
+      color: black;
+
+      .avatar {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px !important;
+      }
+    }
+  }
+}
