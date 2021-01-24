@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import styles from './SearchBar.module.scss';
-import { centers , services, detailedServ } from '../../data/searchKeys';
+import { centers , services, detailedServ, catsInd } from '../../data/searchKeys';
 import { medicsList } from '../../data/medicsList';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme: Theme) =>
 export const SearchBar = () => {
     let history = useHistory();
     const classes = useStyles();
-    const searchBar = useRef(null);
 
     const centersNames = [...centers];
     const medics = [...medicsList];
@@ -41,9 +40,11 @@ export const SearchBar = () => {
     let searchResultContent = [];
     const [title, setValue] = useState([]);
     const [content, setContent] = useState([]);
+    const [input, setInput] = useState('');
 
     const handler = (e) => {
         if (e.target.value.trim() !== '') {
+            setInput(e.target.value);
             const regex = new RegExp(`${e.target.value}`, 'gmi');
             const centersNamesFiltered = centersNames.filter(e => regex.test(e));
             const categoriesFiltered = categories.filter(e => regex.test(e));
@@ -75,43 +76,54 @@ export const SearchBar = () => {
             setValue(searchResultTitles);
             setContent(searchResultContent);
         } else {
+            setInput('');
             setValue([]);
             setContent([]);
         }
     }
+
+    const clearInput = () => {
+        setInput('');
+        setValue([]);
+        setContent([]);
+    }
+
     const handlerMedcenters = (e) => {
+        clearInput();
         return window.location.href=`/MedcentersList`;
     }
     const handlerDepartments = (e) => {
+        clearInput();
         // LOGIC
         return window.location.href=`/MedcentersList`;
     }
     const handlerServices = (e) => {
+        clearInput();
         // LOGIC
         return window.location.href=`/MedcentersList`;
     }
     const handlerSpecialities = (e) => {
+        clearInput();
         history.push({
             pathname: '/MedicsList',
             category: e.target.textContent,
-          });
+            categoryIndex: catsInd.indexOf(e.target.textContent) + 1
+        });
     }
 
     const handlerMedicNames = (e) => {
-        // let ats = searchBar as unknown as <HTMLElement>;
-        // ats.classList.remove('resultsWrapper');
+        clearInput();
         const id = medicsList.find(el => el.name === e.target.textContent).id;
-
         history.push({
             pathname: `/MedicPage/${id}`,
-          });
+        });
     }
 
         return (
         <div className={styles.searchWrapper}>
-            <input className={styles.input} type='search' placeholder='Найти услугу, врача, медцентр...' onChange={handler} >
+            <input className={styles.input} value={input} type='search' placeholder='Найти услугу, врача, медцентр...' onChange={handler}>
             </input>
-                <div className={content.length ? styles.resultsWrapper : styles.hidden} ref={searchBar}> 
+                <div className={content.length ? styles.resultsWrapper : styles.hidden} > 
                     {
                         title.map((accordeons,index) => {
                             return (

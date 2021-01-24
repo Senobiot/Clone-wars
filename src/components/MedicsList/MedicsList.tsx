@@ -13,9 +13,11 @@ export const MedicsList = () => {
   const [medics, setCategories] = useState(location.category ? data.filter((medic) => medic.speciality === location.category) : data);
   const [category, setCategory] = useState(location.category ? location.category : 'Все врачи');
 
+  console.log(location.categoryIndex)
    const handleCategoryChange = (e) => {
     setCategory(e.target.textContent);
   };
+  const searchCat = location.category ?  location.categoryIndex : null;
 
   useEffect(() => {
     let currentData;
@@ -29,7 +31,7 @@ export const MedicsList = () => {
 
   return (
     <div className={styles.medicsListPage}>
-      <MedicListCtrlPanel handler={handleCategoryChange} />
+      <MedicListCtrlPanel handler={handleCategoryChange} searchCat={searchCat} />
       <div className={styles.medicsListWrapper}>
         {medics.map((e, index) => {
           return (
