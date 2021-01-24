@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const catBtnsArray = [];
 services_category.map((e) => {
-  if (e.services.serv_0 !== null && catBtnsArray.indexOf(e.id) === -1) {
+  if (e.medic !== null && catBtnsArray.indexOf(e.id) === -1) {
     catBtnsArray.push(e.id);
   }
 });

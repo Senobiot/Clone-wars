@@ -13,7 +13,6 @@ export const MedicsList = () => {
   const [medics, setCategories] = useState(location.category ? data.filter((medic) => medic.speciality === location.category) : data);
   const [category, setCategory] = useState(location.category ? location.category : 'Все врачи');
 
-  console.log(location.categoryIndex)
    const handleCategoryChange = (e) => {
     setCategory(e.target.textContent);
   };
