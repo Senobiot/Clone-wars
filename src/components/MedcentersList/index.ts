@@ -1,0 +1,1 @@
+export { MedcentersList } from './MedcentersList';

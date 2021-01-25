@@ -67,7 +67,7 @@ function IconButtons({ tel, email }) {
   );
 }
 
-const MedicPage = () => {
+export const MedicPage = () => {
   let { id } = useParams();
   const history = useHistory();
   const func = history.goBack;
@@ -132,4 +132,3 @@ const MedicPage = () => {
   );
 };
 
-export default MedicPage;

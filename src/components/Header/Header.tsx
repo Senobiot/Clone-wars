@@ -3,6 +3,7 @@ import { AppBar, InputBase, Toolbar } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import HeaderMenu from './HeaderMenu';
 import styles from './Header.module.scss';
+import { SearchBar } from '../Search/SearchBar';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuSide from '../MenuSide/MenuSide'
 
@@ -22,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     margin: '0 auto',
-    width: '40vw',
+    width: '400px',
+    maxWidth: 'calc(100vw - 200px)'
     // [theme.breakpoints.up('sm')]: {
     //   marginLeft: theme.spacing(1),
     // },
@@ -31,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
+    right: '0',
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
@@ -78,15 +81,7 @@ export function Header({ term, data, update }: any): JSX.Element {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-              onChange={dataSearch}
-            />
+              <SearchBar />
           </div>
           <HeaderMenu></HeaderMenu>
         </Toolbar>

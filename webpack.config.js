@@ -37,6 +37,10 @@ module.exports = env => {
     module: {
       rules: [
         {
+          test: /react-spring/,
+          sideEffects: true
+        },
+        {
           test: /\.(ts|tsx)$/,
           exclude: /node_modules/,
           use: [
