@@ -14,7 +14,6 @@ interface Props {
 
 export function TextFieldEditor({ formStateUser, type, name, isEdit, options, handleChange }: Props): JSX.Element {
   /* const [isEdit, setIsEdit] = useState(false); */
-  console.log(options);
   return (
     <Grid container direction="row" justify="space-between" alignItems="center">
       <Grid item xs={3}>

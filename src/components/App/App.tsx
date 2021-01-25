@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { PersonalPage } from '../PersonalPage';
@@ -7,37 +7,64 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import MedicsList from '../MedicsList/MedicsList';
 import MedicPage from '../MedicPage/MedicPage';
 import MedcentersList from '../MedcentersList/MedcentersList';
-import { MainContainer } from '../MainPage/MainContainer';
 import { MainPage } from '../MainPage2/MainPage';
 import '../../global/variables.scss';
 import '../../global/reset.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ArrowUp from '../ArrowUP/ArrowUp';
 import { User } from '../User';
-import { isEmpty, useFirestore, useFirestoreConnect, isLoaded } from 'react-redux-firebase';
+import { isEmpty, useFirestore, useFirestoreConnect, isLoaded, useFirebase } from 'react-redux-firebase';
 import { useSelector, useDispatch } from 'react-redux';
-import { addUser, getData } from '../../../store/actions/actionData';
+import { getData } from '../../../store/actions/actionData';
 import { Spinner } from '../Spinner/Spinner';
-import { IData } from '../../model/data.model';
+import { IData, IMedicsList, IMmedCenters } from '../../model/data.model';
+import { getImageUrl } from '../../services/updateFirebase';
+import { med_centers } from '../../data/medcentersList.js';
+import { medicsList } from '../../data/medicsList.js';
+import { db } from '../../../firebase';
+import { getUser, updateNewUser, updateUserAuthorization } from '../../../store/actions/actionUser';
+import { Data } from '@react-google-maps/api';
+
+const useConnectFirestore = () => {
+  const dispatch = useDispatch();
+  useFirestoreConnect(['users', 'med_centers', 'services_category']);
+  const data = useSelector((state) => state.firestore.ordered.med_centers);
+
+  useEffect(() => {
+    if (data) {
+      dispatch(getData(data));
+    }
+  }, [data]);
+  const isLouadedData = isLoaded(data);
+  return isLouadedData;
+};
 
 export default function App(): JSX.Element {
+  /*   medicsList.forEach(async (item: IMmedCenters) => {
+    const img = await getImageUrl(item.img.slice(6));
+    const newCityRef = db.collection('users').doc();
+    const id = newCityRef.id;
+    // later...
+    newCityRef.set({ ...item, uid: id, img: img });
+  }); */
+  /* console.log(medicsList); */
+  const auth = useSelector((state) => state.firebase.auth);
   const firestore = useFirestore();
-  useFirestoreConnect(['users', 'med_centers', 'services_category']);
-  const users = useSelector((state) => state.firestore.ordered.users);
-  const med_centers = useSelector((state) => state.firestore.ordered.med_centers);
-  const services_category = useSelector((state) => state.firestore.ordered.services_category);
+  const firebase = useFirebase();
   const dispatch = useDispatch();
+  const userData = useSelector((state) => state.user);
+  /* const isLoad = useConnectFirestore(); */
+  /* const createTodo = useCallback((todo) => dispatch(addUser({ firestore }, todo)), [firestore]); */
+  console.log('app');
   useEffect(() => {
-    if (users && med_centers && services_category) {
-      dispatch(getData({ users, med_centers, services_category }));
+    if (isLoaded(auth) && !isEmpty(auth)) {
+      console.log(auth.uid);
+      dispatch(getUser({ firestore }, auth.uid));
+      dispatch(updateUserAuthorization(true));
     }
-  }, [users, med_centers, services_category]);
+  }, [auth]);
 
-  const createTodo = useCallback((todo) => dispatch(addUser({ firestore }, todo)), [firestore]);
-  const handle = () => {
-    console.log(users);
-  };
-  if (!isLoaded(users, med_centers, services_category)) return <Spinner />;
+  /*  if (!isLoad) return <Spinner />; */
   return (
     <BrowserRouter>
       <ArrowUp />
@@ -49,7 +76,7 @@ export default function App(): JSX.Element {
         <Route exact path={'/MedicPage/:id'} component={MedicPage}></Route>
         <Route exact path={'/ServicesPage/'} component={ServicesPage}></Route>
         <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
-        <Route path={'/User/'} component={User}></Route>
+        <Route exact path={'/User/'} component={User}></Route>
         <Route path={'*'} component={NotFoundPage} />
       </Switch>
       <Footer></Footer>

@@ -15,11 +15,13 @@ import React, { useEffect, useState } from 'react';
 import style from './User.module.scss';
 import { TextFieldEditor } from './TextFieldEditor';
 import { PhotoCamera } from '@material-ui/icons';
-import { setDocument, updateObjectField, uploudImage } from '../../services/updateFirebase';
-import { IData, IUser, Role } from '../../model/data.model';
+import { uploudImage } from '../../services/updateFirebase';
+import { IData, IUser } from '../../model/data.model';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateUser, updateUserField } from '../../../store/actions/actionUser';
 import { SchedulerVisit } from '../SchedulerVisit/SchedulerVisit';
+import { useFirestore } from 'react-redux-firebase';
+import { Spinner } from '../Spinner/Spinner';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -46,7 +48,33 @@ export function User(): JSX.Element {
   const classes = useStyles();
   const userData = useSelector((state) => state.user);
   const dataState: IData = useSelector((state) => state.data);
+  const firestore = useFirestore();
   const dispatch = useDispatch();
+  const [formStateUser, setFormStateUser] = useState<IUser>(userData.data);
+  const [file, setFile] = useState<FileList>();
+  const [isEdit, setIsEdit] = useState(false);
+
+  useEffect(() => setFormStateUser(userData.data), [userData]);
+  useEffect(() => {
+    if (file) {
+      uploudImage(file).then(async (url) => {
+        await setFormStateUser((prevState) => ({ ...prevState, img: url }));
+        dispatch(updateUserField({ firestore }, formStateUser.uid, 'img', url));
+      });
+    }
+  }, [file]);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target as HTMLInputElement;
+    setFormStateUser((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const saveUser = () => {
+    if (isEdit) {
+      dispatch(updateUser({ firestore }, formStateUser.uid, formStateUser));
+    }
+    setIsEdit(!isEdit);
+  };
+  /*  if (!dataState.users) return <Spinner />; */
   const dataUser = [
     { name: 'name', type: 'text' },
     { name: 'gender', type: 'select', option: ['male', 'female'] },
@@ -64,37 +92,9 @@ export function User(): JSX.Element {
     { name: 'speciality', type: 'select', option: dataState.services_category.map((item) => item.medic) },
     { name: 'category', type: 'text' },
     { name: 'graduation', type: 'text' },
-    , 
-  ];*/
-
-  const [formStateUser, setFormStateUser] = useState<IUser>(userData.data);
-  const [file, setFile] = useState<FileList>();
-  const [isEdit, setIsEdit] = useState(false);
+    ,
+  ]; */
   const data = userData.data.role === 'patient' ? dataUser : dataDoctor;
-  useEffect(() => setFormStateUser(userData.data), [userData]);
-  useEffect(() => {
-    if (file) {
-      uploudImage(file).then(async (url) => {
-        await setFormStateUser((prevState) => ({ ...prevState, img: url }));
-        updateObjectField('users', formStateUser.id, { img: url });
-        console.log(formStateUser);
-        dispatch(updateUserField('img', url));
-      });
-    }
-  }, [file]);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target as HTMLInputElement;
-    setFormStateUser((prevState) => ({ ...prevState, [name]: value }));
-  };
-
-  const saveUser = () => {
-    if (isEdit) {
-      setDocument('users', formStateUser.id, formStateUser);
-      dispatch(updateUser(formStateUser));
-    }
-    setIsEdit(!isEdit);
-  };
-
   return (
     <div className={style.wrapper}>
       {!userData.authorized ? (
@@ -109,7 +109,7 @@ export function User(): JSX.Element {
             <Card className={style.card}>
               <CardContent className={style.cardContent}>
                 <Grid className={style.avatar} item md={4} sm={4}>
-                  <Avatar style={{ height: '100px', width: '100px' }} src={formStateUser.img}></Avatar>
+                  <Avatar style={{ height: '100px', width: '100px' }} src={userData.data.img}></Avatar>
                   <input
                     accept="image/"
                     className={classes.input}

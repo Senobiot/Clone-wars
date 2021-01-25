@@ -43,7 +43,7 @@ export const setDocument = (collection: string, doc: string, object: any): void 
 
 export const addUser = async (object: any) => {
   const uid = auth.currentUser.uid;
-  await setDocument('users', uid, { ...object, id: uid });
+  await setDocument('users', uid, { ...object, uid: uid });
 };
 
 export const updateObjectField = (collection: string, doc: string, objectField: any): void => {
@@ -144,7 +144,7 @@ export const uploudImage = async (file: any): Promise<string> => {
   return urlImage;
 };
 export const getImageUrl = async (file): Promise<string> => {
-  const puth = `${file.type}/${file.name}`;
+  const puth = file;
   let urlImage: string;
   await storageRef
     .child(puth)

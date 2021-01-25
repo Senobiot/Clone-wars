@@ -15,15 +15,17 @@ import {
 import Alert from '@material-ui/lab/Alert';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import LockIcon from '@material-ui/icons/Lock';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import style from './authorizatio.module.scss';
-import { getDocument, signIn, signUp, singUpGoogle } from '../../services/updateFirebase';
 import { IUser, Role } from '../../model/data.model';
-import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateNewUser, updateUser, updateUserAuthorization } from '../../../store/actions/actionUser';
+import { updateNewUser } from '../../../store/actions/actionUser';
+import { useFirebase, useFirestore } from 'react-redux-firebase';
+import { addUser } from '../../../store/actions/actionData';
+import { DialogRole } from '../DialogRole/DialogRole';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -37,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '30%', // Fix IE 11 issue.
+    width: '30%',
     minWidth: '300px',
     margin: 'auto',
     marginTop: theme.spacing(1),
@@ -53,60 +55,42 @@ const useStyles = makeStyles((theme) => ({
 export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () => void }): JSX.Element {
   const classes = useStyles();
   const userData = useSelector((state) => state.user);
+  const firebase = useFirebase();
   const dispatch = useDispatch();
+  const firestore = useFirestore();
   const [formState, setFormState] = useState<IUser>(userData.data);
   const [error, setError] = useState<{ email: boolean; password: boolean }>({ email: false, password: false });
   const [isRegistration, setIsregistration] = useState<boolean>(false);
   const [stateAlert, setstateAlert] = useState<{ open: boolean; message: string }>({ open: false, message: '' });
-  const [isLoggin, setIsLogin] = useState<boolean>(false);
+  const [open, setOpen] = React.useState(false);
   const history = useHistory();
-
-  useEffect(() => {
-    const q = auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        console.log(user);
-        setIsLogin(true);
-      } else {
-        setIsLogin(false);
-      }
+  const awaitingPromiseRef = React.useRef<{
+    resolve: () => void;
+    reject: () => void;
+  }>();
+  const handleClickOpen = () => {
+    setOpen(true);
+    return new Promise((resolve, reject) => {
+      awaitingPromiseRef.current = { resolve, reject };
     });
+  };
 
-    if (isLoggin) {
-      goUserPage();
-    }
-    return () => q();
-  }, [isLoggin]);
-
-  const goUserPage = async () => {
-    const uid = auth.currentUser.uid;
-    const state = await getDocument('users', uid);
-    dispatch(updateUser(state));
-    dispatch(updateNewUser(isRegistration));
-    dispatch(updateUserAuthorization(true));
-    setFormState(state);
-    handleClickOpenDialog();
-    isRegistration ? history.push('/User/') : '';
+  const handleClose = (value: Role) => {
+    setOpen(false);
+    setFormState((prevState) => ({ ...prevState, role: value }));
+    awaitingPromiseRef.current.resolve();
   };
 
   const isValidation = (name: string, value: string) => {
     const reg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     (name === 'password' && value.length > 6) || (name === 'email' && reg.test(value))
-      ? setError((prevState) => ({
-          ...prevState,
-          [name]: false,
-        }))
-      : setError((prevState) => ({
-          ...prevState,
-          [name]: true,
-        }));
+      ? setError((prevState) => ({ ...prevState, [name]: false }))
+      : setError((prevState) => ({ ...prevState, [name]: true }));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target as HTMLInputElement;
-    setFormState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+    setFormState((prevState) => ({ ...prevState, [name]: value }));
     if (name === 'password' || name === 'email') isValidation(name, value);
   };
 
@@ -116,12 +100,62 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
   };
   const handleSabmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    isRegistration ? signUp(formState, setstateAlert) : signIn(formState, setstateAlert);
+    isRegistration
+      ? firebase
+          .createUser({ email: formState.email, password: formState.password })
+          .then(() => {
+            const uid = auth.currentUser.uid;
+            console.log(uid);
+            dispatch(addUser({ firestore }, uid, { ...formState, uid: uid }));
+            history.push('/User/');
+            handleClickOpenDialog();
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            setstateAlert({ open: true, message: errorMessage });
+          })
+      : firebase
+          .login({
+            email: formState.email,
+            password: formState.password,
+          })
+          .then(() => handleClickOpenDialog())
+          .catch((error) => {
+            const errorMessage = error.message;
+            setstateAlert({ open: true, message: errorMessage });
+          });
+    dispatch(updateNewUser(isRegistration));
   };
 
   const changeSing = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setIsregistration(!isRegistration);
+  };
+
+  const siginGoogle = () => {
+    firebase.login({ provider: 'google', type: 'popup' }).then((result) => {
+      const user = result.user;
+      if (result.additionalUserInfo.isNewUser) {
+        handleClickOpen().then(() => {
+          const uid = auth.currentUser.uid;
+          dispatch(
+            addUser({ firestore }, uid, {
+              ...formState,
+              name: user.providerData[0].displayName || '',
+              email: user.providerData[0].email || '',
+              phone: user.providerData[0].phoneNumber || '',
+              img: user.providerData[0].photoURL || '',
+              uid: uid,
+            }),
+          );
+          dispatch(updateNewUser(true));
+          history.push('/User/');
+          handleClickOpenDialog();
+        });
+      } else {
+        handleClickOpenDialog();
+      }
+    });
   };
 
   return (
@@ -205,7 +239,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
                 </Link>
               </Grid>
 
-              {isRegistration ? (
+              {!isRegistration ? (
                 <>
                   <Grid item>
                     <div className={style.line}>
@@ -213,7 +247,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
                     </div>
                   </Grid>
                   <Grid item xs>
-                    <IconButton color="secondary" aria-label="add an alarm" onClick={() => singUpGoogle(formState)}>
+                    <IconButton color="secondary" aria-label="add an alarm" onClick={siginGoogle}>
                       <span className={style.logo}></span>
                     </IconButton>
                   </Grid>
@@ -233,6 +267,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
           <Alert severity="error">{stateAlert.message}</Alert>
         </Snackbar>
       </Grid>
+      <DialogRole open={open} onClose={handleClose} />
     </>
   );
 }

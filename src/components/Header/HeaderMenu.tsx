@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { MenuItem, Menu, Button, Avatar, Tooltip, IconButton } from '@material-ui/core';
+import React from 'react';
+import { Button, Avatar, Tooltip, IconButton } from '@material-ui/core';
 import { DialogAutorization } from '../DialogAuthorization';
 import styles from './Header.module.scss';
-import { signOut } from '../../services/updateFirebase';
-import { useLocation, useHistory } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteUser, updateUser, updateUserAuthorization } from '../../../store/actions/actionUser';
+import { logoutUser } from '../../../store/actions/actionUser';
+import { useFirebase, useFirestore } from 'react-redux-firebase';
+import { useHistory } from 'react-router';
 
 export default function HeaderMenu(): JSX.Element {
   const [openDialog, setOpenDialog] = React.useState<boolean>(false);
   const userData = useSelector((state) => state.user);
   const history = useHistory();
+  const firestore = useFirestore();
+  const firebase = useFirebase();
   const dispatch = useDispatch();
-
   const handleClickOpenDialog = () => {
     setOpenDialog(!openDialog);
   };
@@ -23,8 +24,7 @@ export default function HeaderMenu(): JSX.Element {
   };
 
   const logOut = () => {
-    signOut();
-    dispatch(deleteUser());
+    dispatch(logoutUser({ firebase }));
     history.push('/');
   };
 

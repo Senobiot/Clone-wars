@@ -4,10 +4,10 @@ export interface IMedicsList {
   category: string;
   experience: string;
   graduation: string;
-  id: string;
   img: string;
   name: string;
   phone: string;
+  id: string;
 }
 
 export interface IUser extends IMedicsList {
@@ -16,6 +16,7 @@ export interface IUser extends IMedicsList {
   gender: string;
   birthday: string;
   role: Role;
+  uid: string;
 }
 
 export enum Role {

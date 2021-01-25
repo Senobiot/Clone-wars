@@ -3,7 +3,7 @@ import {
   UPDATE_USER_STATE,
   UPDATE_USER_AUTHORIZATION,
   UPDATE_USER_FIELD,
-  DELETE_USER,
+  LOGOUT_USER,
   UPDATE_USER_NEW,
 } from '../actions/actionUser';
 
@@ -25,25 +25,21 @@ const initState = {
     speciality: '',
     gender: '',
     birthday: '',
+    uid: '',
   },
 };
 
 const userReducer = (state = initState, action) => {
   switch (action.type) {
     case UPDATE_USER_STATE:
-      console.log(action.state);
       return { ...state, data: action.data };
-    case DELETE_USER:
-      console.log(action.state);
+    case LOGOUT_USER:
       return initState;
     case UPDATE_USER_FIELD:
-      console.log(action.state);
       return { ...state, data: { ...state.data, [action.field]: action.value } };
     case UPDATE_USER_AUTHORIZATION:
-      console.log(action.value);
       return { ...state, authorized: action.value };
     case UPDATE_USER_NEW:
-      console.log(action.value);
       return { ...state, isNewUser: action.value };
     default:
       return state;
