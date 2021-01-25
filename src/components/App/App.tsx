@@ -1,18 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ArrowUp } from '../ArrowUp';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { PersonalPage } from '../PersonalPage';
 import { ServicesPage } from '../ServicePage';
-import NotFoundPage from '../NotFoundPage/NotFoundPage';
-import MedicsList from '../MedicsList/MedicsList';
-import MedicPage from '../MedicPage/MedicPage';
-import MedcentersList from '../MedcentersList/MedcentersList';
-import { MainContainer } from '../MainPage/MainContainer';
-import { MainPage } from '../MainPage2/MainPage';
+import { NotFoundPage } from '../NotFoundPage';
+import { MedicsList } from '../MedicsList';
+import { MedicPage } from '../MedicPage';
+import { MedcentersList } from '../MedcentersList';
+import { MainPage } from '../MainPage/MainPage';
 import '../../global/variables.scss';
 import '../../global/reset.scss';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ArrowUp from '../ArrowUP/ArrowUp';
 
 export default function App() {
   return (

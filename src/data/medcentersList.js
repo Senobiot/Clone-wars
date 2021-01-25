@@ -125,13 +125,12 @@ export const med_centers = [
                 {visit_1: 40 }, {visit_2: 35 }, 
              ],
             'procedure': [ 
-                { serv_0: null },
                 { serv_1: 14.10 },
                 { serv_2: 8.92 },
                 { serv_3: 8.80 },
                 { serv_4: 21.22 },
-                { serv_8: 11.25 },
-                { serv_9: 8 },
+                { serv_5: 11.25 },
+                { serv_6: 8 },
             ],
             'therapy': [ 
                 {visit_1: 40}, {visit_2: 30 },
@@ -256,7 +255,6 @@ export const med_centers = [
                 {visit_1:  35.95}
              ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8.25 },
@@ -417,7 +415,6 @@ export const med_centers = [
                 {visit_1: 35 }, {visit_2: 29  }, {visit_home: 65 },
              ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8 },
@@ -1069,7 +1066,6 @@ export const med_centers = [
                 {visit_1: 37 }, {visit_2: 32 },
                 ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8 },
@@ -1173,7 +1169,6 @@ export const med_centers = [
                 {visit_1: 11.14 },
                 ],
             'procedure': [ 
-                    { serv_0: null},
                     { serv_1: 7 },
                     { serv_2: 8 },
                     { serv_3: 8 },

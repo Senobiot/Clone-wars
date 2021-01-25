@@ -8,19 +8,67 @@ $color: #2194E0;
     height: calc(100vh - 104px);
     justify-content: center;
     align-items: center;
-    // $color: #3f51b5;
+    overflow: hidden;
     position: relative;
-    &:after {
-        top: 0;
-        left: 0;
+    .card1 {
         position: absolute;
-        content: '';
-        width: 100%;
+        top: -10vw;
+        width: 120%;
+        left: -10vw;
         height: 100%;
-        background: fixed url('../../assets/main_page/hosp3.png') no-repeat 50% 50%/cover;
-        opacity: 0.5;
+        z-index: -2;
+        background: url('../../assets/main_page/sky.png') no-repeat 50%/cover;
+      }
+      
+      .card2 {
+        position: absolute;
+        top: 50px;
+        width: 150px;
+        right: 50px;
+        height: 150px;
         z-index: -1;
-    }
+        background: url('../../assets/main_page/sun.png') no-repeat 50%/cover;
+      }
+      
+      .card3 {
+        position: absolute;
+        top: 100px;
+        width: 250px;
+        left: 500px;
+        height: 250px;
+        background: url('../../assets/main_page/cloud.png') no-repeat 50%/contain;
+      }
+      
+      .card4 {
+        position: absolute;
+        bottom: -150px;
+        width: 120%;
+        left: -10vw;
+        height: 287px;
+        z-index: -1;
+        background: url('../../assets/main_page/grass.png') repeat-x 50%/contain;
+      }
+      
+      .card5 {
+        position: absolute;
+        top: 100px;
+        width: 350px;
+        right: 100px;
+        height: 250px;
+        z-index: -1;
+        background: url('../../assets/main_page/cloud2.png') no-repeat 50%/cover;
+      }
+
+      .card6 {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 40vh;
+        z-index: -2;
+        opacity: 0.5;
+        background: url('../../assets/main_page/city.png') no-repeat 50%/cover;
+      }
+
     .mainPageBtnWrapper {
         max-width: 620px;
         display: flex;

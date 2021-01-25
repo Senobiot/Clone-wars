@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Notfound.module.scss';
+import { SearchBar } from '../Search/SearchBar'
 
-const NotFoundPage = () => {
+export const NotFoundPage = () => {
   return (
     <div className={styles.wrapper}>
       <p className={styles.article}>
@@ -10,8 +11,7 @@ const NotFoundPage = () => {
         <span>Нет такой страницы</span>
       </p> 
       <Link to="/" className={styles.button}>На главную</Link>
+      <SearchBar />
     </div>
   )
 }
-
-export default NotFoundPage;
