@@ -152,3 +152,12 @@ export const getImageUrl = async (file): Promise<string> => {
     .then((url) => (urlImage = url));
   return urlImage;
 };
+
+/* services_category.forEach(async (item) => {
+  const img = await getImageUrl(item.img);
+  const logo = await getImageUrl(item.img); 
+  const newCityRef = db.collection('services_category').doc();
+  const id = newCityRef.id;
+  // later...
+  newCityRef.set({ ...item, uid: id });
+}); */

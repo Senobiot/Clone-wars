@@ -1,6 +1,9 @@
 import { ADD_USER, GET_DATA } from '../actions/actionData';
+import { medicsList } from '../../src/data/medicsList.js';
+import { med_centers } from '../../src/data/medcentersList.js';
+import { services_category } from '../../src/data/servicesList.js';
 
-const initState = { users: {}, med_centers: {}, services_category: {} };
+const initState = { users: medicsList, med_centers, services_category };
 
 const dataReducer = (state = initState, action) => {
   const { data } = action;
@@ -9,8 +12,8 @@ const dataReducer = (state = initState, action) => {
       return action.data;
     case ADD_USER:
       return {
-        ...state.users,
-        data,
+        ...state,
+        users: { ...state.users, [data.uid]: data },
       };
     default:
       return state;

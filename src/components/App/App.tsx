@@ -13,57 +13,41 @@ import { MainPage } from '../MainPage/MainPage';
 import { User } from '../User';
 import '../../global/variables.scss';
 import '../../global/reset.scss';
-import { isEmpty, useFirestore, useFirestoreConnect, isLoaded, useFirebase } from 'react-redux-firebase';
+import { isEmpty, useFirestore, useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import { getData } from '../../../store/actions/actionData';
 import { Spinner } from '../Spinner/Spinner';
-import { IData, IMedicsList, IMmedCenters } from '../../model/data.model';
-import { getImageUrl } from '../../services/updateFirebase';
-import { med_centers } from '../../data/medcentersList.js';
-import { medicsList } from '../../data/medicsList.js';
-import { db } from '../../../firebase';
-import { getUser, updateNewUser, updateUserAuthorization } from '../../../store/actions/actionUser';
-import { Data } from '@react-google-maps/api';
+import { getUser, updateUserAuthorization } from '../../../store/actions/actionUser';
+import { IState } from '../../model/data.model';
 
 const useConnectFirestore = () => {
   const dispatch = useDispatch();
   useFirestoreConnect(['users', 'med_centers', 'services_category']);
-  const data = useSelector((state) => state.firestore.ordered.med_centers);
-
+  const users = useSelector((state: IState) => state.firestore.ordered.users);
+  const med_centers = useSelector((state: IState) => state.firestore.ordered.med_centers);
+  const services_category = useSelector((state: IState) => state.firestore.ordered.services_category);
+  const isLouadedData = isLoaded(users, med_centers, services_category);
   useEffect(() => {
-    if (data) {
-      dispatch(getData(data));
+    if (isLouadedData) {
+      dispatch(getData({ users, med_centers, services_category }));
     }
-  }, [data]);
-  const isLouadedData = isLoaded(data);
+  }, [isLouadedData]);
+
   return isLouadedData;
 };
 
 export default function App(): JSX.Element {
-  /*   medicsList.forEach(async (item: IMmedCenters) => {
-    const img = await getImageUrl(item.img.slice(6));
-    const newCityRef = db.collection('users').doc();
-    const id = newCityRef.id;
-    // later...
-    newCityRef.set({ ...item, uid: id, img: img });
-  }); */
-  /* console.log(medicsList); */
-  const auth = useSelector((state) => state.firebase.auth);
+  const auth = useSelector((state: IState) => state.firebase.auth);
   const firestore = useFirestore();
-  const firebase = useFirebase();
   const dispatch = useDispatch();
-  const userData = useSelector((state) => state.user);
   /* const isLoad = useConnectFirestore(); */
   /* const createTodo = useCallback((todo) => dispatch(addUser({ firestore }, todo)), [firestore]); */
-  console.log('app');
   useEffect(() => {
     if (isLoaded(auth) && !isEmpty(auth)) {
-      console.log(auth.uid);
       dispatch(getUser({ firestore }, auth.uid));
       dispatch(updateUserAuthorization(true));
     }
   }, [auth]);
-
   /*  if (!isLoad) return <Spinner />; */
   return (
     <BrowserRouter>

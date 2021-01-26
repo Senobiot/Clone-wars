@@ -18,10 +18,10 @@ import LockIcon from '@material-ui/icons/Lock';
 import React from 'react';
 import { useState } from 'react';
 import style from './authorizatio.module.scss';
-import { IUser, Role } from '../../model/data.model';
+import { IState, IUser, Role } from '../../model/data.model';
 import { auth } from '../../../firebase';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateNewUser } from '../../../store/actions/actionUser';
+import { updateNewUser, updateUserGoodleAuthorization } from '../../../store/actions/actionUser';
 import { useFirebase, useFirestore } from 'react-redux-firebase';
 import { addUser } from '../../../store/actions/actionData';
 import { DialogRole } from '../DialogRole/DialogRole';
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog: () => void }): JSX.Element {
   const classes = useStyles();
-  const userData = useSelector((state) => state.user);
+  const userData = useSelector((state: IState) => state.user);
   const firebase = useFirebase();
   const dispatch = useDispatch();
   const firestore = useFirestore();
@@ -105,7 +105,6 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
           .createUser({ email: formState.email, password: formState.password })
           .then(() => {
             const uid = auth.currentUser.uid;
-            console.log(uid);
             dispatch(addUser({ firestore }, uid, { ...formState, uid: uid }));
             history.push('/User/');
             handleClickOpenDialog();
@@ -138,16 +137,16 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
       if (result.additionalUserInfo.isNewUser) {
         handleClickOpen().then(() => {
           const uid = auth.currentUser.uid;
-          dispatch(
-            addUser({ firestore }, uid, {
-              ...formState,
-              name: user.providerData[0].displayName || '',
-              email: user.providerData[0].email || '',
-              phone: user.providerData[0].phoneNumber || '',
-              img: user.providerData[0].photoURL || '',
-              uid: uid,
-            }),
-          );
+          const data = {
+            ...formState,
+            name: user.providerData[0].displayName || '',
+            email: user.providerData[0].email || '',
+            phone: user.providerData[0].phoneNumber || '',
+            img: user.providerData[0].photoURL || '',
+            uid: uid,
+          };
+          dispatch(addUser({ firestore }, uid, data));
+          dispatch(updateUserGoodleAuthorization(data));
           dispatch(updateNewUser(true));
           history.push('/User/');
           handleClickOpenDialog();

@@ -34,7 +34,8 @@ const appointments = [
       experience: 'Стаж 21 лет',
       graduation: 'Витебский государственный медицинский университет в 1999 году',
       medcenter: 'Альфамед',
-      img: '../../assets/medics_img/males/m1.jpg',
+      img:
+        'https://firebasestorage.googleapis.com/v0/b/rs-clone-146b4.appspot.com/o/assets%2Fmedics_img%2Ffemales%2Ff43.jpg?alt=media&token=cf8eb1b5-3f3c-4247-a6a8-fdf5d0d2d3fe',
       phone: '+375-17-714-08-34',
       email: 'jcholewa@me.com',
     },

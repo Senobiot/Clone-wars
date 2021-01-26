@@ -16,7 +16,7 @@ import style from './User.module.scss';
 import { TextFieldEditor } from './TextFieldEditor';
 import { PhotoCamera } from '@material-ui/icons';
 import { uploudImage } from '../../services/updateFirebase';
-import { IData, IUser } from '../../model/data.model';
+import { IData, IState, IUser } from '../../model/data.model';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateUser, updateUserField } from '../../../store/actions/actionUser';
 import { SchedulerVisit } from '../SchedulerVisit/SchedulerVisit';
@@ -46,13 +46,13 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export function User(): JSX.Element {
   const classes = useStyles();
-  const userData = useSelector((state) => state.user);
-  const dataState: IData = useSelector((state) => state.data);
+  const userData = useSelector((state: IState) => state.user);
+  const dataState: IData = useSelector((state: IState) => state.data);
   const firestore = useFirestore();
   const dispatch = useDispatch();
   const [formStateUser, setFormStateUser] = useState<IUser>(userData.data);
   const [file, setFile] = useState<FileList>();
-  const [isEdit, setIsEdit] = useState(false);
+  const [isEdit, setIsEdit] = useState<boolean>(false);
 
   useEffect(() => setFormStateUser(userData.data), [userData]);
   useEffect(() => {
@@ -74,7 +74,7 @@ export function User(): JSX.Element {
     }
     setIsEdit(!isEdit);
   };
-  /*  if (!dataState.users) return <Spinner />; */
+  if (!dataState.users) return <Spinner />;
   const dataUser = [
     { name: 'name', type: 'text' },
     { name: 'gender', type: 'select', option: ['male', 'female'] },
@@ -82,7 +82,7 @@ export function User(): JSX.Element {
     { name: 'phone', type: 'tel' },
     { name: 'email', type: 'email' },
   ];
-  let dataDoctor; /* = [
+  const dataDoctor = [
     { name: 'name', type: 'text' },
     { name: 'birthday', type: 'date' },
     { name: 'gender', type: 'select', option: ['male', 'female'] },
@@ -93,7 +93,7 @@ export function User(): JSX.Element {
     { name: 'category', type: 'text' },
     { name: 'graduation', type: 'text' },
     ,
-  ]; */
+  ];
   const data = userData.data.role === 'patient' ? dataUser : dataDoctor;
   return (
     <div className={style.wrapper}>

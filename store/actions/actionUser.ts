@@ -1,3 +1,4 @@
+import { BaseExtendedFirebaseInstance, ExtendedFirestoreInstance } from 'react-redux-firebase';
 import { IUser } from '../../src/model/data.model';
 
 export const UPDATE_USER_STATE = 'UPDATE_USER_STATE';
@@ -6,8 +7,8 @@ export const UPDATE_USER_FIELD = 'UPDATE_USER_FIELD';
 export const LOGOUT_USER = 'LOGOUT_USER';
 export const UPDATE_USER_NEW = 'UPDATE_USER_NEW';
 
-export const getUser = ({ firestore }, uid: string) => {
-  return (dispatch, getState) => {
+export const getUser = ({ firestore }: { firestore: ExtendedFirestoreInstance }, uid: string) => {
+  return (dispatch, getState): void => {
     firestore
       .collection('users')
       .doc(uid)
@@ -23,8 +24,8 @@ export const getUser = ({ firestore }, uid: string) => {
   };
 };
 
-export const updateUser = ({ firestore }: any, doc: string, data: IUser) => {
-  return (dispatch, getState) => {
+export const updateUser = ({ firestore }: { firestore: ExtendedFirestoreInstance }, doc: string, data: IUser) => {
+  return (dispatch, getState): void => {
     firestore
       .collection('users')
       .doc(doc)
@@ -38,12 +39,17 @@ export const updateUser = ({ firestore }: any, doc: string, data: IUser) => {
       });
   };
 };
-export const updateUserField = ({ firestore }, doc: string, name: string, value: string) => {
-  return (dispatch, getState) => {
+export const updateUserField = (
+  { firestore }: { firestore: ExtendedFirestoreInstance },
+  doc: string,
+  name: string,
+  value: string,
+) => {
+  return (dispatch, getState): void => {
     firestore
       .collection('users')
       .doc(doc)
-      .update({ name: value })
+      .update({ [name]: value })
       .then(function () {
         console.log('Document successfully written!');
         dispatch({ type: UPDATE_USER_FIELD, value, field: name });
@@ -54,26 +60,33 @@ export const updateUserField = ({ firestore }, doc: string, name: string, value:
   };
 };
 
-export const updateUserAuthorization = (value: boolean) => {
+export const updateUserAuthorization = (value: boolean): { type: typeof UPDATE_USER_AUTHORIZATION; value: boolean } => {
   return {
     type: UPDATE_USER_AUTHORIZATION,
     value,
   };
 };
-export const updateNewUser = (value: boolean) => {
+
+export const updateUserGoodleAuthorization = (data: IUser): { type: typeof UPDATE_USER_STATE; data: IUser } => {
+  return {
+    type: UPDATE_USER_STATE,
+    data,
+  };
+};
+
+export const updateNewUser = (value: boolean): { type: typeof UPDATE_USER_NEW; value: boolean } => {
   return {
     type: UPDATE_USER_NEW,
     value,
   };
 };
 
-export const logoutUser = ({ firebase }) => {
-  return (dispatch, getState) => {
+export const logoutUser = ({ firebase }: { firebase: BaseExtendedFirebaseInstance }) => {
+  return (dispatch, getState): void => {
     firebase
       .auth()
       .signOut()
       .then(() => {
-        console.log(getState());
         dispatch({ type: LOGOUT_USER });
       })
       .catch((error) => {
