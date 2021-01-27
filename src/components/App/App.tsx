@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ArrowUp } from '../ArrowUp';
 import { Footer } from '../Footer';
@@ -10,10 +10,45 @@ import { MedicsList } from '../MedicsList';
 import { MedicPage } from '../MedicPage';
 import { MedcentersList } from '../MedcentersList';
 import { MainPage } from '../MainPage/MainPage';
+import { User } from '../User';
 import '../../global/variables.scss';
 import '../../global/reset.scss';
+import { isEmpty, useFirestore, useFirestoreConnect, isLoaded } from 'react-redux-firebase';
+import { useSelector, useDispatch } from 'react-redux';
+import { getData } from '../../../store/actions/actionData';
+import { Spinner } from '../Spinner/Spinner';
+import { getUser, updateUserAuthorization } from '../../../store/actions/actionUser';
+import { IState } from '../../model/data.model';
 
-export default function App() {
+const useConnectFirestore = () => {
+  const dispatch = useDispatch();
+  useFirestoreConnect(['users', 'med_centers', 'services_category']);
+  const users = useSelector((state: IState) => state.firestore.ordered.users);
+  const med_centers = useSelector((state: IState) => state.firestore.ordered.med_centers);
+  const services_category = useSelector((state: IState) => state.firestore.ordered.services_category);
+  const isLouadedData = isLoaded(users, med_centers, services_category);
+  useEffect(() => {
+    if (isLouadedData) {
+      dispatch(getData({ users, med_centers, services_category }));
+    }
+  }, [isLouadedData]);
+
+  return isLouadedData;
+};
+
+export default function App(): JSX.Element {
+  const auth = useSelector((state: IState) => state.firebase.auth);
+  const firestore = useFirestore();
+  const dispatch = useDispatch();
+  /* const isLoad = useConnectFirestore(); */
+  /* const createTodo = useCallback((todo) => dispatch(addUser({ firestore }, todo)), [firestore]); */
+  useEffect(() => {
+    if (isLoaded(auth) && !isEmpty(auth)) {
+      dispatch(getUser({ firestore }, auth.uid));
+      dispatch(updateUserAuthorization(true));
+    }
+  }, [auth]);
+  /*  if (!isLoad) return <Spinner />; */
   return (
     <BrowserRouter>
       <ArrowUp />
@@ -25,6 +60,7 @@ export default function App() {
         <Route exact path={'/MedicPage/:id'} component={MedicPage}></Route>
         <Route exact path={'/ServicesPage/'} component={ServicesPage}></Route>
         <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
+        <Route exact path={'/User/'} component={User}></Route>
         <Route path={'*'} component={NotFoundPage} />
       </Switch>
       <Footer></Footer>

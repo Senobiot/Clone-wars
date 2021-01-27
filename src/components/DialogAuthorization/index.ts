@@ -1,0 +1,1 @@
+export { DialogAutorization } from './DialogAutorization';

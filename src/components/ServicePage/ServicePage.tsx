@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './ServicePage.module.scss';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,7 +10,9 @@ import Collapse from '@material-ui/core/Collapse';
 import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import { getCollection } from '../../services/updateFirebase';
+import { useSelector } from 'react-redux';
+import { IData } from '../../model/data.model';
+import { Spinner } from '../Spinner/Spinner';
 
 interface Props {
   element: { services: any; category_name: string; medic: string; id: string };
@@ -87,19 +89,17 @@ function BlockList({ element, index }: Props) {
   );
 }
 
-export function ServicesPage() {
-  const [services_category, setServices] = useState([]);
-  useEffect(() => {
-    getCollection('services_category').then((data) => {
-      setServices(data);
-    });
-  }, []);
-
+export function ServicesPage(): JSX.Element {
+  const dataState: IData = useSelector((state) => state.data);
   return (
     <div className={styles.container}>
-      {services_category.map((element, index) => {
-        return <BlockList element={element} index={index} key={index}></BlockList>;
-      })}
+      {!dataState.services_category ? (
+        <Spinner />
+      ) : (
+        dataState.services_category.map((element, index) => {
+          return <BlockList element={element} index={index} key={index}></BlockList>;
+        })
+      )}
     </div>
   );
 }

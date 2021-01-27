@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function Header({ term, data, update }: any) {
+export function Header({ term, data, update }: any): JSX.Element {
   const dataSearch = (e) => {
     const value = e.target.value.toLowerCase();
 
