@@ -7,7 +7,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Collapse from '@material-ui/core/Collapse';
-import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import { useSelector } from 'react-redux';
@@ -17,6 +16,7 @@ import { Spinner } from '../Spinner/Spinner';
 interface Props {
   element: { services: any; category_name: string; medic: string; id: string };
   index: number;
+  imgSrc: string;
 }
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,11 +29,14 @@ const useStyles = makeStyles((theme) => ({
   },
   category: {
     fontSize: '25px',
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 18
+    },
   },
 }));
 
-function BlockList({ element, index }: Props) {
+function BlockList({ element, index, imgSrc }: Props) {
   const classes = useStyles();
   let count = 0;
 
@@ -50,7 +53,7 @@ function BlockList({ element, index }: Props) {
       subheader={
         <ListItem component="div" className={classes.category} key={index}>
           <ListItemIcon key={index}>
-            <SendIcon />
+            <img src={imgSrc} className={styles.servicePageLogo}/>
           </ListItemIcon>
           {element.category_name}
         </ListItem>
@@ -68,7 +71,7 @@ function BlockList({ element, index }: Props) {
         }
       })}
       <ListItem button onClick={handleClick} key={index}>
-        <Link key={index}>more</Link>
+        <Link key={index}><b>Показать все</b></Link>
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -97,7 +100,7 @@ export function ServicesPage(): JSX.Element {
         <Spinner />
       ) : (
         dataState.services_category.map((element, index) => {
-          return <BlockList element={element} index={index} key={index}></BlockList>;
+          return <BlockList element={element} imgSrc={element.logo} index={index} key={index}></BlockList>;
         })
       )}
     </div>

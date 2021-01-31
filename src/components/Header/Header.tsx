@@ -1,8 +1,6 @@
 import React from 'react';
 import { AppBar, InputBase, Toolbar } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
 import HeaderMenu from './HeaderMenu';
-import styles from './Header.module.scss';
 import { SearchBar } from '../Search/SearchBar';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuSide from '../MenuSide/MenuSide'
@@ -15,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#2194E0',
     boxShadow: 'inset 0 0 10px'
   },
+  appbar: {
+    left: 5
+  },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -24,10 +25,10 @@ const useStyles = makeStyles((theme) => ({
     },
     margin: '0 auto',
     width: '400px',
-    maxWidth: 'calc(100vw - 200px)'
-    // [theme.breakpoints.up('sm')]: {
-    //   marginLeft: theme.spacing(1),
-    // },
+    maxWidth: 'calc(100vw - 200px)',
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: theme.spacing(6),
+    },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -57,30 +58,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export function Header({ term, data, update }: any): JSX.Element {
-  const dataSearch = (e) => {
-    const value = e.target.value.toLowerCase();
-
-    const filter = data.filter((user) => {
-      return user.name.toLowerCase().includes(value);
-    });
-
-    update({
-      data: filter,
-      active: 0,
-      term: value,
-    });
-  };
   const classes = useStyles();
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar classes={{ root: classes.toolBar }}>
           <MenuSide />
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
               <SearchBar />
           </div>
           <HeaderMenu></HeaderMenu>

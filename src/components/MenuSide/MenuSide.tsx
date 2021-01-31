@@ -38,9 +38,9 @@ const useStyles = makeStyles((theme: Theme) =>
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      width: 100,
+      width: 60,
       height: 64,
-      left: 30,
+      left: 5,
       background: 'none',
       boxShadow: 'none'
     },

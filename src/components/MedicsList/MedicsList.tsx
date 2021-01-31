@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import styles from './MedicslList.modlule.scss';
 import MedicsCard from './MedicsCard';
 import MedicListCtrlPanel from './MedicListCtrlPanel';
-import { medicsList } from '../../data/medicsList';
-import { useLocation } from "react-router-dom";
-
-
+// import { medicsList } from '../../data/medicsList';
 
 export const MedicsList = () => {
-  const data = medicsList;
-  const location = useLocation();
-  const [medics, setCategories] = useState(location.category ? data.filter((medic) => medic.speciality === location.category) : data);
-  const [category, setCategory] = useState(location.category ? location.category : 'Все врачи');
+  const data = useSelector((state)=> state.data.users);
+  const currentCat = useSelector((state)=> state.category.category);
 
-   const handleCategoryChange = (e) => {
-    setCategory(e.target.textContent);
-  };
-  const searchCat = location.category ?  location.categoryIndex : null;
+  const [medics, setCategories] = useState(data);
+  const [category, setCategory] = useState('Все врачи');
 
+  const handleCategoryChange = (e) => {
+  setCategory(e.target.textContent);
+};
   useEffect(() => {
     let currentData;
     if (category !== 'Все врачи') {
@@ -28,9 +25,19 @@ export const MedicsList = () => {
     setCategories(currentData);
   }, [category]);
 
+  useEffect(() => {
+    let currentData;
+    if (currentCat !== 'Все врачи') {
+      currentData = data.filter((medic) => medic.speciality === currentCat);
+    } else {
+      currentData = data;
+    }
+    setCategories(currentData);
+  }, [currentCat]);
+
   return (
     <div className={styles.medicsListPage}>
-      <MedicListCtrlPanel handler={handleCategoryChange} searchCat={searchCat} />
+      <MedicListCtrlPanel handler={handleCategoryChange} />
       <div className={styles.medicsListWrapper}>
         {medics.map((e, index) => {
           return (

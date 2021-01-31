@@ -8,7 +8,7 @@ import { services_category } from '../../data/servicesList';
 import styles from './MedicPage.modlule.scss';
 import IconButton from '@material-ui/core/IconButton';
 import PhoneCallbackIcon from '@material-ui/icons/PhoneCallback';
-import ScheduleIcon from '@material-ui/icons/Schedule';
+import TelegramIcon from '@material-ui/icons/Telegram';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -47,21 +47,23 @@ function ContainedButtons({ func }) {
   );
 }
 
-function IconButtons({ tel, email }) {
+function IconButtons({ tel, email, tg }) {
   return (
     <div className={styles.icons}>
       <Link href={tel}>
-      <IconButton aria-label="phone">
-        <PhoneCallbackIcon />
-      </IconButton>
+        <IconButton aria-label="phone">
+          <PhoneCallbackIcon />
+        </IconButton>
       </Link>
-      <IconButton aria-label="schedule">
-        <ScheduleIcon />
-      </IconButton>
+      <Link href={tg}>
+        <IconButton aria-label="telegram">
+          <TelegramIcon />
+        </IconButton>
+      </Link>
       <Link href={email}>
-      <IconButton aria-label="mail">
-        <EmailSharpIcon />
-      </IconButton>
+        <IconButton aria-label="mail">
+          <EmailSharpIcon />
+        </IconButton>
       </Link>
     </div>
   );
@@ -78,6 +80,7 @@ export const MedicPage = () => {
   const keys = serviceId.map((e) => Object.keys(e)).flat(1);
   const prices = serviceId.map((e) => Object.values(e)).flat(1);
   const tel = 'tel:' + medicData.phone;
+  const tg = `tg://resolve?domain=${medicData.name}`
   const email = 'mailto:' + medicData.email;
   const namedKeys = [];
   keys.map((e) => namedKeys.push(serviceData.services[e]));
@@ -89,7 +92,7 @@ export const MedicPage = () => {
     <div className={styles.medicPageWrapper}>
       <img src={photo} className={styles.medicPagePhoto} alt="Logo" />
       <div className={styles.medicPageName}>{medicData.name}</div>
-      <div className={styles.medicPageIcons}>{IconButtons({tel, email})}</div>
+      <div className={styles.medicPageIcons}>{IconButtons({tel, email, tg})}</div>
       <div className={styles.medicPageSpec}>
         <img src={categoryLogo} className={styles.medicPageCategoryLogo}/>
         {medicData.speciality}

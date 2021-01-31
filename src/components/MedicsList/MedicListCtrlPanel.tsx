@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import styles from './MedicsListCtrlPanel.module.scss';
 import services_category from '../../data/servicesList';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -23,17 +24,21 @@ services_category.map((e) => {
 
 interface Props {
   handler: Function;
-  searchCat: number | null;
 }
 
-const MedicListCtrlPanel: React.FC<Props> = ({ handler, searchCat }) => {
+const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
+  const currentCat = useSelector((state)=> state.categoryTile.categoryTile);
+
   const classes = useStyles();
-  const [value, setValue] = useState(searchCat ? searchCat : 0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue);
   };
 
+  useEffect(() => {
+    setValue(currentCat);
+  }, [currentCat]);
 
   return (
     <div className={classes.root}>

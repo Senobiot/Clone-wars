@@ -47,8 +47,7 @@ export default function HeaderMenu(): JSX.Element {
           </IconButton>
         </Tooltip>
       ) : (
-        <Button style={{ color: 'white' }} onClick={handleClickOpenDialog}>
-          Войти
+        <Button className={styles.enter} onClick={handleClickOpenDialog}>
         </Button>
       )}
 

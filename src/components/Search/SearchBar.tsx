@@ -9,6 +9,9 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import { useDispatch } from 'react-redux';
+import { chooseCategories } from '../../../store/actions/actionCategories';
+import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -28,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const SearchBar = () => {
+    const dispatch = useDispatch();
     let history = useHistory();
     const classes = useStyles();
 
@@ -104,10 +108,10 @@ export const SearchBar = () => {
     }
     const handlerSpecialities = (e) => {
         clearInput();
+        dispatch(chooseCategories(e.target.textContent));
+        dispatch(chooseCategoriesTile(catsInd.indexOf(e.target.textContent) + 1));
         history.push({
             pathname: '/MedicsList',
-            category: e.target.textContent,
-            categoryIndex: catsInd.indexOf(e.target.textContent) + 1
         });
     }
 
