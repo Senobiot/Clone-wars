@@ -65,6 +65,7 @@ export interface IData {
 export interface IState {
   data: IData;
   user: { authorized: boolean; isNewUser: boolean; data: IUser };
+  service: {service: any}
   firebase: FirebaseReducer.Reducer;
   firestore: FirestoreReducer.Reducer;
 }
