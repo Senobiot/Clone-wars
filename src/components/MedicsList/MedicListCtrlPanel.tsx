@@ -5,7 +5,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import styles from './MedicsListCtrlPanel.module.scss';
 import services_category from '../../data/servicesList';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
+  const dispatch = useDispatch();
   const currentCat = useSelector((state)=> state.categoryTile.categoryTile);
 
   const classes = useStyles();
@@ -34,6 +36,7 @@ const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue);
+    dispatch(chooseCategoriesTile(newValue));
   };
 
   useEffect(() => {

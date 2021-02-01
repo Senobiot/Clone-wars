@@ -20,6 +20,9 @@ import BusinessIcon from '@material-ui/icons/Business';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import styles from '../Header/Header.module.scss';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { chooseCategories } from '../../../store/actions/actionCategories';
+import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 
 
 const drawerWidth = 240;
@@ -100,6 +103,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function MenuSide() {
+  const dispatch = useDispatch();
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -162,10 +166,15 @@ export default function MenuSide() {
         <Divider />
         <List>
           {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, i) => (
-             <Link key={i} onClick={handleDrawerClose} className={styles.link} to={
+             <Link key={i} onClick={()=>{
+              handleDrawerClose();
+              if (i == 2) {
+                  dispatch(chooseCategories('Все врачи'));
+                  dispatch(chooseCategoriesTile(0));}
+             }} className={styles.link} to={
                i === 0 ? '/' :
                i === 1 ? '/MedcentersList/' :
-               i === 2 ? '/MedicsList/' :
+               i === 2 ? {pathname: '/MedicsList/', state: { prevPath: location.pathname } }:
                i === 3 ? '/ServicesPage/' :
                '/PersonalPage/'
               }>

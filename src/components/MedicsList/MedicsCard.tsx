@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../global/variables.scss';
 import styles from './MedicsCard.module.scss';
+import { Avatar } from '@material-ui/core';
 
 interface Props {
   id: number;
@@ -15,7 +16,7 @@ interface Props {
 const MedicsCard: React.FC<Props> = ({ id, name, category, speciality, experience, imgSource }) => {
   return (
     <div className={styles.medicsCard}>
-      <img src={imgSource} />
+      <Avatar src={imgSource} className={styles.avatar}></Avatar>
       <div className={styles.medicFullname}>{name}</div>
       <div className={styles.medicCallbacks}>Пока нет отзывов</div>
       <div className={styles.medicExperience}>{experience}</div>

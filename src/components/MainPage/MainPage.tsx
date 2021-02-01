@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './MainPage.module.scss';
 import { Link } from 'react-router-dom';
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring';
+import { useDispatch } from 'react-redux';
+import { chooseCategories } from '../../../store/actions/actionCategories';
+import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 100}px,${y / 10}px,0)`
@@ -13,6 +16,7 @@ const trans6 = (x, y) => `translate3d(${x / 50}px,${y / 25}px,0)`
 
 
 export function MainPage() {
+  const dispatch = useDispatch();
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
     return (
       <>
@@ -26,7 +30,11 @@ export function MainPage() {
             <div className={styles.mainPageBtnWrapper}>
             {['Найти свой медцентр', ' Найти своего врача', ' Посмотреть услуги', 'Зайти в свой кабинет'].map((text, i) => {
                 return (
-                  <Link key={i} to={
+                  <Link key={i} onClick={()=>{
+                    if (i == 1) {
+                        dispatch(chooseCategories('Все врачи'));
+                        dispatch(chooseCategoriesTile(0));}
+                   }} to={
                     i === 0 ? '/MedcentersList/' :
                     i === 1 ? '/MedicsList/' :
                     i === 2 ? '/ServicesPage/' :
