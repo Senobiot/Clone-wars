@@ -10,9 +10,12 @@ import Collapse from '@material-ui/core/Collapse';
 import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import { useSelector } from 'react-redux';
-import { IData } from '../../model/data.model';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { IData, IState } from '../../model/data.model';
+import { useHistory } from 'react-router-dom';
 import { Spinner } from '../Spinner/Spinner';
+import { updateService } from '../../../store/actions/actionService';
 
 interface Props {
   element: { services: any; category_name: string; medic: string; id: string };
@@ -34,6 +37,36 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function BlockList({ element, index }: Props) {
+  const dataState: any = useSelector((state: IState) => state.service);
+  const dispatch = useDispatch();
+
+  let history = useHistory();
+
+  const handleCategoryChange = (e) => {
+    let arr = [];
+    Object.values(Object.entries(element.services)).forEach((serv) => {
+      if (serv[1] == e.target.textContent) {
+        let id = element.id;
+        let name_service = serv[0];
+        arr.push(id);
+        arr.push(name_service);
+
+      }
+
+    });
+console.log(arr);
+    dispatch(updateService(arr));
+    history.push({
+      pathname: '/MedcentersList',
+      state: { service: arr },
+    });
+  };
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+    setValue(newValue);
+  };
+
   const classes = useStyles();
   let count = 0;
 
@@ -61,14 +94,15 @@ function BlockList({ element, index }: Props) {
         while (count < 3 && value != null) {
           count++;
           return (
+            // to = {{ pathname: "/MedcentersList", state: { category: category } }}
             <ListItem button key={index}>
-              <Link>{value}</Link>
+              <span onClick={handleCategoryChange}>{value}</span>{' '}
             </ListItem>
           );
         }
       })}
-      <ListItem button onClick={handleClick} key={index}>
-        <Link key={index}>more</Link>
+      <ListItem button key={index}>
+        <Link key={index}>...</Link>
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -78,7 +112,12 @@ function BlockList({ element, index }: Props) {
               return (
                 <ListItem button className={classes.nested} key={key}>
                   {' '}
-                  <Link>{value}</Link>{' '}
+                  <Link
+                    // to={{ pathname: '/MedcentersList', state: { category: category } }}
+                    onClick={handleCategoryChange}
+                  >
+                    {value}
+                  </Link>{' '}
                 </ListItem>
               );
             }
