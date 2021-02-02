@@ -21,3 +21,10 @@
     
     > `npm run test` - to run tests. 
     
+    > `npm run lint`  to run lint. 
+    
+    > `npm run lint:fix` - to run lint fixes.
+    
+    > `npm run stylelint` - to run stylelint.  
+    
+    > `npm run stylelint:fix` - to run stylelint fixes. 
