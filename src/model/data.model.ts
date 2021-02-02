@@ -9,16 +9,26 @@ export interface IMedicsList {
   img: string;
   name: string;
   phone: string;
-  id: string;
+  id: number | string;
   email: string;
   role: Role;
   uid: string;
 }
 
+export interface IAppointment {
+  title?: string;
+  startDate: Date;
+  endDate: Date;
+  id: string | number;
+  doctorId?: string | number;
+  available?: boolean;
+  patientId?: string;
+}
+
 export interface IUser extends IMedicsList {
-  password: string;
-  gender: string;
-  birthday: string;
+  password?: string;
+  gender?: string;
+  birthday?: string;
 }
 
 export enum Role {
@@ -60,12 +70,21 @@ export interface IData {
   users: IUser[];
   services_category: IServicesCategory[];
   med_centers: IMedCenters[];
+  appointment?: IAppointment[];
+}
+
+export interface IActiveUser {
+  authorized: boolean;
+  isNewUser: boolean;
+  appointment: IAppointment[];
+  appointmentDoctor: IAppointment[];
+  data: IUser;
 }
 
 export interface IState {
   data: IData;
-  user: { authorized: boolean; isNewUser: boolean; data: IUser };
-  service: {service: any}
+  user: IActiveUser;
+  service: { service: any };
   firebase: FirebaseReducer.Reducer;
   firestore: FirestoreReducer.Reducer;
 }

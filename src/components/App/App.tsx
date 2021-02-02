@@ -17,12 +17,13 @@ import { isEmpty, useFirestore, useFirestoreConnect, isLoaded } from 'react-redu
 import { useSelector, useDispatch } from 'react-redux';
 import { getData } from '../../../store/actions/actionData';
 import { Spinner } from '../Spinner/Spinner';
-import { getUser, updateUserAuthorization } from '../../../store/actions/actionUser';
+import { getAppointmentUser, getUser, updateUserAuthorization } from '../../../store/actions/actionUser';
 import { IState } from '../../model/data.model';
+import { AppointmentDoctor } from '../Appointment';
 
 const useConnectFirestore = () => {
   const dispatch = useDispatch();
-  useFirestoreConnect(['users', 'med_centers', 'services_category']);
+  useFirestoreConnect(['users', 'med_centers', 'services_category', 'appointment']);
   const users = useSelector((state: IState) => state.firestore.ordered.users);
   const med_centers = useSelector((state: IState) => state.firestore.ordered.med_centers);
   const services_category = useSelector((state: IState) => state.firestore.ordered.services_category);
@@ -41,14 +42,14 @@ export default function App(): JSX.Element {
   const firestore = useFirestore();
   const dispatch = useDispatch();
   /* const isLoad = useConnectFirestore(); */
-  /* const createTodo = useCallback((todo) => dispatch(addUser({ firestore }, todo)), [firestore]); */
   useEffect(() => {
     if (isLoaded(auth) && !isEmpty(auth)) {
       dispatch(getUser({ firestore }, auth.uid));
+      dispatch(getAppointmentUser({ firestore }, auth.uid));
       dispatch(updateUserAuthorization(true));
     }
   }, [auth]);
-  /*  if (!isLoad) return <Spinner />; */
+  /* if (!isLoad) return <Spinner />; */
   return (
     <BrowserRouter>
       <ArrowUp />
@@ -60,6 +61,7 @@ export default function App(): JSX.Element {
         <Route exact path={'/MedicPage/:id'} component={MedicPage}></Route>
         <Route exact path={'/ServicesPage/'} component={ServicesPage}></Route>
         <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
+        <Route path={'/AppointmentDoctor/'} component={AppointmentDoctor}></Route>
         <Route exact path={'/User/'} component={User}></Route>
         <Route path={'*'} component={NotFoundPage} />
       </Switch>

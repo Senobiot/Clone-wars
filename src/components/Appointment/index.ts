@@ -1,0 +1,1 @@
+export { AppointmentDoctor } from './Appointment';

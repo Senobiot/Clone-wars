@@ -22,6 +22,7 @@ import { updateUser, updateUserField } from '../../../store/actions/actionUser';
 import { SchedulerVisit } from '../SchedulerVisit/SchedulerVisit';
 import { useFirestore } from 'react-redux-firebase';
 import { Spinner } from '../Spinner/Spinner';
+import { SchedulerDoctor } from '../SchedulerDoctor/SchedulerDoctor';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -53,6 +54,7 @@ export function User(): JSX.Element {
   const [formStateUser, setFormStateUser] = useState<IUser>(userData.data);
   const [file, setFile] = useState<FileList>();
   const [isEdit, setIsEdit] = useState<boolean>(false);
+  /*  const appointment = useSelector((state: IState) => state.firestore.ordered.appointment[0]); */
 
   useEffect(() => setFormStateUser(userData.data), [userData]);
   useEffect(() => {
@@ -74,6 +76,7 @@ export function User(): JSX.Element {
     }
     setIsEdit(!isEdit);
   };
+
   if (!dataState.users) return <Spinner />;
   const dataUser = [
     { name: 'name', type: 'text' },
@@ -148,12 +151,21 @@ export function User(): JSX.Element {
           </Grid>
           <Grid className={style.item}>
             <Card className={style.cardVisit}>
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Мои визиты
-                </Typography>
-                <SchedulerVisit />
-              </CardContent>
+              {userData.data.role === 'patient' ? (
+                <CardContent>
+                  <Typography color="textSecondary" gutterBottom>
+                    Мои визиты
+                  </Typography>
+                  <SchedulerVisit />
+                </CardContent>
+              ) : (
+                <CardContent>
+                  <Typography color="textSecondary" gutterBottom>
+                    Мои визиты
+                  </Typography>
+                  <SchedulerDoctor />
+                </CardContent>
+              )}
             </Card>
           </Grid>
         </>

@@ -1,0 +1,23 @@
+@import '../../global/mixin.scss';
+@import '../../global/variables.scss';
+
+.wrapper {
+  .paper {
+    width: 100%;
+  }
+}
+
+.popover {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute !important;
+  right: 5px;
+  top: 5px;
+}
+
+.sing {
+  width: 90%;
+  margin: 5px 5px 15px !important;
+}

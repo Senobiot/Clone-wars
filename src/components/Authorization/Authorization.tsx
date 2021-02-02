@@ -21,7 +21,7 @@ import style from './authorizatio.module.scss';
 import { IState, IUser, Role } from '../../model/data.model';
 import { auth } from '../../../firebase';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateNewUser, updateUserGoodleAuthorization } from '../../../store/actions/actionUser';
+import { addAppointment, updateNewUser, updateUserGoodleAuthorization } from '../../../store/actions/actionUser';
 import { useFirebase, useFirestore } from 'react-redux-firebase';
 import { addUser } from '../../../store/actions/actionData';
 import { DialogRole } from '../DialogRole/DialogRole';
@@ -105,6 +105,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
           .createUser({ email: formState.email, password: formState.password })
           .then(() => {
             const uid = auth.currentUser.uid;
+            dispatch(addAppointment({ firestore }, uid));
             dispatch(addUser({ firestore }, uid, { ...formState, uid: uid }));
             history.push('/User/');
             handleClickOpenDialog();
@@ -148,6 +149,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
           dispatch(addUser({ firestore }, uid, data));
           dispatch(updateUserGoodleAuthorization(data));
           dispatch(updateNewUser(true));
+          dispatch(addAppointment({ firestore }, uid));
           history.push('/User/');
           handleClickOpenDialog();
         });

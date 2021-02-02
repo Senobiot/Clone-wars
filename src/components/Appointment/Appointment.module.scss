@@ -1,0 +1,29 @@
+@import '../../global/mixin.scss';
+@import '../../global/variables.scss';
+
+.wrapper {
+  height: calc(100vh - 104px);
+  background-color: $very-pale-blue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+
+  .paper {
+    width: 95%;
+  }
+}
+
+.popover {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute !important;
+  right: 5px;
+  top: 5px;
+}
+
+.sing {
+  width: 90%;
+  margin: 5px 5px 15px !important;
+}

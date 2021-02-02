@@ -1,5 +1,20 @@
 @import '../../global/mixin.scss';
 
+.popover {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute !important;
+  right: 5px;
+  top: 5px;
+}
+
+.sing {
+  width: 90%;
+  margin: 5px 5px 15px !important;
+}
+
 .wrapper {
   margin: 15px !important;
   border-top: 1px solid #cccccc;
