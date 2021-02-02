@@ -9,7 +9,7 @@ export interface IMedicsList {
   img: string;
   name: string;
   phone: string;
-  id: string;
+  id: number | string;
   email: string;
   role: Role;
   uid: string;
