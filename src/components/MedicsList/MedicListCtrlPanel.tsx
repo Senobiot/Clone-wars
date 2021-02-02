@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import styles from './MedicsListCtrlPanel.module.scss';
-import services_category from '../../data/servicesList';
 import { useSelector, useDispatch } from 'react-redux';
 import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 
@@ -16,20 +15,21 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const catBtnsArray = [];
-services_category.map((e) => {
-  if (e.medic !== null && catBtnsArray.indexOf(e.id) === -1) {
-    catBtnsArray.push(e.id);
-  }
-});
-
 interface Props {
   handler: Function;
 }
 
 const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
   const dispatch = useDispatch();
+  const allServices = useSelector((state)=> state.data.services_category);
   const currentCat = useSelector((state)=> state.categoryTile.categoryTile);
+  const catBtnsArray = [];
+
+  allServices.map((e) => {
+    if (e.medic !== null && catBtnsArray.indexOf(e.id) === -1) {
+      catBtnsArray.push(e.id);
+    }
+  });
 
   const classes = useStyles();
   const [value, setValue] = useState(0);
@@ -62,8 +62,8 @@ const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
             icon={<img src={'assets/services_logo/all.svg'} />}
              />
           {catBtnsArray.sort().map((e, index) => {
-            const medicSpesc = services_category.find((elem) => elem.id === e).medic;
-            const medicLogo = services_category.find((elem) => elem.id === e).logo;
+            const medicSpesc = allServices.find((elem) => elem.id === e).medic;
+            const medicLogo = allServices.find((elem) => elem.id === e).logo;
             return <Tab label={medicSpesc} 
             className={styles.tabsTile}
              key={index + 1} onClick={(e) => handler(e)}

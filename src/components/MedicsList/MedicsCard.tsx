@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Avatar } from '@material-ui/core';
+
 import '../../global/variables.scss';
 import styles from './MedicsCard.module.scss';
-import { Avatar } from '@material-ui/core';
+
 
 interface Props {
   id: number;

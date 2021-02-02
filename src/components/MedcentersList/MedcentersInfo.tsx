@@ -35,7 +35,7 @@ export default function MedcentersInfo({category, centerName} : ICat) {
   return (
     <div className={classes.root}>
         {
-        categoryEntries.map( (cats, idx) => {  
+        categoryEntries.map( (cats, idx) => {
         return (
         <Accordion key={idx}>
             <AccordionSummary

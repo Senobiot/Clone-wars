@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import styles from './SearchBar.module.scss';
+import { useDispatch } from 'react-redux';
+import { chooseCategories } from '../../../store/actions/actionCategories';
+import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
+import { updateService } from '../../../store/actions/actionService';
 import { centers , services, detailedServ, catsInd } from '../../data/searchKeys';
 import { medicsList } from '../../data/medicsList';
+
+import styles from './SearchBar.module.scss';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
-import { useDispatch } from 'react-redux';
-import { chooseCategories } from '../../../store/actions/actionCategories';
-import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -94,17 +97,28 @@ export const SearchBar = () => {
 
     const handlerMedcenters = (e) => {
         clearInput();
-        return window.location.href=`/MedcentersList`;
+        const match = {centers: [e.target.textContent], query: e.target.textContent }
+        dispatch(updateService(match));
+        history.push({
+            pathname: `/MedcentersList`,
+        });
     }
+
     const handlerDepartments = (e) => {
         clearInput();
-        // LOGIC
-        return window.location.href=`/MedcentersList`;
+        const match = {centers: services[e.target.textContent], query: e.target.textContent }
+        dispatch(updateService(match));
+        history.push({
+            pathname: `/MedcentersList`,
+        });
     }
     const handlerServices = (e) => {
         clearInput();
-        // LOGIC
-        return window.location.href=`/MedcentersList`;
+        const match = {centers: detailedServ[e.target.textContent], query: e.target.textContent }
+        dispatch(updateService(match));
+        history.push({
+            pathname: `/MedcentersList`,
+        });
     }
     const handlerSpecialities = (e) => {
         clearInput();

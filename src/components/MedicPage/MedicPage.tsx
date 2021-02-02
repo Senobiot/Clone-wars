@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from '@material-ui/core/Link';
-import { Link as LinkDom} from 'react-router-dom';
-import { useParams, useHistory } from 'react-router-dom';
-import { medicsList } from '../../data/medicsList';
-import { med_centers } from '../../data/medcentersList';
-import { services_category } from '../../data/servicesList';
+import { useParams, useHistory} from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateService } from '../../../store/actions/actionService';
+
 import styles from './MedicPage.modlule.scss';
 import IconButton from '@material-ui/core/IconButton';
 import PhoneCallbackIcon from '@material-ui/icons/PhoneCallback';
@@ -27,20 +26,18 @@ function Links() {
   const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 }
 
-function ContainedButtons({ func }) {
+function ContainedButtons({ centerFunc, backFunc }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <LinkDom to='/MedcentersList'>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={centerFunc}>
           О МЕДЦЕНТРЕ
         </Button>
-      </LinkDom>
       <Button variant="contained" color="primary">
         ЗАПИСАТЬСЯ
       </Button>
-      <Button variant="contained" color="secondary" onClick={func}>
+      <Button variant="contained" color="secondary" onClick={backFunc}>
         НАЗАД
       </Button>
     </div>
@@ -71,11 +68,15 @@ function IconButtons({ tel, email, tg }) {
 
 export const MedicPage = () => {
   let { id } = useParams();
+  const medcenterName = useRef(null);
   const history = useHistory();
-  const func = history.goBack;
-  const medicData = medicsList.find((e) => e.id == id);
-  const centerData = med_centers.find((e) => e.name === medicData.medcenter);
-  const serviceData = services_category.find((e) => e.medic === medicData.speciality);
+  const dispatch = useDispatch();
+  const allMedics = useSelector((state)=> state.data.users);
+  const allCenters = useSelector((state)=> state.data.med_centers);
+  const allServices = useSelector((state)=> state.data.services_category);
+  const medicData = allMedics.find((e) => e.id == id);
+  const centerData = allCenters.find((e) => e.name === medicData.medcenter);
+  const serviceData = allServices.find((e) => e.medic === medicData.speciality);
   const serviceId = centerData.services[serviceData.id];
   const keys = serviceId.map((e) => Object.keys(e)).flat(1);
   const prices = serviceId.map((e) => Object.values(e)).flat(1);
@@ -87,6 +88,16 @@ export const MedicPage = () => {
   const categoryLogo = '../' +serviceData.logo;
   const photo = '../' + medicData.img;
   const logo = '../' + centerData.logo;
+
+  const centerFunc = () => { 
+    const match = {centers: [medcenterName.current.textContent], query: medcenterName.current.textContent }
+    dispatch(updateService(match));
+    history.push({
+        pathname: `/MedcentersList`,
+    });
+  }
+
+  const backFunc = history.goBack;
 
   return (
     <div className={styles.medicPageWrapper}>
@@ -107,7 +118,7 @@ export const MedicPage = () => {
       <hr></hr>
       <div className={styles.medicPageCenter}>
         <img className={styles.medicPageLogo} src={logo} />
-        <div className={styles.medicPageCenterFullName}>{centerData.fullname}</div>
+        <div ref={medcenterName} className={styles.medicPageCenterFullName}>{centerData.fullname}</div>
         <div className={styles.medicPageCenterAdress}>{centerData.adress}</div>
         <div className={styles.medicPageSubWrapper}>
           <div className={styles.medicPageCenterTime}>
@@ -129,7 +140,7 @@ export const MedicPage = () => {
           </div>
           <iframe className={styles.iframeMap} src={centerData.iframe}></iframe>
         </div>
-        <div className={styles.medicPageCenterScheduleBtn}>{ContainedButtons({ func })}</div>
+        <div className={styles.medicPageCenterScheduleBtn}>{ContainedButtons({ centerFunc, backFunc })}</div>
       </div>
     </div>
   );

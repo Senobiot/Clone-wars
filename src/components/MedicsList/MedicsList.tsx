@@ -5,30 +5,15 @@ import MedicsCard from './MedicsCard';
 import MedicListCtrlPanel from './MedicListCtrlPanel';
 import { chooseCategories } from '../../../store/actions/actionCategories';
 
-// import { medicsList } from '../../data/medicsList';
-
 export const MedicsList = () => {
   const dispatch = useDispatch();
   const data = useSelector((state)=> state.data.users);
-
   const currentCat = useSelector((state)=> state.category.category);
-
   const [medics, setCategories] = useState(data);
-  const [category, setCategory] = useState('Все врачи');
-
   const handleCategoryChange = (e) => {
     chooseCategories(e.target.textContent);
     dispatch(chooseCategories(e.target.textContent));
 };
-  useEffect(() => {
-    let currentData;
-    if (category !== 'Все врачи') {
-      currentData = data.filter((medic) => medic.speciality === category);
-    } else {
-      currentData = data;
-    }
-    setCategories(currentData);
-  }, [category]);
 
   useEffect(() => {
     let currentData;
@@ -61,4 +46,3 @@ export const MedicsList = () => {
     </div>
   );
 };
-
