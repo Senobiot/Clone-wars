@@ -1,3 +1,4 @@
+import { AppointmentMeta } from '@devexpress/dx-react-scheduler';
 import { FirebaseReducer, FirestoreReducer } from 'react-redux-firebase';
 
 export interface IMedicsList {
@@ -15,10 +16,20 @@ export interface IMedicsList {
   uid: string;
 }
 
+export interface IAppointment {
+  title?: string;
+  startDate: Date;
+  endDate: Date;
+  id: string | number;
+  doctorId?: string | number;
+  available?: boolean;
+  patientId?: string;
+}
+
 export interface IUser extends IMedicsList {
-  password: string;
-  gender: string;
-  birthday: string;
+  password?: string;
+  gender?: string;
+  birthday?: string;
 }
 
 export enum Role {
@@ -60,11 +71,20 @@ export interface IData {
   users: IUser[];
   services_category: IServicesCategory[];
   med_centers: IMedCenters[];
+  appointment?: IAppointment[];
+}
+
+export interface IActiveUser {
+  authorized: boolean;
+  isNewUser: boolean;
+  appointment: IAppointment[];
+  appointmentDoctor: IAppointment[];
+  data: IUser;
 }
 
 export interface IState {
   data: IData;
-  user: { authorized: boolean; isNewUser: boolean; data: IUser };
+  user: IActiveUser;
   firebase: FirebaseReducer.Reducer;
   firestore: FirestoreReducer.Reducer;
 }

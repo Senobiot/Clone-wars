@@ -155,9 +155,55 @@ export const getImageUrl = async (file): Promise<string> => {
 
 /* services_category.forEach(async (item) => {
   const img = await getImageUrl(item.img);
-  const logo = await getImageUrl(item.img); 
+  const logo = await getImageUrl(item.img);
   const newCityRef = db.collection('services_category').doc();
   const id = newCityRef.id;
   // later...
   newCityRef.set({ ...item, uid: id });
 }); */
+
+/*  const arrayDate = (startDate, endDate, uid, title) => {
+    let array = {};
+    let currentDate = moment(startDate);
+    const stopDate = moment(endDate);
+    console.log(+moment(currentDate).format('DD'));
+    while (currentDate <= stopDate) {
+      console.log(+moment(currentDate).format('HH'));
+      if (+moment(currentDate).format('DD') % 2 !== 0) {
+        while (+moment(currentDate).format('HH') < 15) {
+          const obj = {
+            title: title,
+            id: moment(currentDate).format('YYYYMMDDHHmm'),
+            startDate: moment(currentDate).format('LLLL'),
+            endDate: moment(currentDate).add(30, 'minutes').format('LLLL'),
+            available: true,
+            doctorId: uid,
+            patientId: '',
+          };
+          array = { ...array, [obj.id]: obj };
+          currentDate = moment(currentDate).add(30, 'minutes');
+        }
+        currentDate = moment(currentDate).add(24, 'h');
+      } else {
+        while (+moment(currentDate).format('HH') < 20) {
+          const obj = {
+            title: title,
+            id: moment(currentDate).format('YYYYMMDDHHmm'),
+            startDate: moment(currentDate).format('LLLL'),
+            endDate: moment(currentDate).add(30, 'minutes').format('LLLL'),
+            available: true,
+            doctorId: uid,
+            patientId: '',
+          };
+          array = { ...array, [obj.id]: obj };
+          currentDate = moment(currentDate).add(30, 'minutes');
+        }
+        currentDate = moment(currentDate).add(12, 'h');
+      }
+    }
+    return array;
+  }; */
+  /* setDocument('appointment', '0', arrayDate('20210201T0800', '20210228T0800')); */
+  /*   q.forEach(async (item) => {
+    await setDocument('appointment', item.uid, arrayDate('20210201T0800', '20210228T0800', item.uid, item.title));
+  }); */

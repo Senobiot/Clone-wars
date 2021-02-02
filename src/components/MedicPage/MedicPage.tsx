@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from '@material-ui/core/Link';
-import { Link as LinkDom} from 'react-router-dom';
+import { Link as LinkDom } from 'react-router-dom';
 import { useParams, useHistory } from 'react-router-dom';
 import { medicsList } from '../../data/medicsList';
 import { med_centers } from '../../data/medcentersList';
@@ -12,6 +12,10 @@ import ScheduleIcon from '@material-ui/icons/Schedule';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { IState } from '../../model/data.model';
+import { useSelector, useDispatch } from 'react-redux';
+import { getAppointmentItemDoctor } from '../../../store/actions/actionUser';
+import { useFirestore } from 'react-redux-firebase';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -29,15 +33,25 @@ function Links() {
 
 function ContainedButtons({ func }) {
   const classes = useStyles();
+  const history = useHistory();
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const firestore = useFirestore();
+  const doctor = useSelector((state: IState) => state.data.users.find((e) => e.id === +id));
 
+  const handleClick = () => {
+    console.log(doctor, id);
+    dispatch(getAppointmentItemDoctor({ firestore }, doctor.uid));
+    history.push('/AppointmentDoctor/');
+  }
   return (
     <div className={classes.root}>
-      <LinkDom to='/MedcentersList'>
+      <LinkDom to="/MedcentersList">
         <Button variant="contained" color="primary">
           О МЕДЦЕНТРЕ
         </Button>
       </LinkDom>
-      <Button variant="contained" color="primary">
+      <Button variant="contained" color="primary" onClick={handleClick}>
         ЗАПИСАТЬСЯ
       </Button>
       <Button variant="contained" color="secondary" onClick={func}>
@@ -51,24 +65,24 @@ function IconButtons({ tel, email }) {
   return (
     <div className={styles.icons}>
       <Link href={tel}>
-      <IconButton aria-label="phone">
-        <PhoneCallbackIcon />
-      </IconButton>
+        <IconButton aria-label="phone">
+          <PhoneCallbackIcon />
+        </IconButton>
       </Link>
       <IconButton aria-label="schedule">
         <ScheduleIcon />
       </IconButton>
       <Link href={email}>
-      <IconButton aria-label="mail">
-        <EmailSharpIcon />
-      </IconButton>
+        <IconButton aria-label="mail">
+          <EmailSharpIcon />
+        </IconButton>
       </Link>
     </div>
   );
 }
 
 export const MedicPage = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   const history = useHistory();
   const func = history.goBack;
   const medicData = medicsList.find((e) => e.id == id);
@@ -81,7 +95,7 @@ export const MedicPage = () => {
   const email = 'mailto:' + medicData.email;
   const namedKeys = [];
   keys.map((e) => namedKeys.push(serviceData.services[e]));
-  const categoryLogo = '../' +serviceData.logo;
+  const categoryLogo = '../' + serviceData.logo;
   const photo = '../' + medicData.img;
   const logo = '../' + centerData.logo;
 
@@ -89,9 +103,9 @@ export const MedicPage = () => {
     <div className={styles.medicPageWrapper}>
       <img src={photo} className={styles.medicPagePhoto} alt="Logo" />
       <div className={styles.medicPageName}>{medicData.name}</div>
-      <div className={styles.medicPageIcons}>{IconButtons({tel, email})}</div>
+      <div className={styles.medicPageIcons}>{IconButtons({ tel, email })}</div>
       <div className={styles.medicPageSpec}>
-        <img src={categoryLogo} className={styles.medicPageCategoryLogo}/>
+        <img src={categoryLogo} className={styles.medicPageCategoryLogo} />
         {medicData.speciality}
       </div>
       <div className={styles.medicPageCat}>{medicData.category}</div>
@@ -112,7 +126,8 @@ export const MedicPage = () => {
             {centerData.schedule.replace(/\—/, ' - ')}
           </div>
           <div className={styles.medicPageCenterPhones}>
-            <span>Регистратура: </span><br></br>
+            <span>Регистратура: </span>
+            <br></br>
             {centerData.phones[0]} , {centerData.phones[1]}
           </div>
           <div className={styles.medicPageCenterPrices}>
@@ -121,7 +136,7 @@ export const MedicPage = () => {
                 <div className={styles.medicPageCenterServices} key={idx}>
                   {e} : <span>{prices[idx]}</span> руб.
                 </div>
-            );
+              );
             })}
           </div>
           <iframe className={styles.iframeMap} src={centerData.iframe}></iframe>
@@ -131,4 +146,3 @@ export const MedicPage = () => {
     </div>
   );
 };
-
