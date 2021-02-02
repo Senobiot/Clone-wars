@@ -1,29 +1,22 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import styles from './Medcenters.module.scss';
+import React, { useState, useRef, useCallback } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateService } from '../../../store/actions/actionService';
+import MedcentersInfo from './MedcentersInfo';
+import { centers } from '../../data/searchKeys';
+
+import styles from './Medcenters.module.scss';
 import { iconPerson } from './Marker';
 import Button from '@material-ui/core/Button';
-import { getCollection } from '../../services/updateFirebase';
-import { med_centers } from '../../data/medcentersList';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import { useSelector, useDispatch } from 'react-redux';
-
 import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
-// import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import ShareIcon from '@material-ui/icons/Share';
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// import MoreVertIcon from '@material-ui/icons/MoreVert';
-import MedcentersInfo from './MedcentersInfo';
-import { arrayOf } from 'prop-types';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -125,18 +118,13 @@ function centerCard({ centerImg, logo, fullname, adress, history, handler, text,
 }
 
 export const MedcentersList = () => {
-  let medCenters = med_centers;
-
-  const dataState: any = useSelector((state: any) => state.service);
+  const dispatch = useDispatch();
+  const medCenters = useSelector((state)=> state.data.med_centers);
+  const filteredCenters = useSelector((state) => state.service.service.centers);
+  const filterQuery = useSelector((state) => state.service.service.query);
 
   const [leafMap, setMap] = useState(null);
-  const [centers, setCenters] = useState([]);
-  useEffect(() => {
-    console.log(medCenters);
-    if (medCenters) {
-      setCenters(medCenters);
-    }
-  }, []);
+
   let coordObject = {};
 
   interface ILats {
@@ -154,6 +142,8 @@ export const MedcentersList = () => {
     },
     [leafMap],
   );
+
+  const filterText = useRef(null);
 
   const refs = medCenters.reduce((acc, value) => {
     acc[value.fullname] = useRef(null);
@@ -173,32 +163,52 @@ export const MedcentersList = () => {
   };
 
   const handleFly = (e) => {
-    handleClick(e.target.parentNode.parentNode.parentNode.childNodes[2].textContent);
+      handleClick(e.target.parentNode.parentNode.parentNode.childNodes[2].textContent);
   };
-  let newArr = [];
 
-  medCenters.forEach((center) => {
-    Object.keys(center.services).forEach((service) => {
-      Object.values(center.services).forEach((type: any) => {
-        type.forEach((e) => {
-          if (service == dataState.service[0] && Object.keys(e) == dataState.service[1]) {
-            newArr.push(center);
+  const handleReset = () => {
+    centers.forEach(center => {
+      refs[center].current.style.display = 'block';
+      if (markerRefs[center].current._popup._container) {
+        markerRefs[center].current._popup._container.style.transform = 'scale(1)';
+      }
+      markerRefs[center].current._icon.style.display = 'block';
+    })
+    dispatch(updateService( {centers: null, query: null } ));
+    leafMap.flyTo([53.9, 27.56667], 12);
+  };
+
+  const filter = () => {
+    if (filteredCenters) {
+      centers.forEach(center => {
+        if (filteredCenters.indexOf(center) !== - 1) {
+          refs[center].current.style.display = 'block';
+          if (markerRefs[center].current._popup._container) {
+            markerRefs[center].current._popup._container.style.transform = 'scale(1)';
           }
-        });
-      });
-    });
-  });
-  let newSet = new Set(Array.from(newArr));
-
-  if (Array.from(newSet).length != 0) {
-    medCenters = Array.from(newSet);
-  }
+          markerRefs[center].current._icon.style.display = 'block';
+        } else {
+            refs[center].current.style.display = 'none';
+              if (markerRefs[center].current._popup._container) {
+              markerRefs[center].current._popup._container.style.transform = 'scale(0)';
+              }
+            markerRefs[center].current._icon.style.display = 'none';
+        }
+      })
+        filterText.current.textContent = filterQuery;
+        // leafMap.flyTo([53.9, 27.56667], 12);
+    }
+  };
 
   return (
     <div className={styles.MedcentersListWrapper}>
       <div className={styles.MedcentersListBlock}>
+        <div className={filteredCenters ? styles.filter : styles.filterHidden }>
+          <ContainedButtons handler={handleReset} text="ПОКАЗАТЬ ВСЕ" />
+          <span>Выбрано:</span>
+          <span ref={filterText}></span>
+        </div>
         {medCenters.map((e) => {
-          console.log(medCenters);
           const centerImg = e.img;
           const logo = e.logo;
           const fullname = e.fullname;
@@ -252,6 +262,7 @@ export const MedcentersList = () => {
             </Marker>
           );
         })}
+        {setTimeout(filter, 0)}
       </MapContainer>
     </div>
   );

@@ -276,7 +276,7 @@ export const services_category = [
         id: 'func_diag',
         logo: 'assets/services_logo/func_diag.svg',
         category_name: 'Функциональная диагностика',
-        medic: 'Функциональный диагност',
+        medic: null,
         services: {
             serv_0: null,
             serv_1: 'Суточное мониторирование давления',

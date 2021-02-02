@@ -5,6 +5,29 @@
     width: 100%;
     @include flex;
     flex-wrap: wrap;
+    .filter {
+        padding: 10px;
+        background-color: aliceblue;
+        & > span:nth-child(2) {
+            display: inline-block;
+            margin: 10px 10px 0 0;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        & > span:last-child {
+            padding-top: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: #f50057;
+            color: aliceblue;
+            display: inline-block;
+        }
+    }
+    .filterHidden {
+        display: none;
+    }
     .leafletContainer {
         height: 100%;
         width: 65%;
@@ -40,6 +63,15 @@
                     button {
                         margin-top: 10px;
                         transition: 0.3s;
+                        padding: 0;
+                        > span:first-child {
+                            width: 118px;
+                            height: 36px;
+                            border-radius: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
                         &:active {
                             box-shadow: 2px 2px 3px rgba(231, 233, 241, 0.2);
                             transform: translate(2px, 2px);
@@ -59,7 +91,10 @@
         }
         width: 35%;
         height: 100%;
-        background-color: #3f51b5;
+        background-color: #afcde2;
+        .MedcentersListFilter {
+            display: flex;
+        }
         .header {
             display: flex;
             flex-wrap: wrap;
