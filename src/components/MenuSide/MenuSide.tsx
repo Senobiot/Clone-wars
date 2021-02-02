@@ -1,6 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { chooseCategories } from '../../../store/actions/actionCategories';
+import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -19,7 +23,7 @@ import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import BusinessIcon from '@material-ui/icons/Business';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import styles from '../Header/Header.module.scss';
-import { Link } from 'react-router-dom';
+
 
 
 const drawerWidth = 240;
@@ -38,9 +42,9 @@ const useStyles = makeStyles((theme: Theme) =>
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      width: 100,
+      width: 60,
       height: 64,
-      left: 30,
+      left: 5,
       background: 'none',
       boxShadow: 'none'
     },
@@ -100,6 +104,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function MenuSide() {
+  const dispatch = useDispatch();
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -162,10 +167,15 @@ export default function MenuSide() {
         <Divider />
         <List>
           {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, i) => (
-             <Link key={i} onClick={handleDrawerClose} className={styles.link} to={
+             <Link key={i} onClick={()=>{
+              handleDrawerClose();
+              if (i == 2) {
+                  dispatch(chooseCategories('Все врачи'));
+                  dispatch(chooseCategoriesTile(0));}
+             }} className={styles.link} to={
                i === 0 ? '/' :
                i === 1 ? '/MedcentersList/' :
-               i === 2 ? '/MedicsList/' :
+               i === 2 ? {pathname: '/MedicsList/', state: { prevPath: location.pathname } }:
                i === 3 ? '/ServicesPage/' :
                '/PersonalPage/'
               }>

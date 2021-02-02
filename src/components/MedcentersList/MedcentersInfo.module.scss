@@ -85,3 +85,21 @@
       text-shadow: inset 2px 2px 1px #0c0146;
     }
   }
+
+  @media (max-width: 600px) {
+    .doctorTile{
+            flex-wrap: wrap;
+        .doctorTileImg {
+            width: 25%;
+            height: auto;
+            margin: 5px 0 10px 5px;
+        }
+        span {
+            flex-grow: 1;
+            width: 70%;
+        }
+        a {
+            margin: 0 10px 10px auto;
+        }
+    }
+  }

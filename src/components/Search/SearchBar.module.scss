@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     height: 40px;
-    z-index: 9999;
+    z-index: 800;
     .input {
         width: 100%;
         height: 40px;
@@ -14,9 +14,17 @@
         color: #fff;
         &::-webkit-search-cancel-button{
             position:relative;
-            right:20px;  
-            height: 50px;
-            width: 50px;
+            right:5px;  
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius:10px;
+            background: url('../../assets/cancel.png') no-repeat 50%/contain;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover {
+                transform: rotate(720deg);
+            }
         }
         &::placeholder {
             color: lemonchiffon;
@@ -48,10 +56,8 @@
         .resultElement {
             display: block;
             background-color: #c9e5f8;
-            // color: #fff;
             width: 100%;
             line-height: 1.2;
-            // margin: 2px 0;
             cursor: pointer;
             border-bottom: 1px solid #fff;
             padding: 5px 8px;
@@ -74,7 +80,7 @@
 @media (max-width: 600px) {
     .searchWrapper {
         .resultsWrapper {
-            left: -98px;
+            left: -60px;
             width: 99vw;
             .headerTitle {
                 font-size: 0.92rem;

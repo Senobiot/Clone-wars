@@ -1,4 +1,3 @@
-import { AppointmentMeta } from '@devexpress/dx-react-scheduler';
 import { FirebaseReducer, FirestoreReducer } from 'react-redux-firebase';
 
 export interface IMedicsList {
@@ -85,6 +84,7 @@ export interface IActiveUser {
 export interface IState {
   data: IData;
   user: IActiveUser;
+  service: { service: any };
   firebase: FirebaseReducer.Reducer;
   firestore: FirestoreReducer.Reducer;
 }

@@ -31,10 +31,11 @@
 
   overflow-wrap: normal;
 
-  img {
+  .avatar {
     grid-area: 1 / 1 / 5 / 2;
     border-radius: 5%;
-    display: block;
+    width: 150px;
+    height: 200px;
   }
 
   .medicFullname {
@@ -127,7 +128,7 @@
       font-size: 0.95em;
     }
 
-    img {
+    .avatar {
       max-width: 120px;
     }
   }

@@ -9,23 +9,22 @@ a {
   color: #fff !important;
 }
 
+.enter {
+  height: 40px;
+  background: url('../../assets/login2.png') no-repeat 50%/contain;
+}
+
 .MuiButton-label {
   color: $very-light-blue;
 }
 
 .heartbeatloader {
   position: relative;
-  margin-left: 50px;
   width: 34px;
   height: 34px;
   margin: 0px;
-  left: 35px;
-  &:after {
-    content: 'МЕНЮ';
-    position: absolute;
-    bottom: -23px;
-    left: -4px;
-  }
+  left: 5px;
+  top: 3px;
 }
 
 .path {
