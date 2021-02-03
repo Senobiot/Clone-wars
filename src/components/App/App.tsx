@@ -22,7 +22,7 @@ import { AppointmentDoctor } from '../Appointment';
 
 const useConnectFirestore = () => {
   const dispatch = useDispatch();
-  useFirestoreConnect(['users', 'med_centers', 'services_category', 'appointment']);
+  useFirestoreConnect(['users', 'med_centers', 'services_category']);
   const users = useSelector((state: IState) => state.firestore.ordered.users);
   const med_centers = useSelector((state: IState) => state.firestore.ordered.med_centers);
   const services_category = useSelector((state: IState) => state.firestore.ordered.services_category);
@@ -40,7 +40,7 @@ export default function App(): JSX.Element {
   const auth = useSelector((state: IState) => state.firebase.auth);
   const firestore = useFirestore();
   const dispatch = useDispatch();
-  /* const isLoad = useConnectFirestore(); */
+  const isLoad = useConnectFirestore();
   useEffect(() => {
     if (isLoaded(auth) && !isEmpty(auth)) {
       dispatch(getUser({ firestore }, auth.uid));
@@ -48,7 +48,7 @@ export default function App(): JSX.Element {
       dispatch(updateUserAuthorization(true));
     }
   }, [auth]);
-  /* if (!isLoad) return <Spinner />; */
+  if (!isLoad) return <Spinner />;
   return (
     <BrowserRouter>
       <ArrowUp />
