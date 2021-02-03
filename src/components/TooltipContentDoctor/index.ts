@@ -1,0 +1,1 @@
+export { TooltipContentDoctor } from './TooltipContentDoctor';

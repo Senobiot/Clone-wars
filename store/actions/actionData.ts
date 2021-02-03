@@ -3,10 +3,17 @@ import { IData, IUser } from '../../src/model/data.model';
 
 export const ADD_USER = 'ADD_USER';
 export const GET_DATA = 'GET_DATA';
+export const UPDATE_USER = 'UPDATE_USER';
 
 export const getData = (data: IData): { type: typeof GET_DATA; data: IData } => {
   return {
     type: GET_DATA,
+    data,
+  };
+};
+export const updateDataUser = (data: IUser): { type: typeof UPDATE_USER; data: IUser } => {
+  return {
+    type: UPDATE_USER,
     data,
   };
 };

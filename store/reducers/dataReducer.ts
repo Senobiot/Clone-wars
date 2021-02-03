@@ -1,8 +1,8 @@
-import { ADD_USER, GET_DATA } from '../actions/actionData';
+import { ADD_USER, GET_DATA, UPDATE_USER } from '../actions/actionData';
 import { medicsList } from '../../src/data/medicsList.js';
 import { med_centers } from '../../src/data/medcentersList.js';
 import { services_category } from '../../src/data/servicesList.js';
-import { IAppointment, IData, IUser } from '../../src/model/data.model';
+import { IData } from '../../src/model/data.model';
 
 const initState: IData = { users: medicsList, med_centers, services_category };
 
@@ -14,7 +14,12 @@ const dataReducer = (state = initState, action) => {
     case ADD_USER:
       return {
         ...state,
-        users: { ...state.users, [data.uid]: data },
+        users: [...state.users, data],
+      };
+    case UPDATE_USER:
+      return {
+        ...state,
+        users: state.users.map((e) => (e.uid === action.data.uid ? action.data : e)),
       };
     default:
       return state;
