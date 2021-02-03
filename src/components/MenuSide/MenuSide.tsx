@@ -24,8 +24,6 @@ import BusinessIcon from '@material-ui/icons/Business';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import styles from '../Header/Header.module.scss';
 
-
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -35,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: 10,
       left: 10,
-      zIndex: 1100,
+      zIndex: 1299,
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
@@ -46,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 64,
       left: 5,
       background: 'none',
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
     appBarShift: {
       width: 100,
@@ -63,8 +61,8 @@ const useStyles = makeStyles((theme: Theme) =>
       '&:hover': {
         boxShadow: 'none',
         textShadow: 'none',
-        background: 'none'
-      }
+        background: 'none',
+      },
     },
     hide: {
       display: 'none',
@@ -120,8 +118,8 @@ export default function MenuSide() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-        {
-          <div className={styles.heartbeatloader}>
+      {
+        <div className={styles.heartbeatloader}>
           <svg width="100%" height="100%" viewBox="0 0 150 400" xmlns="http://www.w3.org/2000/svg">
             <path
               className={styles.path}
@@ -133,22 +131,22 @@ export default function MenuSide() {
           </svg>
           <div className={styles.outercircle}></div>
         </div>
-        }
+      }
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleDrawerOpen}
+          edge="start"
+          className={clsx(classes.menuButton, open && classes.hide)}
+        >
+          <MenuIcon />
+        </IconButton>
       </AppBar>
       <Drawer
         className={classes.drawer}
@@ -167,28 +165,44 @@ export default function MenuSide() {
         <Divider />
         <List>
           {['Главная', 'Медцентры', 'Врачи', 'Список услуг', 'Личный кабинет'].map((text, i) => (
-             <Link key={i} onClick={()=>{
-              handleDrawerClose();
-              if (i == 2) {
+            <Link
+              key={i}
+              onClick={() => {
+                handleDrawerClose();
+                if (i == 2) {
                   dispatch(chooseCategories('Все врачи'));
-                  dispatch(chooseCategoriesTile(0));}
-             }} className={styles.link} to={
-               i === 0 ? '/' :
-               i === 1 ? '/MedcentersList/' :
-               i === 2 ? {pathname: '/MedicsList/', state: { prevPath: location.pathname } }:
-               i === 3 ? '/ServicesPage/' :
-               '/PersonalPage/'
-              }>
-            <ListItem button key={text}>
-              <ListItemIcon  className={styles.icon}>{
-              i  === 0 ?  <HomeIcon /> :
-              i === 1 ?   <BusinessIcon /> :
-              i === 2 ?   <AssignmentIndIcon /> :
-              i === 3 ?   <LocalHospitalIcon /> :
-              < AccountCircleIcon/>}
-            </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
+                  dispatch(chooseCategoriesTile(0));
+                }
+              }}
+              className={styles.link}
+              to={
+                i === 0
+                  ? '/'
+                  : i === 1
+                  ? '/MedcentersList/'
+                  : i === 2
+                  ? { pathname: '/MedicsList/', state: { prevPath: location.pathname } }
+                  : i === 3
+                  ? '/ServicesPage/'
+                  : '/User/'
+              }
+            >
+              <ListItem button key={text}>
+                <ListItemIcon className={styles.icon}>
+                  {i === 0 ? (
+                    <HomeIcon />
+                  ) : i === 1 ? (
+                    <BusinessIcon />
+                  ) : i === 2 ? (
+                    <AssignmentIndIcon />
+                  ) : i === 3 ? (
+                    <LocalHospitalIcon />
+                  ) : (
+                    <AccountCircleIcon />
+                  )}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
             </Link>
           ))}
         </List>

@@ -47,8 +47,7 @@ export default function HeaderMenu(): JSX.Element {
           </IconButton>
         </Tooltip>
       ) : (
-        <Button className={styles.enter} onClick={handleClickOpenDialog}>
-        </Button>
+        <Button className={styles.enter} onClick={handleClickOpenDialog}></Button>
       )}
 
       <DialogAutorization openDialog={openDialog} handleClickOpenDialog={handleClickOpenDialog} />

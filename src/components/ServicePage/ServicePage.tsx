@@ -1,5 +1,10 @@
 import React from 'react';
-import styles from './ServicePage.module.scss';
+import { useSelector, useDispatch } from 'react-redux';
+import { IData } from '../../model/data.model';
+import { useHistory } from 'react-router-dom';
+import { Spinner } from '../Spinner/Spinner';
+import { updateService } from '../../../store/actions/actionService';
+import { detailedServ } from '../../data/searchKeys';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
@@ -9,13 +14,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-
-import { useSelector, useDispatch } from 'react-redux';
-import { IData, IState } from '../../model/data.model';
-import { useHistory } from 'react-router-dom';
-import { Spinner } from '../Spinner/Spinner';
-import { updateService } from '../../../store/actions/actionService';
-import { detailedServ } from '../../data/searchKeys';
+import styles from './ServicePage.module.scss';
 
 interface Props {
   element: { services: any; category_name: string; medic: string; id: string };
@@ -35,35 +34,24 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '25px',
     alignItems: 'center',
     [theme.breakpoints.down('xs')]: {
-      fontSize: 18
+      fontSize: 18,
     },
   },
 }));
 
 function BlockList({ element, index, imgSrc }: Props) {
-  const dataState: any = useSelector((state: IState) => state.service);
   const dispatch = useDispatch();
-
-  let history = useHistory();
+  const history = useHistory();
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  let count = 0;
 
   const handleCategoryChange = (e) => {
-    const match = {centers: detailedServ[e.target.textContent], query: e.target.textContent }
-    dispatch(updateService(match));
+    dispatch(updateService({ centers: detailedServ[e.target.textContent], query: e.target.textContent }));
     history.push({
       pathname: '/MedcentersList',
     });
   };
-
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
-  };
-
-  const classes = useStyles();
-  let count = 0;
-
-  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -76,7 +64,7 @@ function BlockList({ element, index, imgSrc }: Props) {
       subheader={
         <ListItem component="div" className={classes.category} key={index}>
           <ListItemIcon key={index}>
-            <img src={imgSrc} className={styles.servicePageLogo}/>
+            <img src={imgSrc} className={styles.servicePageLogo} />
           </ListItemIcon>
           {element.category_name}
         </ListItem>
@@ -88,13 +76,17 @@ function BlockList({ element, index, imgSrc }: Props) {
           count++;
           return (
             <ListItem button key={index}>
-              <span onClick={handleCategoryChange}>{value.match(/Первичный/) ? value.replace(/Первичный прием/, 'Приём'): value}</span>{' '}
+              <span onClick={handleCategoryChange}>
+                {value.match(/Первичный/) ? value.replace(/Первичный прием/, 'Приём') : value}
+              </span>{' '}
             </ListItem>
           );
         }
       })}
       <ListItem button onClick={handleClick} key={index}>
-        <Link key={index}><b>Показать все</b></Link>
+        <Link key={index}>
+          <b>Показать все</b>
+        </Link>
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -104,11 +96,7 @@ function BlockList({ element, index, imgSrc }: Props) {
               return (
                 <ListItem button className={classes.nested} key={key}>
                   {' '}
-                  <Link
-                    onClick={handleCategoryChange}
-                  >
-                    {value}
-                  </Link>{' '}
+                  <Link onClick={handleCategoryChange}>{value}</Link>{' '}
                 </ListItem>
               );
             }
@@ -126,8 +114,7 @@ export function ServicesPage(): JSX.Element {
       {!dataState.services_category ? (
         <Spinner />
       ) : (
-
-        dataState.services_category.map((element, index, array) => {
+        dataState.services_category.map((element, index) => {
           return <BlockList element={element} imgSrc={element.logo} index={index} key={index}></BlockList>;
         })
       )}

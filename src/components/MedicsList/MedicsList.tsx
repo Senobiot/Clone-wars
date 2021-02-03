@@ -7,13 +7,13 @@ import { chooseCategories } from '../../../store/actions/actionCategories';
 
 export const MedicsList = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state)=> state.data.users);
-  const currentCat = useSelector((state)=> state.category.category);
+  const data = useSelector((state) => state.data.users);
+  const currentCat = useSelector((state) => state.category.category);
   const [medics, setCategories] = useState(data);
   const handleCategoryChange = (e) => {
     chooseCategories(e.target.textContent);
     dispatch(chooseCategories(e.target.textContent));
-};
+  };
 
   useEffect(() => {
     let currentData;
@@ -32,7 +32,7 @@ export const MedicsList = () => {
         {medics.map((e, index) => {
           return (
             <MedicsCard
-              key={index}         
+              key={index}
               id={e.id}
               name={e.name}
               category={e.category}

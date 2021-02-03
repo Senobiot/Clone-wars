@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ArrowUp } from '../ArrowUp';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
-import { PersonalPage } from '../PersonalPage';
 import { ServicesPage } from '../ServicePage';
 import { NotFoundPage } from '../NotFoundPage';
 import { MedicsList } from '../MedicsList';
@@ -60,7 +59,6 @@ export default function App(): JSX.Element {
         <Route exact path={'/MedicsList/'} component={MedicsList}></Route>
         <Route exact path={'/MedicPage/:id'} component={MedicPage}></Route>
         <Route exact path={'/ServicesPage/'} component={ServicesPage}></Route>
-        <Route path={'/PersonalPage/'} component={PersonalPage}></Route>
         <Route path={'/AppointmentDoctor/'} component={AppointmentDoctor}></Route>
         <Route exact path={'/User/'} component={User}></Route>
         <Route path={'*'} component={NotFoundPage} />

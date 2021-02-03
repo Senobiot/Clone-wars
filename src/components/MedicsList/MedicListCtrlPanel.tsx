@@ -16,13 +16,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 interface Props {
-  handler: Function;
+  handler: any;
 }
 
-const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
+const MedicListCtrlPanel = ({ handler }: Props) => {
   const dispatch = useDispatch();
-  const allServices = useSelector((state)=> state.data.services_category);
-  const currentCat = useSelector((state)=> state.categoryTile.categoryTile);
+  const allServices = useSelector((state) => state.data.services_category);
+  const currentCat = useSelector((state) => state.categoryTile.categoryTile);
+  console.log(currentCat);
   const catBtnsArray = [];
 
   allServices.map((e) => {
@@ -34,7 +35,7 @@ const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+  const handleChange = (event: React.ChangeEvent<Record<string, never>>, newValue: number) => {
     setValue(newValue);
     dispatch(chooseCategoriesTile(newValue));
   };
@@ -56,20 +57,25 @@ const MedicListCtrlPanel: React.FC<Props> = ({ handler }) => {
           textColor="primary"
           aria-label="scrollable force tabs example"
         >
-          <Tab label="Все врачи"
-           className={styles.tabsTile}
-            key={0} onClick={(e) => handler(e)}
+          <Tab
+            label="Все врачи"
+            className={styles.tabsTile}
+            key={0}
+            onClick={(e) => handler(e)}
             icon={<img src={'assets/services_logo/all.svg'} />}
-             />
+          />
           {catBtnsArray.sort().map((e, index) => {
             const medicSpesc = allServices.find((elem) => elem.id === e).medic;
             const medicLogo = allServices.find((elem) => elem.id === e).logo;
-            return <Tab label={medicSpesc} 
-            className={styles.tabsTile}
-             key={index + 1} onClick={(e) => handler(e)}
-             icon={<img src={medicLogo} />}
-             >
-            </Tab>;
+            return (
+              <Tab
+                label={medicSpesc}
+                className={styles.tabsTile}
+                key={index + 1}
+                onClick={(e) => handler(e)}
+                icon={<img src={medicLogo} />}
+              ></Tab>
+            );
           })}
         </Tabs>
       </AppBar>

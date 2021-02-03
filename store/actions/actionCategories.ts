@@ -1,7 +1,7 @@
 export const CHOOSE_CATEGORY = 'CHOOSE_CATEGORY';
 export const CHOOSE_CATEGORY_TILE = 'CHOOSE_CATEGORY_TILE';
 
-export const chooseCategories = (value) => {
+export const chooseCategories = (value)  => {
   return {
     type: CHOOSE_CATEGORY,
     value

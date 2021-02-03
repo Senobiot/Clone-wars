@@ -8,8 +8,10 @@ export const NotFoundPage = () => {
       <p className={styles.article}>
         <span>404</span>
         <span>Нет такой страницы</span>
-      </p> 
-      <Link to="/" className={styles.button}>На главную</Link>
+      </p>
+      <Link to="/" className={styles.button}>
+        На главную
+      </Link>
     </div>
-  )
-}
+  );
+};
