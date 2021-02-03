@@ -1,5 +1,19 @@
 import { FirebaseReducer, FirestoreReducer } from 'react-redux-firebase';
 
+export interface IService{
+  centers: any,
+  query: any 
+}
+
+export interface ICategory {
+  category: string;
+}
+
+export interface ICategoryTile {
+  categoryTile: number;
+}
+
+
 export interface IMedicsList {
   speciality: string;
   medcenter: string;

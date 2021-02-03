@@ -3,7 +3,7 @@ import { AppBar, InputBase, Toolbar } from '@material-ui/core';
 import HeaderMenu from './HeaderMenu';
 import { SearchBar } from '../Search/SearchBar';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuSide from '../MenuSide/MenuSide'
+import MenuSide from '../MenuSide/MenuSide';
 
 const useStyles = makeStyles((theme) => ({
   toolBar: {
@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     position: 'relative',
     backgroundColor: '#2194E0',
-    boxShadow: 'inset 0 0 10px'
+    boxShadow: 'inset 0 0 10px',
   },
   appbar: {
-    left: 5
+    left: 5,
   },
   search: {
     position: 'relative',
@@ -66,7 +66,7 @@ export function Header({ term, data, update }: any): JSX.Element {
         <Toolbar classes={{ root: classes.toolBar }}>
           <MenuSide />
           <div className={classes.search}>
-              <SearchBar />
+            <SearchBar />
           </div>
           <HeaderMenu></HeaderMenu>
         </Toolbar>

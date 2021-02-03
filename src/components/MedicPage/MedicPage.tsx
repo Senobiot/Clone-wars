@@ -24,11 +24,12 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function Links() {
-  const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+interface IFunc {
+  centerFunc: any;
+  backFunc: any;
 }
 
-function ContainedButtons({ centerFunc, backFunc }) {
+const ContainedButtons = ({ centerFunc, backFunc }: IFunc) => {
   const classes = useStyles();
   const history = useHistory();
   const { id } = useParams();
@@ -53,9 +54,15 @@ function ContainedButtons({ centerFunc, backFunc }) {
       </Button>
     </div>
   );
+};
+
+interface IContacts {
+  tel: string;
+  email: string;
+  tg: string;
 }
 
-function IconButtons({ tel, email, tg }) {
+const IconButtons = ({ tel, email, tg }: IContacts) => {
   return (
     <div className={styles.icons}>
       <Link href={tel}>
@@ -75,7 +82,7 @@ function IconButtons({ tel, email, tg }) {
       </Link>
     </div>
   );
-}
+};
 
 export const MedicPage = () => {
   const { id } = useParams();
@@ -101,8 +108,7 @@ export const MedicPage = () => {
   const logo = '../' + centerData.logo;
 
   const centerFunc = () => {
-    const match = { centers: [medcenterName.current.textContent], query: medcenterName.current.textContent };
-    dispatch(updateService(match));
+    dispatch(updateService({ centers: [medcenterName.current.textContent], query: medcenterName.current.textContent }));
     history.push({
       pathname: `/MedcentersList`,
     });

@@ -1,7 +1,10 @@
 import { UPDATE_SERVICE_STATE } from '../actions/actionService';
 
 const initialState = {
-  service: {centers: null, query: null }
+  service: {
+    centers: null,
+    query: null 
+  }
 };
 
 const servicesReducer = (state = initialState, action) => {

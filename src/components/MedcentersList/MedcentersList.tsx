@@ -47,11 +47,11 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface IButton {
-  handler: Function;
+  handler: any;
   text: string;
 }
 
-function ContainedButtons({ handler, text }: IButton) {
+const ContainedButtons = ({ handler, text }: IButton) => {
   return (
     <div className={styles.button}>
       <Button variant="contained" onClick={(e) => handler(e)}>
@@ -59,7 +59,7 @@ function ContainedButtons({ handler, text }: IButton) {
       </Button>
     </div>
   );
-}
+};
 
 interface ICard {
   centerImg: string;
@@ -67,13 +67,13 @@ interface ICard {
   fullname: string;
   adress: string;
   history: string;
-  handler: Function;
+  handler: any;
   text: string;
   centerName: string;
-  category: {};
+  category: Record<string, unknown>;
 }
 
-function centerCard({ centerImg, logo, fullname, adress, history, handler, text, category, centerName }: ICard) {
+const centerCard = ({ centerImg, logo, fullname, adress, history, handler, text, category, centerName }: ICard) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -115,17 +115,16 @@ function centerCard({ centerImg, logo, fullname, adress, history, handler, text,
       </Collapse>
     </Card>
   );
-}
+};
 
 export const MedcentersList = () => {
   const dispatch = useDispatch();
-  const medCenters = useSelector((state)=> state.data.med_centers);
-  const filteredCenters = useSelector((state) => state.service.service.centers);
+  const medCenters = useSelector((state) => state.data.med_centers);
+  const filteredCenters = useSelector((state) => state.service.service).centers;
   const filterQuery = useSelector((state) => state.service.service.query);
-
   const [leafMap, setMap] = useState(null);
 
-  let coordObject = {};
+  const coordObject = {};
 
   interface ILats {
     latings: number[];
@@ -163,47 +162,47 @@ export const MedcentersList = () => {
   };
 
   const handleFly = (e) => {
-      handleClick(e.target.parentNode.parentNode.parentNode.childNodes[2].textContent);
+    handleClick(e.target.parentNode.parentNode.parentNode.childNodes[2].textContent);
   };
 
   const handleReset = () => {
-    centers.forEach(center => {
+    centers.forEach((center) => {
       refs[center].current.style.display = 'block';
       if (markerRefs[center].current._popup._container) {
         markerRefs[center].current._popup._container.style.transform = 'scale(1)';
       }
       markerRefs[center].current._icon.style.display = 'block';
-    })
-    dispatch(updateService( {centers: null, query: null } ));
+    });
+    dispatch(updateService({ centers: null, query: null }));
     leafMap.flyTo([53.9, 27.56667], 12);
   };
 
   const filter = () => {
     if (filteredCenters) {
-      centers.forEach(center => {
-        if (filteredCenters.indexOf(center) !== - 1) {
+      centers.forEach((center) => {
+        if (filteredCenters.indexOf(center) !== -1) {
           refs[center].current.style.display = 'block';
           if (markerRefs[center].current._popup._container) {
             markerRefs[center].current._popup._container.style.transform = 'scale(1)';
           }
           markerRefs[center].current._icon.style.display = 'block';
         } else {
-            refs[center].current.style.display = 'none';
-              if (markerRefs[center].current._popup._container) {
-              markerRefs[center].current._popup._container.style.transform = 'scale(0)';
-              }
-            markerRefs[center].current._icon.style.display = 'none';
+          refs[center].current.style.display = 'none';
+          if (markerRefs[center].current._popup._container) {
+            markerRefs[center].current._popup._container.style.transform = 'scale(0)';
+          }
+          markerRefs[center].current._icon.style.display = 'none';
         }
-      })
-        filterText.current.textContent = filterQuery;
-        // leafMap.flyTo([53.9, 27.56667], 12);
+      });
+      filterText.current.textContent = filterQuery;
+      // leafMap.flyTo([53.9, 27.56667], 12);
     }
   };
 
   return (
     <div className={styles.MedcentersListWrapper}>
       <div className={styles.MedcentersListBlock}>
-        <div className={filteredCenters ? styles.filter : styles.filterHidden }>
+        <div className={filteredCenters ? styles.filter : styles.filterHidden}>
           <ContainedButtons handler={handleReset} text="ПОКАЗАТЬ ВСЕ" />
           <span>Выбрано:</span>
           <span ref={filterText}></span>

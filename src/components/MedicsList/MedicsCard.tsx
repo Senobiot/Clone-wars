@@ -5,8 +5,7 @@ import { Avatar } from '@material-ui/core';
 import '../../global/variables.scss';
 import styles from './MedicsCard.module.scss';
 
-
-interface Props {
+interface IProps {
   id: number;
   name: string;
   category: string;
@@ -15,7 +14,7 @@ interface Props {
   imgSource: string;
 }
 
-const MedicsCard: React.FC<Props> = ({ id, name, category, speciality, experience, imgSource }) => {
+const MedicsCard = ({ id, name, category, speciality, experience, imgSource }: IProps) => {
   return (
     <div className={styles.medicsCard}>
       <Avatar src={imgSource} className={styles.avatar}></Avatar>

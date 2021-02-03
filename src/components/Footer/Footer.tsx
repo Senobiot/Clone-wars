@@ -11,11 +11,11 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.year}>© 2021 Clone-Wars</div>
-      <a href='https://rs.school/js/' className={styles.rsSchoolLogo}></a>
+      <a href="https://rs.school/js/" className={styles.rsSchoolLogo}></a>
       <div className={styles.githubLinksContainer}>
         {links.map((link, index) => {
           return (
-            <a href={link} key={index} >
+            <a href={link} key={index}>
               @{link.replace('https://github.com/', '')}
             </a>
           );
