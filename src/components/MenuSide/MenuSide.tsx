@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: 10,
       left: 10,
-      zIndex: 1850,
+      zIndex: 1299,
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
