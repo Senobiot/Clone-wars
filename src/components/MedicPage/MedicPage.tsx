@@ -35,7 +35,7 @@ const ContainedButtons = ({ centerFunc, backFunc }: IFunc) => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const firestore = useFirestore();
-  const doctor = useSelector((state: IState) => state.data.users.find((e) => e.id === +id));
+  const doctor = useSelector((state: IState) => state.data.users.find((e) => e.id === +id || e.id === id));
 
   const handleClick = () => {
     dispatch(getAppointmentItemDoctor({ firestore }, doctor.uid));
@@ -104,8 +104,8 @@ export const MedicPage = () => {
   const namedKeys = [];
   keys.map((e) => namedKeys.push(serviceData.services[e]));
   const categoryLogo = '../' + serviceData.logo;
-  const photo = '../' + medicData.img;
-  const logo = '../' + centerData.logo;
+  const photo = medicData.img;
+  const logo = centerData.logo;
 
   const centerFunc = () => {
     dispatch(updateService({ centers: [medcenterName.current.textContent], query: medcenterName.current.textContent }));

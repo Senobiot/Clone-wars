@@ -1,5 +1,6 @@
 import { BaseExtendedFirebaseInstance, ExtendedFirestoreInstance } from 'react-redux-firebase';
 import { IUser } from '../../src/model/data.model';
+import { UPDATE_USER } from './actionData';
 
 export const UPDATE_USER_STATE = 'UPDATE_USER_STATE';
 export const UPDATE_USER_AUTHORIZATION = 'UPDATE_USER_AUTHORIZATION';
@@ -40,6 +41,7 @@ export const updateUser = ({ firestore }: { firestore: ExtendedFirestoreInstance
       .then(function () {
         console.log('Document successfully written!');
         dispatch({ type: UPDATE_USER_STATE, data });
+        dispatch({ type: UPDATE_USER, data });
       })
       .catch(function (error) {
         console.error('Error writing document: ', error);
@@ -138,6 +140,7 @@ export const addAppointmentItemUser = (
       .then(function () {
         console.log('Document successfully written!');
         const data = Object.values(obj);
+        console.log(obj)
         dispatch({ type: UPDATE_APPOINTMENT_USER, data });
       })
       .catch(function (error) {

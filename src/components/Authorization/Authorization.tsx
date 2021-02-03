@@ -100,31 +100,33 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
   };
   const handleSabmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    isRegistration
-      ? firebase
-          .createUser({ email: formState.email, password: formState.password })
-          .then(() => {
-            const uid = auth.currentUser.uid;
-            dispatch(addAppointment({ firestore }, uid));
-            dispatch(addUser({ firestore }, uid, { ...formState, uid: uid }));
-            history.push('/User/');
-            handleClickOpenDialog();
-          })
-          .catch((error) => {
-            const errorMessage = error.message;
-            setstateAlert({ open: true, message: errorMessage });
-          })
-      : firebase
-          .login({
-            email: formState.email,
-            password: formState.password,
-          })
-          .then(() => handleClickOpenDialog())
-          .catch((error) => {
-            const errorMessage = error.message;
-            setstateAlert({ open: true, message: errorMessage });
-          });
-    dispatch(updateNewUser(isRegistration));
+    if (!error.email && !error.password && formState.email && formState.password) {
+      isRegistration
+        ? firebase
+            .createUser({ email: formState.email, password: formState.password })
+            .then(() => {
+              const uid = auth.currentUser.uid;
+              dispatch(addAppointment({ firestore }, uid));
+              dispatch(addUser({ firestore }, uid, { ...formState, uid: uid, id: uid }));
+              history.push('/User/');
+              handleClickOpenDialog();
+            })
+            .catch((error) => {
+              const errorMessage = error.message;
+              setstateAlert({ open: true, message: errorMessage });
+            })
+        : firebase
+            .login({
+              email: formState.email,
+              password: formState.password,
+            })
+            .then(() => handleClickOpenDialog())
+            .catch((error) => {
+              const errorMessage = error.message;
+              setstateAlert({ open: true, message: errorMessage });
+            });
+      dispatch(updateNewUser(isRegistration));
+    }
   };
 
   const changeSing = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -145,6 +147,7 @@ export function Authorization({ handleClickOpenDialog }: { handleClickOpenDialog
             phone: user.providerData[0].phoneNumber || '',
             img: user.providerData[0].photoURL || '',
             uid: uid,
+            id: uid,
           };
           dispatch(addUser({ firestore }, uid, data));
           dispatch(updateUserGoodleAuthorization(data));

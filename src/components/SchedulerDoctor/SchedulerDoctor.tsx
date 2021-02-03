@@ -6,39 +6,27 @@ import {
   WeekView,
   Toolbar,
   DateNavigator,
+  AppointmentForm,
 } from '@devexpress/dx-react-scheduler-material-ui';
-import React, { useCallback, useEffect, useState } from 'react';
-import {
-  Theme,
-  createStyles,
-  fade,
-  WithStyles,
-  withStyles,
-  Grid,
-  Button,
-  Popover,
-  IconButton,
-} from '@material-ui/core';
+import React from 'react';
+import { Theme, createStyles, fade, WithStyles, withStyles, Popover, IconButton } from '@material-ui/core';
 import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
-import { teal, blue, indigo } from '@material-ui/core/colors';
+import { blue, indigo } from '@material-ui/core/colors';
 import s from './SchedulerDoctor.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  addAppointment,
-  addAppointmentItemUser,
-  changeAvailableDoctor,
-  getAppointmentItemDoctor,
-} from '../../../store/actions/actionUser';
-import { IActiveUser, IAppointment, IState, IUser } from '../../model/data.model';
+import { addAppointmentItemUser, changeAvailableDoctor } from '../../../store/actions/actionUser';
+import { IAppointment, IState, IUser } from '../../model/data.model';
 import { Close } from '@material-ui/icons';
-import { TooltipContent } from '../TooltipContent';
 import { Spinner } from '../Spinner/Spinner';
 import { isLoaded, useFirestore } from 'react-redux-firebase';
+import moment from 'moment';
+import { TooltipContentDoctor } from '../TooltipContentDoctor';
+import classNames from 'clsx';
 
 const styles = ({ palette }: Theme) =>
   createStyles({
     appointment: {
-      borderRadius: 0,
+      borderRadius: 5,
       borderBottom: 0,
       display: 'flex !impontmant',
       alignItems: 'center',
@@ -46,7 +34,11 @@ const styles = ({ palette }: Theme) =>
       color: '#78909C!important',
     },
     highPriorityAppointment: {
-      borderLeft: `4px solid ${teal[500]}`,
+      borderRadius: 5,
+      backgroundColor: `red`,
+      '&:hover': {
+        backgroundColor: 'red',
+      },
     },
     mediumPriorityAppointment: {
       borderLeft: `4px solid ${blue[500]}`,
@@ -92,7 +84,14 @@ type AppointmentContentProps = Appointments.AppointmentContentProps & WithStyles
 type AppointmentTooltipLayoutProps = AppointmentTooltip.LayoutProps & WithStyles<typeof styles>;
 
 const Appointment = withStyles(styles)(({ classes, data, ...restProps }: AppointmentProps) => (
-  <Appointments.Appointment {...restProps} data={data} />
+  <Appointments.Appointment
+    {...restProps}
+    className={classNames({
+      [classes.highPriorityAppointment]: !data.available,
+      [classes.appointment]: true,
+    })}
+    data={data}
+  />
 ));
 const AppointmentContent = withStyles(styles, { name: 'AppointmentContent' })(
   ({ classes, data, ...restProps }: AppointmentContentProps) => {
@@ -108,7 +107,7 @@ const AppointmentContent = withStyles(styles, { name: 'AppointmentContent' })(
   },
 );
 
-const Layout = ({ appointmentMeta, visible, onHide, ...restProps }: AppointmentTooltipLayoutProps) => {
+const Layout = ({ appointmentMeta, visible, onHide }: AppointmentTooltipLayoutProps) => {
   const user = useSelector((state: IState) => state.user);
   const firestore = useFirestore();
   const target: any = appointmentMeta && appointmentMeta.target;
@@ -122,8 +121,8 @@ const Layout = ({ appointmentMeta, visible, onHide, ...restProps }: AppointmentT
     dispatch(
       changeAvailableDoctor({ firestore }, appointmentMeta.data.doctorId, {
         ...appointmentMeta.data,
-        available: false,
-        patientId: user.data.uid,
+        available: true,
+        patientId: '',
       }),
     );
     onHide();
@@ -142,43 +141,43 @@ const Layout = ({ appointmentMeta, visible, onHide, ...restProps }: AppointmentT
       <IconButton className={s.closeButton} aria-label="close" onClick={onHide}>
         <Close />
       </IconButton>
-      <TooltipContent appointmentData={appointmentMeta} />
-      <Grid container justify="center">
-        <Button className={s.sing} onClick={remove} variant="contained" color="primary">
-          записаться
-        </Button>
-      </Grid>
+      <TooltipContentDoctor appointmentData={appointmentMeta} />
     </Popover>
   );
 };
 
 export function SchedulerDoctor(): JSX.Element {
-  const appointment: any = useSelector((state: IState) => state.user.appointmentDoctor);
+  const user: IUser = useSelector((state: IState) => state.user.data);
+  const appointment: IAppointment[] = useSelector((state: IState) => state.user.appointment);
 
+  const firestore = useFirestore();
+  const dispatch = useDispatch();
   const commitChanges = ({ added, changed, deleted }) => {
-    console.log({ added, changed, deleted });
-    this.setState((state) => {
-      let { data } = state;
-      if (added) {
-        const startingAddedId = data.length > 0 ? data[data.length - 1].id + 1 : 0;
-        data = [...data, { id: startingAddedId, ...added }];
-      }
-      if (changed) {
-        data = data.map((appointment) =>
-          changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment,
-        );
-      }
-      if (deleted !== undefined) {
-        data = data.filter((appointment) => appointment.id !== deleted);
-      }
-      return { data };
-    });
+    moment.locale('en');
+    console.log({ added });
+    if (added) {
+      const id = moment(added.startDate).format('YYYYMMDDHHmm');
+      dispatch(
+        addAppointmentItemUser({ firestore }, user.uid, {
+          [id]: {
+            title: user.category,
+            id: moment(added.startDate).format('YYYYMMDDHHmm'),
+            startDate: moment(added.startDate).format('LLLL'),
+            endDate: moment(added.endDate).format('LLLL'),
+            available: true,
+            doctorId: user.uid,
+            patientId: '',
+          },
+        }),
+      );
+    }
   };
+
   if (!isLoaded(appointment)) return <Spinner />;
   return (
     <div className={s.wrapper}>
       <Paper className={s.paper}>
-        <Scheduler data={appointment.filter((e) => e.available)} height={500}>
+        <Scheduler data={appointment} height={500}>
           <ViewState />
           <Toolbar />
           <EditingState onCommitChanges={commitChanges} />
@@ -187,6 +186,7 @@ export function SchedulerDoctor(): JSX.Element {
           <WeekView startDayHour={8} endDayHour={20} />
           <Appointments appointmentComponent={Appointment} appointmentContentComponent={AppointmentContent} />
           <AppointmentTooltip layoutComponent={Layout} />
+          <AppointmentForm />
         </Scheduler>
       </Paper>
     </div>
