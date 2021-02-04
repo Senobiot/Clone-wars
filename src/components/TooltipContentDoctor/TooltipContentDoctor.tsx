@@ -14,7 +14,6 @@ export function TooltipContentDoctor({ appointmentData }: { appointmentData: any
   const doctor: IUser = useSelector((state: IState) =>
     state.data.users.find((e) => e.uid === appointmentData.data.patientId),
   );
-  console.log(doctor)
   const day = moment(appointmentData.data.startDate).format('LL');
   const time = moment(appointmentData.data.startDate).format('HH:mm');
   return (

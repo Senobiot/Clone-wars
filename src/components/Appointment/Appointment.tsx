@@ -71,7 +71,7 @@ const styles = ({ palette }: Theme) =>
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
       textAlign: 'center',
-      fontSize: '1.5rem',
+      fontSize: '4vmin',
     },
     content: {
       opacity: 0.7,
