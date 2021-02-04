@@ -61,7 +61,9 @@ export const SearchBar = () => {
 
       medics.forEach((element) => {
         if (regex.test(element.name)) {
-          medicsNamesFiltered.push(element.name);
+          if (element.speciality) {
+            medicsNamesFiltered.push(element.name);
+          }   
         }
         if (regex.test(element.speciality) && medicsSpecsFiltered.indexOf(element.speciality) === -1) {
           medicsSpecsFiltered.push(element.speciality);

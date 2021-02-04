@@ -158,7 +158,7 @@ export function AppointmentDoctor(): JSX.Element {
   return (
     <div className={s.wrapper}>
       <Paper className={s.paper}>
-        <Scheduler data={appointment.filter((e) => e.available)} height={500}>
+        <Scheduler data={appointment.filter((e) => e.available)}>
           <ViewState />
           <Toolbar />
           <DateNavigator />
