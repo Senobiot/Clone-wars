@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -6,8 +7,6 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import styles from './MedcentersInfo.module.scss';
-import services_category from '../../data/servicesList';
-import { medicsList } from '../../data/medicsList';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -28,6 +27,8 @@ interface ICat {
 }
 
 export default function MedcentersInfo({ category, centerName }: ICat) {
+  const services_category = useSelector((state) => state.data.services_category);
+  const medicsList = useSelector((state) => state.data.users);
   const classes = useStyles();
   const categoryEntries = Object.entries(category);
 

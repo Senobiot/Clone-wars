@@ -154,7 +154,7 @@ export function SchedulerDoctor(): JSX.Element {
   const dispatch = useDispatch();
   const commitChanges = ({ added, changed, deleted }) => {
     moment.locale('en');
-    console.log({ added });
+
     if (added) {
       const id = moment(added.startDate).format('YYYYMMDDHHmm');
       dispatch(

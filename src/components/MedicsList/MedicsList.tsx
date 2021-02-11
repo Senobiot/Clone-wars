@@ -30,17 +30,19 @@ export const MedicsList = () => {
       <MedicListCtrlPanel handler={handleCategoryChange} />
       <div className={styles.medicsListWrapper}>
         {medics.map((e, index) => {
-          return (
-            <MedicsCard
-              key={index}
-              id={e.id}
-              name={e.name}
-              category={e.category}
-              speciality={e.speciality}
-              experience={e.experience}
-              imgSource={e.img}
-            />
-          );
+          if (e.speciality) {
+              return (
+              <MedicsCard
+                key={index}
+                id={e.id}
+                name={e.name}
+                category={e.category}
+                speciality={e.speciality}
+                experience={e.experience}
+                imgSource={e.img}
+              />
+            );
+          }
         })}
       </div>
     </div>

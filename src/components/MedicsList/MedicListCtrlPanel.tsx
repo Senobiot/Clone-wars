@@ -23,7 +23,6 @@ const MedicListCtrlPanel = ({ handler }: Props) => {
   const dispatch = useDispatch();
   const allServices = useSelector((state) => state.data.services_category);
   const currentCat = useSelector((state) => state.categoryTile.categoryTile);
-  console.log(currentCat);
   const catBtnsArray = [];
 
   allServices.map((e) => {

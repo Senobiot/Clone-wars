@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { chooseCategories } from '../../../store/actions/actionCategories';
 import { chooseCategoriesTile } from '../../../store/actions/actionCategories';
 import { updateService } from '../../../store/actions/actionService';
 import { centers, services, detailedServ, catsInd } from '../../data/searchKeys';
-import { medicsList } from '../../data/medicsList';
 
 import styles from './SearchBar.module.scss';
 import Accordion from '@material-ui/core/Accordion';
@@ -33,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const SearchBar = () => {
+  const medicsList = useSelector((state) => state.data.users);
   const dispatch = useDispatch();
   const history = useHistory();
   const classes = useStyles();
@@ -61,7 +61,9 @@ export const SearchBar = () => {
 
       medics.forEach((element) => {
         if (regex.test(element.name)) {
-          medicsNamesFiltered.push(element.name);
+          if (element.speciality) {
+            medicsNamesFiltered.push(element.name);
+          }   
         }
         if (regex.test(element.speciality) && medicsSpecsFiltered.indexOf(element.speciality) === -1) {
           medicsSpecsFiltered.push(element.speciality);
